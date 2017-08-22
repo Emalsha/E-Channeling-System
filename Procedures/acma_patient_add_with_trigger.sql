@@ -1,5 +1,4 @@
 create or replace procedure acma_patient_add(
--- comment
 fullname in varchar2,
 nic in varchar2,
 telephone in number,
@@ -20,7 +19,7 @@ begin
 end;
 
 CREATE SEQUENCE auto_num
-  START WITH 'patn_'1
+  START WITH 1
   INCREMENT BY 1
   CACHE 10000;
   
