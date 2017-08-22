@@ -39,9 +39,3 @@ BEGIN
   );
   COMMIT;
 END;
-
-DECLARE
-BEGIN
-  ACMA_DOCTOR_ADD('Dr.Prasanna Serasinghe',0710868178,'AB923,Haputhale Road,Bandarawela','89055145v',0,10,10,6,'prasanna','123','prasanna@gmail.com');
-END;
-  
