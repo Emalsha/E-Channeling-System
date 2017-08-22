@@ -10,17 +10,17 @@ as begin
 end;
 
 declare 
-  fname varchar2(255) := 'Delushaa deku';
-  nic varchar2 (15):= '990828845v';
+  fname varchar2(255) := 'jilla';
+  nic varchar2 (15):= '930828845v';
   tele number := 0715404579;
-  addr varchar(255) := 'Colombo main stree, Sri Lanka';
+  addr varchar(255) := 'hatton town, Sri Lanka';
 begin
   acma_patient_add(fname, nic, tele, addr);
   dbms_output.put_line('Inserted');
 end;
 
 CREATE SEQUENCE auto_num
-  START WITH 'patn_'1
+  START WITH 1
   INCREMENT BY 1
   CACHE 10000;
   
@@ -32,7 +32,3 @@ BEGIN
     INTO :new.patient_id
     FROM dual;
 END;
-
-
-select * from acma_patient
-delete from acma_patient where patient_id = 5
