@@ -22,6 +22,7 @@ declare
   room number := 60;
 begin
   acma_doctor_update_basicinfo(do_id,fname,phone,address,nic,room);
+  dbms_output.put_line('done');
 end;
 
 select * from acma_doctor
