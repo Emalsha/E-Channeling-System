@@ -1,3 +1,4 @@
+--create procedure commad
 create or replace function acma_patient_delete_by_nic(nic_no varchar2)
 return number
 is
@@ -16,7 +17,7 @@ begin
 end;
 
 
-
+--slient site check the procedure with data
 declare
   nic varchar2(15);
 begin

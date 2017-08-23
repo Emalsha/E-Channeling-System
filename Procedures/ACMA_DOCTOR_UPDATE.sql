@@ -1,3 +1,4 @@
+--procedure starts
 create or replace procedure acma_doctor_update_basicinfo(
 doc_id in number,
 fname in varchar2,
@@ -11,7 +12,7 @@ begin
   commit;
 end;
   
-  
+--client side check procedure with data
 declare
   do_id number := &doctor_id;
   fname varchar2(64) := 'Dr.Jill delushaan delu';

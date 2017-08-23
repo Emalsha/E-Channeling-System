@@ -1,3 +1,4 @@
+--create function for search patient by nic
 create or replace function acma_patient_search_by_nic(nic_no varchar2)
 return varchar2
 is
@@ -16,7 +17,7 @@ begin
     end if;
 end;
 
-
+--client side search method with data of patient nic number
 declare
   nic varchar2(15);
 begin
