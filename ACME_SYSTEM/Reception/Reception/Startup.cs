@@ -15,5 +15,24 @@ namespace Reception
         {
             InitializeComponent();
         }
+
+        private void Startup_Load(object sender, EventArgs e)
+        {
+            this.timer1.Enabled = true;
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.Increment(+2);
+            if (progressBar1.Value == 99)
+            {
+                Login log = new Login();
+                log.Show();
+                timer1.Stop();
+                progressBar1.Value = 0;
+                this.Hide();
+            }
+        }
     }
 }

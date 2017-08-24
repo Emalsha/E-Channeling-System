@@ -5,3 +5,4 @@ C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Reception\obj\
 C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Reception\obj\x86\Debug\Reception.exe
 C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Reception\obj\x86\Debug\Reception.pdb
 C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Reception\obj\x86\Debug\Reception.Startup.resources
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Reception\obj\x86\Debug\Reception.Login.resources
