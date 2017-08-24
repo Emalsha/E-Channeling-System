@@ -29,7 +29,7 @@ CREATE SEQUENCE acma_reception_add_sq
   INCREMENT BY 1
   CACHE 10000;
   
--- auto number tirger
+-- auto number tirger\
 CREATE OR REPLACE TRIGGER acma_reception_add_trg
   BEFORE INSERT ON acma_reception
   FOR EACH ROW
