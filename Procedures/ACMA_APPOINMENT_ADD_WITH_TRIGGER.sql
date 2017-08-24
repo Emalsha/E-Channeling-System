@@ -3,23 +3,25 @@ create or replace procedure acma_appoinment_add(
 pa_id in number,
 do_id in number,
 ap_date in date,
+ap_time in varchar2,
 cat in varchar2
 )
 as 
 begin
-  insert into acma_appoinment (patient_id, doctor_id,created_date_time,appointment_date_time,consulting_catogery,status)
-  values (pa_id, do_id, sysdate, ap_date, cat, 1);
+  insert into acma_appoinment (patient_id, doctor_id,created_date_time,appointment_date,appointment_time,consulting_catogery,status)
+  values (pa_id, do_id, sysdate, ap_date,ap_time, cat, 1);
 end;
 
 -- CLIENT SIDE TESTING WITH DATA ROW
 declare
 pat_id number := 3;
 doc_id number := 5;
-ap_date date :=to_date('8/23/2017','MM/DD/yyyy');
+ap_date date :=to_date('8/24/2017','MM/DD/yyyy');
+ap_time varchar2(64) := '08.30.24 PM';
 cat varchar2(65) := 'Eye Ear Thoiraid';
 
 begin
-  acma_appoinment_add(pat_id,doc_id,ap_date,cat);
+  acma_appoinment_add(pat_id,doc_id,ap_date,ap_time,cat);
 end;
 
 

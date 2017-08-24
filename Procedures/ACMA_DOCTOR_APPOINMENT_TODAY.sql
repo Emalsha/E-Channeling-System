@@ -5,8 +5,8 @@ create or replace type acma_app_o as object
 --store object to table
 create or replace type acma_app_t is table of acma_app_o;
 
---function to view appointment details
-create or replace function acma_cancel_appoinment_view(app_id number) 
+--function with joing and select multiple records
+create or replace function acma_doctor_appoinments_today(today varchar2) 
 return acma_app_t
 as data_set acma_app_t;
 begin
@@ -15,7 +15,7 @@ begin
   from acma_appoinment ap
   left join acma_patient p on ap.patient_id = p.patient_id
   left join acma_doctor d on ap.doctor_id = d.doctor_id
-  where ap. appoinment_id= app_id order by ap.appoinment_id;
+  where to_char(ap.appointment_date, 'mm/dd/yyyy') = today order by ap.appoinment_id;
   return data_set;
 end;
 
@@ -23,15 +23,15 @@ end;
 declare
   datas acma_app_t;
 begin
-  datas := acma_cancel_appoinment_view(15);
+  datas := acma_doctor_appoinments_today('8/23/2017');
   for x in 1..datas.count loop
     dbms_output.put_line(
     'Appointment_id : '||datas(x).app_id || 
     ' Patient_id : ' ||datas(x).pat_id ||
     ' Doctor_id : ' ||datas(x).doc_id ||
     ' Created Date Time : ' ||datas(x).cre||
-    ' Appointment Date Time : ' ||datas(x).app_d||
-    ' Appointment Date Time : ' ||datas(x).app_t||
+    ' Appointment Date : ' ||datas(x).app_d||
+    ' Appointment Time : ' ||datas(x).app_t||
     ' Catogery : ' ||datas(x).cat||
     ' Status : ' ||datas(x).sta 
     );
@@ -39,43 +39,6 @@ begin
 end;
 
 
---procedure for update status to cancel appoinment
-create or replace procedure acma_cancel_appoinment(app_id number)
-as
- myexp exception;
-begin
-  update acma_appoinment set status = 0 where appoinment_id = app_id;
-
--- excepetion is not working "I dont know why"
-  exception when no_data_found then
-      dbms_output.put_line('No Appoinment Found!');
-end;
-
--- client side checking the procedure to cancel the apponment
-declare
-   appoint_id number := &appoinment_id;
-begin
-  acma_cancel_appoinment(appoint_id);
-  end;
-
-
-
 select * from acma_appoinment
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-select * from acma_appoinment

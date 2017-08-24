@@ -1,6 +1,6 @@
 --create type object for store table of records
 create or replace type acma_app_o as object
-(app_id number, pat_id varchar2(64), doc_id varchar2(64), cre date, app_d date, cat varchar2(64), sta number);
+(app_id number, pat_id varchar2(64), doc_id varchar2(64), cre date, app_d date, app_t varchar2(64), cat varchar2(64), sta number);
 
 --store object to table
 create or replace type acma_app_t is table of acma_app_o;
@@ -10,7 +10,7 @@ create or replace function acma_doctor_appoinment_view(doct_id number)
 return acma_app_t
 as data_set acma_app_t;
 begin
-  select acma_app_o(ap.appoinment_id, p.fullname, d.fullname, ap.created_date_time, ap.appointment_date_time, ap.consulting_catogery, ap.status) 
+  select acma_app_o(ap.appoinment_id, p.fullname, d.fullname, ap.created_date_time, ap.appointment_date,ap.appointment_time, ap.consulting_catogery, ap.status) 
   bulk collect into data_set 
   from acma_appoinment ap
   left join acma_patient p on ap.patient_id = p.patient_id
@@ -30,7 +30,8 @@ begin
     ' Patient_id : ' ||datas(x).pat_id ||
     ' Doctor_id : ' ||datas(x).doc_id ||
     ' Created Date Time : ' ||datas(x).cre||
-    ' Appointment Date Time : ' ||datas(x).app_d||
+    ' Appointment Date : ' ||datas(x).app_d||
+    ' Appointment Time : ' ||datas(x).app_t||
     ' Catogery : ' ||datas(x).cat||
     ' Status : ' ||datas(x).sta 
     );
