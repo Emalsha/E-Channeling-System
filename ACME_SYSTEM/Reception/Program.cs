@@ -15,7 +15,7 @@ namespace Reception
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Startup());
+            Application.Run(new Login());
         }
     }
 }
