@@ -1,0 +1,40 @@
+
+-------------------------------------------- Procedure
+
+CREATE OR REPLACE PROCEDURE ACMA_DUTY_UPDATE(
+       DOCTOR_ID_ IN NUMBER,
+       CONSULTING_DATE_ IN NUMBER,
+       CONSULTING_TIME_BEGIN_ IN VARCHAR2,
+       CONSULTING_TIME_END_ IN VARCHAR2,
+       TICKETS_PER_DAY_ IN NUMBER,
+       OUTPUT OUT VARCHAR2
+)
+IS
+  COUNT_ROW NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO COUNT_ROW FROM ACMA_DUTY WHERE (TICKETS_PER_DAY - REMAINING_TICKET) < TICKETS_PER_DAY_ AND DOCTOR_ID = DOCTOR_ID_ AND CONSULTING_DATE = CONSULTING_DATE_;
+  
+  IF ( COUNT_ROW > 0) THEN 
+    
+    UPDATE ACMA_DUTY D
+    SET  D.CONSULTING_TIME_BEGIN = CONSULTING_TIME_BEGIN_,
+         D.CONSULTING_TIME_END = CONSULTING_TIME_END_,
+         D.TICKETS_PER_DAY = TICKETS_PER_DAY_
+    WHERE 
+         D.DOCTOR_ID = DOCTOR_ID_ AND CONSULTING_DATE = CONSULTING_DATE_;
+    IF(SQL%ROWCOUNT > 0)
+    THEN OUTPUT := 'Available time updated.';
+    ELSE OUTPUT := 'Not updated.';
+    END IF;
+    COMMIT;
+  ELSE 
+    OUTPUT := ' Not possible to reduce number of tickets per day because you have some appoinment.';
+  END IF;
+END;
+
+DECLARE
+  res varchar2(100);
+BEGIN
+  ACMA_DUTY_UPDATE(06,2,'10:00:00','11:00:00',5,res);
+  dbms_output.put_line(res);
+END;
