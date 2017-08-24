@@ -1,0 +1,7 @@
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Doctor\bin\Debug\Doctor.exe
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Doctor\bin\Debug\Doctor.pdb
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Doctor\obj\x86\Debug\Doctor.Form1.resources
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Doctor\obj\x86\Debug\Doctor.Properties.Resources.resources
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Doctor\obj\x86\Debug\Doctor.csproj.GenerateResource.Cache
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Doctor\obj\x86\Debug\Doctor.exe
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Doctor\obj\x86\Debug\Doctor.pdb

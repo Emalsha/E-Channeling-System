@@ -1,0 +1,7 @@
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Reception\bin\Debug\Reception.exe
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Reception\bin\Debug\Reception.pdb
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Reception\obj\x86\Debug\Reception.Properties.Resources.resources
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Reception\obj\x86\Debug\Reception.csproj.GenerateResource.Cache
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Reception\obj\x86\Debug\Reception.exe
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Reception\obj\x86\Debug\Reception.pdb
+C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Reception\obj\x86\Debug\Reception.Startup.resources
