@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemUser", "SystemUser\SystemUser.csproj", "{0AB0B73D-070E-48DA-A869-8314AAD47AE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorPanel", "DoctorPanel\DoctorPanel.csproj", "{4BBCAF17-0066-42FA-9DB9-540E25D005F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{0AB0B73D-070E-48DA-A869-8314AAD47AE8}.Debug|x86.Build.0 = Debug|x86
 		{0AB0B73D-070E-48DA-A869-8314AAD47AE8}.Release|x86.ActiveCfg = Release|x86
 		{0AB0B73D-070E-48DA-A869-8314AAD47AE8}.Release|x86.Build.0 = Release|x86
+		{4BBCAF17-0066-42FA-9DB9-540E25D005F2}.Debug|x86.ActiveCfg = Debug|x86
+		{4BBCAF17-0066-42FA-9DB9-540E25D005F2}.Debug|x86.Build.0 = Debug|x86
+		{4BBCAF17-0066-42FA-9DB9-540E25D005F2}.Release|x86.ActiveCfg = Release|x86
+		{4BBCAF17-0066-42FA-9DB9-540E25D005F2}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
