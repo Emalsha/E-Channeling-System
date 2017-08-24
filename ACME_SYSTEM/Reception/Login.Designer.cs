@@ -31,23 +31,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
 <<<<<<< HEAD
-<<<<<<< HEAD
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-=======
->>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
-=======
->>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,28 +58,6 @@
             // label3
             // 
             this.label3.AutoSize = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label3.Location = new System.Drawing.Point(74, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 34);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "login";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Reception.Properties.Resources.login__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(38, 31);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-=======
-=======
->>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
             this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label3.Location = new System.Drawing.Point(13, 24);
@@ -92,10 +65,6 @@
             this.label3.Size = new System.Drawing.Size(80, 29);
             this.label3.TabIndex = 10;
             this.label3.Text = "Login";
-<<<<<<< HEAD
->>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
-=======
->>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
             // 
             // label1
             // 
@@ -157,53 +126,6 @@
             this.textBox2.Size = new System.Drawing.Size(213, 24);
             this.textBox2.TabIndex = 13;
             // 
-            // button1
-            // 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Image = global::Reception.Properties.Resources.login__3_;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(109, 291);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 41);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Login ";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-=======
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.CausesValidation = false;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(199, 286);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 29);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Login";
->>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
-=======
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.CausesValidation = false;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(199, 286);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 29);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Login";
->>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Reception.Properties.Resources.hospital;
@@ -214,8 +136,6 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
-<<<<<<< HEAD
-=======
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Reception.Properties.Resources.login__2_;
@@ -226,14 +146,30 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
->>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.CausesValidation = false;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Location = new System.Drawing.Point(199, 293);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(85, 29);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Login";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(357, 433);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
@@ -248,8 +184,8 @@
             this.Text = "Login - ACME Medical Center";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,6 +203,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
