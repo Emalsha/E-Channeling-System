@@ -5,6 +5,7 @@ START WITH 1
 INCREMENT BY 1
 CACHE 20;
 
+
 -------------------------------------------- Procedure
 
 CREATE OR REPLACE PROCEDURE ACMA_DUTY_ADD(
@@ -34,6 +35,6 @@ END;
 
 DECLARE
 BEGIN
-  ACMA_DUTY_ADD(03,SYSDATE,'13:00:00','15:00:00',0,6,4);
+  ACMA_DUTY_ADD(08,SYSDATE,'13:00:00','15:00:00',0,6,4);
 END;
   
