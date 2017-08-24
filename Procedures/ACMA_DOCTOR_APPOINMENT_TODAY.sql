@@ -39,6 +39,6 @@ begin
 end;
 
 
-select * from acma_appoinment
+select * from acma_duty
 
 
