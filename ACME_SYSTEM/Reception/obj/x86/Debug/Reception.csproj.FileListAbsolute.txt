@@ -9,14 +9,12 @@ C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\Reception\obj\
 D:\Project\E-Channeling-System\ACME_SYSTEM\Reception\obj\x86\Debug\Reception.exe
 D:\Project\E-Channeling-System\ACME_SYSTEM\Reception\obj\x86\Debug\Reception.pdb
 <<<<<<< HEAD
-<<<<<<< HEAD
 D:\Project\E-Channeling-System\ACME_SYSTEM\Reception\bin\Debug\Reception.exe
 D:\Project\E-Channeling-System\ACME_SYSTEM\Reception\bin\Debug\Reception.pdb
 D:\Project\E-Channeling-System\ACME_SYSTEM\Reception\obj\x86\Debug\Reception.Login.resources
 D:\Project\E-Channeling-System\ACME_SYSTEM\Reception\obj\x86\Debug\Reception.Startup.resources
 D:\Project\E-Channeling-System\ACME_SYSTEM\Reception\obj\x86\Debug\Reception.Properties.Resources.resources
 D:\Project\E-Channeling-System\ACME_SYSTEM\Reception\obj\x86\Debug\Reception.csproj.GenerateResource.Cache
-=======
 =======
 >>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
 C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\obj\x86\Debug\Reception.exe
@@ -27,7 +25,3 @@ C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\obj\x86\Debug\
 C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\obj\x86\Debug\Reception.Startup.resources
 C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\obj\x86\Debug\Reception.Properties.Resources.resources
 C:\Users\modelk\Desktop\E-Channeling-System\ACME_SYSTEM\Reception\obj\x86\Debug\Reception.csproj.GenerateResource.Cache
-<<<<<<< HEAD
->>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
-=======
->>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
