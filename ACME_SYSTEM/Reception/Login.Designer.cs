@@ -31,7 +31,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+=======
+>>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
 =======
 >>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
             this.label1 = new System.Windows.Forms.Label();
@@ -61,6 +64,7 @@
             // 
             this.label3.AutoSize = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label3.Location = new System.Drawing.Point(74, 29);
@@ -79,6 +83,8 @@
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
 =======
+=======
+>>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
             this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label3.Location = new System.Drawing.Point(13, 24);
@@ -86,6 +92,9 @@
             this.label3.Size = new System.Drawing.Size(80, 29);
             this.label3.TabIndex = 10;
             this.label3.Text = "Login";
+<<<<<<< HEAD
+>>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
+=======
 >>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
             // 
             // label1
@@ -151,6 +160,7 @@
             // button1
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Image = global::Reception.Properties.Resources.login__3_;
@@ -162,6 +172,21 @@
             this.button1.Text = "Login ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+=======
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.CausesValidation = false;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(199, 286);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 29);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Login";
+>>>>>>> 9f8017592680c2dcdd9d5d5a6ae468dc2fed070c
 =======
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
