@@ -27,5 +27,15 @@ namespace SystemUser
         {
             this.Hide();
         }
+
+        private void lbl1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbl1.Text = DateTime.Now.ToString("dd-MMM-yyyy  hh:mm:ss tt");
+        }
     }
 }
