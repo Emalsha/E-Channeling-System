@@ -63,6 +63,16 @@ namespace SystemUser.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ACMA_logo_1 {
+            get {
+                object obj = ResourceManager.GetObject("ACMA-logo-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ACMA_logo_2 {
             get {
                 object obj = ResourceManager.GetObject("ACMA-logo-2", resourceCulture);
@@ -86,6 +96,16 @@ namespace SystemUser.Properties {
         internal static System.Drawing.Bitmap loaderLogin {
             get {
                 object obj = ResourceManager.GetObject("loaderLogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login__2_ {
+            get {
+                object obj = ResourceManager.GetObject("login (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
