@@ -10,6 +10,7 @@ namespace DoctorPanel
 {
     class DoctorController
     {
+        //Login function
         public int DoctorLogin(string username, string password)
         {
             using (OracleConnection con = new OracleConnection(DBString.GetString()))
@@ -44,6 +45,21 @@ namespace DoctorPanel
                         return -2;
                     }
                     
+                }
+            }
+        }
+
+        //Doctor today appointment view
+        public void DoctorTodayView(int doctorId)
+        {
+            using (OracleConnection con = new OracleConnection(DBString.GetString()))
+            {
+                con.Open();
+                string qry = "acma_doctor_appoinments_today";
+                using(OracleCommand cmd = new OracleCommand(qry,con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("");
                 }
             }
         }

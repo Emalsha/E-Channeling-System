@@ -15,7 +15,7 @@ begin
   from acma_appoinment ap
   left join acma_patient p on ap.patient_id = p.patient_id
   left join acma_doctor d on ap.doctor_id = d.doctor_id
-  where to_char(ap.appointment_date, 'mm/dd/yyyy') = today order by ap.appoinment_id;
+  where to_char(ap.appointment_date, 'mm/dd/yyyy') =  today order by ap.appoinment_id;
   return data_set;
 end;
 
@@ -38,6 +38,11 @@ begin
   end loop;
 end;
 
+select acma_app_o(ap.appoinment_id, p.fullname, d.fullname, ap.created_date_time, ap.appointment_date,ap.appointment_time, ap.consulting_catogery, ap.status) 
+  from acma_appoinment ap
+  left join acma_patient p on ap.patient_id = p.patient_id
+  left join acma_doctor d on ap.doctor_id = d.doctor_id
+  where to_char(ap.appointment_date, 'mm/dd/yyyy') = '8/23/2017'
 
 select * from acma_duty
 
