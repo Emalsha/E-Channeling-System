@@ -1,0 +1,10 @@
+<resources>
+  <color name="primary">#2196F3</color>rgb(33,150,243)
+  <color name="primary_dark">#1976D2</color>rgb(25,118,210)
+  <color name="primary_light">#BBDEFB</color>rgb(187,222,251)
+  <color name="accent">#9E9E9E</color>
+  <color name="primary_text">#212121</color>
+  <color name="secondary_text">#757575</color>
+  <color name="icons">#FFFFFF</color>
+  <color name="divider">#BDBDBD</color>
+</resources>
