@@ -15,7 +15,11 @@ namespace SystemUser
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new Dashboard());
+=======
+            Application.Run(new StartForm());
+>>>>>>> parent of 4ee73b6... login form competed
         }
     }
 }

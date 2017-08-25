@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +59,8 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> parent of 4ee73b6... login form competed
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,12 +69,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> parent of 4ee73b6... login form competed
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +104,7 @@
   <ItemGroup>
     <None Include="Resources\ACMA-logo-2.png" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <None Include="Resources\login %282%291.png" />
   </ItemGroup>
@@ -113,6 +120,8 @@
   <ItemGroup>
     <None Include="Resources\logout %282%29.png" />
   </ItemGroup>
+=======
+>>>>>>> parent of 4ee73b6... login form competed
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
