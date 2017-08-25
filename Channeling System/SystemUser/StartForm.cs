@@ -20,7 +20,7 @@ namespace SystemUser
         {
             progressBar1.Maximum = 100;
             progressBar1.Minimum = 0;
-            progressBar1.Step = 4;
+            progressBar1.Step = 10;
             timer1.Start();  // start the timer
 
         }
