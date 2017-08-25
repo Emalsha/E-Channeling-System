@@ -1,19 +1,22 @@
 -- login auth checking function by username and password 
-create or replace function acma_doctor_login(user in varchar2, pass in varchar2)
-return varchar2
+create or replace function acma_doctor_login(username_ in varchar2, password_ in varchar2)
+return number
 as
   match_count number;
-  log_id varchar2(64);
+  doctor_id_ number;
 begin
-  select count(*) into match_count from acma_doctor where username=user and password=pass;
+  select count(*) into match_count from acma_doctor where username=username_ and password=password_;
+  dbms_output.put_line(match_count);
   if match_count = 0 then
-    return 'Wrong username or password!';
+    -- No user;
+    return 0;
   elsif match_count = 1 then
-    select fullname into log_id from acma_doctor where username=user and password=pass;
-    -- returning the fullname of the user to chk the auth success conformation
-    return log_id;
+    select doctor_id into doctor_id_ from acma_doctor where username=username_ and password=password_;
+    -- Return doctor id
+    return doctor_id_;
   else
-    return 'Too many matches, this should never happen!';
+    -- Too many result
+    return -1;
   end if;
 end;
 /
@@ -22,7 +25,7 @@ end;
 declare
 usename varchar2(64) := 'sadun';
 password varchar2(64) := '123';
-output varchar2(128);
+output number;
 begin
   output := acma_doctor_login(usename,password);
    dbms_output.put_line(output);
