@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace DoctorPanel
 {
-    public partial class start : Form
+    public partial class LoginForm : Form
     {
-        public start()
+        public LoginForm()
         {
             InitializeComponent();
-        }
-
-        private void start_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
