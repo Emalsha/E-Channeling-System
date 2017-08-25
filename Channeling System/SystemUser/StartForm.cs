@@ -15,5 +15,27 @@ namespace SystemUser
         {
             InitializeComponent();
         }
+
+        private void StartForm_Load(object sender, EventArgs e)
+        {
+            progressBar1.Maximum = 100;
+            progressBar1.Minimum = 0;
+            progressBar1.Step = 4;
+            timer1.Start();  // start the timer
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressBar1.PerformStep(); // or progressBar1.Value++;
+            if (progressBar1.Value == 100)  // check with the value
+            {
+                new Login().Show();
+                timer1.Stop();
+                this.Hide();
+            }
+        }
+
+        
     }
 }
