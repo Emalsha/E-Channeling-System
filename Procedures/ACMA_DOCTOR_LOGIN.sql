@@ -18,16 +18,21 @@ begin
     -- Too many result
     return -1;
   end if;
+exception 
+  when others then 
+    IF SQLCODE=-6502 THEN
+      return -2;
+    end if;
 end;
 /
 
 -- clinet side data chk auth function 
 declare
-usename varchar2(64) := 'sadun';
-password varchar2(64) := '123';
+usename varchar2(64) := '';
+password varchar2(64) := '';
 output number;
 begin
-  output := acma_doctor_login(usename,password);
+  output := acma_doctor_login('','');
    dbms_output.put_line(output);
 end; 
 
