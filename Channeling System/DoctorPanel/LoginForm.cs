@@ -15,5 +15,25 @@ namespace DoctorPanel
         {
             InitializeComponent();
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panel3_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtPassword.Focus();
+        }
+
+        private void panel7_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtUsername.Focus();
+        }
+
+
+       
+
+        
     }
 }
