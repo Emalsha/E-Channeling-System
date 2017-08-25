@@ -117,25 +117,6 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Login ";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SystemUser.Properties.Resources.ACMA_logo_1;
-            this.pictureBox2.Location = new System.Drawing.Point(18, 344);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(151, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SystemUser.Properties.Resources.login__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(359, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
             // 
             // Login
             // 

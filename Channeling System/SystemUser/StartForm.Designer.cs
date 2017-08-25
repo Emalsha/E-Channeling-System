@@ -56,22 +56,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SystemUser.Properties.Resources.ACMA_logo_2;
-            this.pictureBox1.Location = new System.Drawing.Point(101, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(134, 164);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::SystemUser.Properties.Resources.loaderLogin;
-            this.pictureBox2.Location = new System.Drawing.Point(117, 148);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 67);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
+            
             // 
             // StartForm
             // 
