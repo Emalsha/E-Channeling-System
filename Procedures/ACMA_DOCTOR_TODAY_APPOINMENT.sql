@@ -24,7 +24,7 @@ END;
 SELECT ACMA_DOC_TODAY_OBJ(ap.appoinment_id, ap.patient_id, p.fullname, ap.created_date_time, ap.appointment_time, ap.consulting_catogery, ap.status) 
   FROM acma_appoinment ap
   LEFT JOIN acma_patient p on ap.patient_id = p.patient_id
-  WHERE to_char(ap.appointment_date, 'mm/dd/yyyy') = '08/23/2017' AND AP.DOCTOR_ID = 5 order by ap.appoinment_id;
+  WHERE to_char(ap.appointment_date, 'mm/dd/yyyy') = '8/23/2017' AND AP.DOCTOR_ID = 5 order by ap.appoinment_id;
 
 SELECT to_char(appointment_date, 'mm/dd/yyyy') FROM acma_appoinment
 
@@ -32,7 +32,7 @@ SELECT to_char(appointment_date, 'mm/dd/yyyy') FROM acma_appoinment
 declare
   datas ACMA_DOC_TODAY_TBL;
 begin
-  datas := ACMA_DOCTOR_TODAY_APPOINMENT('8/23/2017',5);
+  datas := ACMA_DOCTOR_TODAY_APPOINMENT('08/23/2017',5);
   for x in 1..datas.count loop
     dbms_output.put_line(
     'Appointment_id : '||datas(x).appinment_id || 
@@ -45,3 +45,5 @@ begin
     );
   end loop;
 end;
+
+select * from table( acma_doctor_today_appoinment('08/23/2017',5) )
