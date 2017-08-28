@@ -47,5 +47,10 @@ namespace SystemUser
         {
             new SearchPatient().Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new AddAppointment().Show();
+        }
     }
 }

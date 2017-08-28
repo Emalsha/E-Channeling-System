@@ -154,7 +154,7 @@
             this.txttelephone.Location = new System.Drawing.Point(202, 310);
             this.txttelephone.Name = "txttelephone";
             this.txttelephone.Size = new System.Drawing.Size(216, 25);
-            this.txttelephone.TabIndex = 13;
+            this.txttelephone.TabIndex = 15;
             // 
             // txtname
             // 
@@ -163,7 +163,7 @@
             this.txtname.Location = new System.Drawing.Point(202, 219);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(216, 25);
-            this.txtname.TabIndex = 14;
+            this.txtname.TabIndex = 13;
             // 
             // txtnicnumber
             // 
@@ -172,7 +172,7 @@
             this.txtnicnumber.Location = new System.Drawing.Point(202, 266);
             this.txtnicnumber.Name = "txtnicnumber";
             this.txtnicnumber.Size = new System.Drawing.Size(216, 25);
-            this.txtnicnumber.TabIndex = 15;
+            this.txtnicnumber.TabIndex = 14;
             // 
             // txtaddress
             // 
