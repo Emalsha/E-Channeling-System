@@ -11,12 +11,10 @@ namespace SystemUser
 {
     public class SyetemController
     {
-        string oracleDB = Helper.con_string("acma_db");
-        OracleCommand cmd = new OracleCommand();
-
-
         public void login_auth(string username, string password)
         {
+            string oracleDB = Helper.con_string("acma_db");
+            OracleCommand cmd = new OracleCommand();
             OracleConnection connect = new OracleConnection(oracleDB);
             cmd.Connection = connect;
             connect.Open();
@@ -53,10 +51,12 @@ namespace SystemUser
 
         public string SearchPatientByNIC(string nic)
         {
+            string oracleDB = Helper.con_string("acma_db");
             OracleConnection connect = new OracleConnection(oracleDB);
-
+            OracleCommand cmd = new OracleCommand();
             cmd.Connection = connect;
             connect.Open();
+
             cmd.CommandText = "acma_patient_search_by_nic";
             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -78,9 +78,35 @@ namespace SystemUser
             
         }
 
-        public static addNewPatient(string fullname, string nic, string telephone, string address)
+        public void addNewPatient(string fullname, string nic, string telephone, string address)
         {
-        
+            string oracleDB = Helper.con_string("acma_db");
+            OracleCommand cmd = new OracleCommand();
+            OracleConnection connect = new OracleConnection(oracleDB);
+            cmd.Connection = connect;
+            connect.Open();
+
+            cmd.CommandText = "acma_patient_add";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("fullname", OracleDbType.Varchar2, fullname, ParameterDirection.Input);
+            cmd.Parameters.Add("nic", OracleDbType.Varchar2, nic, ParameterDirection.Input);
+            cmd.Parameters.Add("telephone", OracleDbType.Decimal, telephone, ParameterDirection.Input);
+            cmd.Parameters.Add("address", OracleDbType.Varchar2, address, ParameterDirection.Input);
+
+            int status = cmd.ExecuteNonQuery();
+
+            if (status == 0)
+            {
+                MessageBox.Show("New patient cann't be added", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                new SearchPatient().Hide();
+            }
+            else
+            {
+                MessageBox.Show("New patient successfully added!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                new SearchPatient().Hide();
+            }
+
         }
 
     }

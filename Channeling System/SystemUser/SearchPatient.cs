@@ -53,5 +53,11 @@ namespace SystemUser
             this.Hide();
             new SearchPatient().Show();
         }
+
+        private void btnaddpatient_Click(object sender, EventArgs e)
+        {
+            SyetemController addPatient = new SyetemController();
+            addPatient.addNewPatient(txtname.Text, txtnicnumber.Text, txttelephone.Text, txtaddress.Text);
+        }
     }
 }

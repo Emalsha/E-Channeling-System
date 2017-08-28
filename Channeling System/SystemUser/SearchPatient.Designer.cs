@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtnic = new System.Windows.Forms.TextBox();
             this.lblname = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.btnaddpatient = new System.Windows.Forms.Button();
             this.btnclose = new System.Windows.Forms.Button();
             this.btnsearch = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +60,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(464, 46);
             this.panel1.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SystemUser.Properties.Resources.user_search;
+            this.pictureBox1.Location = new System.Drawing.Point(405, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -207,6 +217,7 @@
             this.btnaddpatient.Text = "Add Patient";
             this.btnaddpatient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnaddpatient.UseVisualStyleBackColor = false;
+            this.btnaddpatient.Click += new System.EventHandler(this.btnaddpatient_Click);
             // 
             // btnclose
             // 
@@ -236,16 +247,6 @@
             this.btnsearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnsearch.UseVisualStyleBackColor = false;
             this.btnsearch.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SystemUser.Properties.Resources.user_search;
-            this.pictureBox1.Location = new System.Drawing.Point(405, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // SearchPatient
             // 
