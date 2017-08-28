@@ -55,7 +55,10 @@ namespace DoctorPanel
                 }
                 else
                 {
-                    MessageBox.Show( "Welcome user : "+ num);
+                    this.Hide();
+                    DoctorHome home = new DoctorHome(num);
+                    home.Closed += (s, arg) => this.Close();
+                    home.Show();
                 }
 
             }
