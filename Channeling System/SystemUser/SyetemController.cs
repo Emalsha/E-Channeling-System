@@ -9,16 +9,18 @@ using System.Windows.Forms;
 
 namespace SystemUser
 {
-    public class ClassLogin
+    public class SyetemController
     {
+        string oracleDB = Helper.con_string("acma_db");
+        OracleCommand cmd = new OracleCommand();
+
+
         public void login_auth(string username, string password)
         {
-            string oracleDB = Helper.con_string("acma_db");
             OracleConnection connect = new OracleConnection(oracleDB);
-            OracleCommand cmd = new OracleCommand();
-
             cmd.Connection = connect;
             connect.Open();
+            
             cmd.CommandText = "acma_reception_login";
             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -28,8 +30,7 @@ namespace SystemUser
             
             cmd.ExecuteNonQuery();
             try
-            {
-                
+            {     
                 int response = int.Parse(cmd.Parameters["logid"].Value.ToString());
                 if (response == 0 )
                 {
@@ -40,8 +41,7 @@ namespace SystemUser
                     new Dashboard().Show();
                 }
             }
-            
-
+           
             finally
             {
                 connect.Dispose();
@@ -50,5 +50,38 @@ namespace SystemUser
             }
 
         }
+
+        public string SearchPatientByNIC(string nic)
+        {
+            OracleConnection connect = new OracleConnection(oracleDB);
+
+            cmd.Connection = connect;
+            connect.Open();
+            cmd.CommandText = "acma_patient_search_by_nic";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            //cmd.Parameters.Add("patientname", OracleDbType.Varchar2, ParameterDirection.ReturnValue);
+
+            OracleParameter p_name = new OracleParameter();
+            p_name.Size = 64;
+            p_name.ParameterName = "patientname";
+            p_name.Direction = ParameterDirection.ReturnValue;
+            cmd.Parameters.Add(p_name);
+
+            cmd.Parameters.Add("user_no", OracleDbType.Varchar2,nic, ParameterDirection.Input);
+
+            cmd.ExecuteNonQuery();
+
+            string text = cmd.Parameters["patientname"].Value.ToString();
+
+            return text;
+            
+        }
+
+        public static addNewPatient(string fullname, string nic, string telephone, string address)
+        {
+        
+        }
+
     }
 }
