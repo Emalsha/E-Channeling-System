@@ -7,7 +7,7 @@ as
 begin
   select count(*) into match_count from acma_reception where username=user and r_password=pass;
   if match_count = 0 then
-    return 56;
+    return 0;
   elsif match_count = 1 then
     select receptionist_id into log_id from acma_reception where username=user and r_password=pass;
     -- returning the fullname of the user to chk the auth success conformation
