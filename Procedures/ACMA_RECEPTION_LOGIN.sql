@@ -11,9 +11,9 @@ begin
   elsif match_count = 1 then
     select receptionist_id into log_id from acma_reception where username=user and r_password=pass;
     -- returning the fullname of the user to chk the auth success conformation
-    return log_id;
+    return 1;
   else
-    return 2;
+    return -1;
   end if;
 end;
 /

@@ -18,33 +18,35 @@ namespace SystemUser
             OracleCommand cmd = new OracleCommand();
 
             cmd.Connection = connect;
+            connect.Open();
             cmd.CommandText = "acma_reception_login";
             cmd.CommandType = CommandType.StoredProcedure;
 
+            cmd.Parameters.Add("logid", OracleDbType.Decimal, ParameterDirection.ReturnValue);
+            cmd.Parameters.Add("user", OracleDbType.Varchar2, username, ParameterDirection.Input);
+            cmd.Parameters.Add("pass", OracleDbType.Varchar2, password, ParameterDirection.Input);
+            
+            cmd.ExecuteNonQuery();
             try
             {
-                connect.Open();
-                cmd.Parameters.Add(new OracleParameter("user", username));
-                cmd.Parameters.Add(new OracleParameter("pass", password));
-                //cmd.Parameters.Add("return_value", OracleDbType.Int32, ParameterDirection.ReturnValue);
-                //int result = Convert.ToInt32(cmd.Parameters["return_value"].Value);
-                cmd.Parameters.Add("log_id", OracleDbType.RefCursor);
-
-                cmd.Parameters["log_id"].Direction = ParameterDirection.ReturnValue;
-                var log_id = Convert.ToString(cmd.Parameters["log_id"].Value);
                 
-                OracleDataReader oReader = cmd.ExecuteReader();
-                cmd.ExecuteNonQuery();
-                
-                MessageBox.Show(log_id);
-
-                
+                int response = int.Parse(cmd.Parameters["logid"].Value.ToString());
+                if (response == 0 )
+                {
+                 MessageBox.Show("Wrong Username or Password! Make sure your authentication values correct.","Error in login!",MessageBoxButtons.OK,MessageBoxIcon.Error);       
+                }
+                else
+                {
+                    new Dashboard().Show();
+                }
             }
             
 
             finally
             {
-                connect.Clone();
+                connect.Dispose();
+                Login log_o = new Login();
+                log_o.Hide();
             }
 
         }

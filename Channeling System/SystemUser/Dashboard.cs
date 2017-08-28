@@ -37,5 +37,10 @@ namespace SystemUser
         {
             lbl1.Text = DateTime.Now.ToString("dd-MMM-yyyy  hh:mm:ss tt");
         }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
