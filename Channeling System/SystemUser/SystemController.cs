@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace SystemUser
 {
-    public class SyetemController
+    public class SystemController
     {
         public void login_auth(string username, string password)
         {

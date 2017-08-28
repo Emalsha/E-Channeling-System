@@ -23,7 +23,7 @@ namespace SystemUser
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SyetemController SearchByNic = new SyetemController();
+            SystemController SearchByNic = new SystemController();
             string nic = txtnic.Text;
             lblname.Text = SearchByNic.SearchPatientByNIC(nic);
 
@@ -56,7 +56,7 @@ namespace SystemUser
 
         private void btnaddpatient_Click(object sender, EventArgs e)
         {
-            SyetemController addPatient = new SyetemController();
+            SystemController addPatient = new SystemController();
             addPatient.addNewPatient(txtname.Text, txtnicnumber.Text, txttelephone.Text, txtaddress.Text);
         }
     }
