@@ -7,6 +7,7 @@ patient_time in number)
 as
 begin
   update acma_doctor set available_on_weekend = weekend, patient_per_day = patient_no, time_per_patient = patient_time where doctor_id = doc_id;
+  commit;
 end;
   
 --client side check procedure with data  

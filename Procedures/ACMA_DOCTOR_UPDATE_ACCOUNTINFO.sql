@@ -6,6 +6,7 @@ mail in varchar2)
 as
 begin
   update acma_doctor set username = usern, password = pass, email = mail where doctor_id = doc_id;
+  commit;
 end;
   
   

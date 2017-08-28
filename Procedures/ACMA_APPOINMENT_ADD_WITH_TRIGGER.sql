@@ -10,6 +10,7 @@ as
 begin
   insert into acma_appoinment (patient_id, doctor_id,created_date_time,appointment_date,appointment_time,consulting_catogery,status)
   values (pa_id, do_id, sysdate, ap_date,ap_time, cat, 1);
+  commit;
 end;
 
 -- CLIENT SIDE TESTING WITH DATA ROW
