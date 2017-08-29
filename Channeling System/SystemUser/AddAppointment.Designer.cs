@@ -29,24 +29,26 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnsearch = new System.Windows.Forms.Button();
-            this.btnreload = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.chkname = new System.Windows.Forms.CheckBox();
             this.chkspc = new System.Windows.Forms.CheckBox();
             this.chkdate = new System.Windows.Forms.CheckBox();
             this.txtfullname = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnsearch = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,16 +60,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1079, 46);
             this.panel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SystemUser.Properties.Resources.school_calendar;
-            this.pictureBox1.Location = new System.Drawing.Point(763, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -120,37 +112,6 @@
             this.dateTimePicker1.TabIndex = 28;
             this.dateTimePicker1.Value = new System.DateTime(2017, 8, 28, 0, 0, 0, 0);
             // 
-            // btnsearch
-            // 
-            this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnsearch.Image = global::SystemUser.Properties.Resources.search;
-            this.btnsearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnsearch.Location = new System.Drawing.Point(501, 123);
-            this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(88, 36);
-            this.btnsearch.TabIndex = 29;
-            this.btnsearch.Text = "Search";
-            this.btnsearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsearch.UseVisualStyleBackColor = false;
-            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
-            // 
-            // btnreload
-            // 
-            this.btnreload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.btnreload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnreload.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnreload.Image = global::SystemUser.Properties.Resources.refresh;
-            this.btnreload.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnreload.Location = new System.Drawing.Point(613, 123);
-            this.btnreload.Name = "btnreload";
-            this.btnreload.Size = new System.Drawing.Size(88, 36);
-            this.btnreload.TabIndex = 30;
-            this.btnreload.Text = "Reload";
-            this.btnreload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnreload.UseVisualStyleBackColor = false;
-            // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -197,19 +158,71 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(69, 190);
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(69, 180);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(664, 105);
+            this.listView1.Size = new System.Drawing.Size(664, 305);
             this.listView1.TabIndex = 38;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // dataGridView1
+            // columnHeader1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 335);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(714, 150);
-            this.dataGridView1.TabIndex = 39;
+            this.columnHeader1.Text = "DOCTOR_ID";
+            this.columnHeader1.Width = 80;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "FULLNAME";
+            this.columnHeader2.Width = 110;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "AVAILABLE_ON_WEEKEND";
+            this.columnHeader3.Width = 160;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "ROOM_NUMBER";
+            this.columnHeader4.Width = 105;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "DESCRIPTION";
+            this.columnHeader5.Width = 210;
+            // 
+            // btnsearch
+            // 
+            this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnsearch.Image = global::SystemUser.Properties.Resources.search;
+            this.btnsearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnsearch.Location = new System.Drawing.Point(561, 123);
+            this.btnsearch.Name = "btnsearch";
+            this.btnsearch.Size = new System.Drawing.Size(88, 36);
+            this.btnsearch.TabIndex = 29;
+            this.btnsearch.Text = "Search";
+            this.btnsearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsearch.UseVisualStyleBackColor = false;
+            this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SystemUser.Properties.Resources.school_calendar;
+            this.pictureBox1.Location = new System.Drawing.Point(763, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // AddAppointment
             // 
@@ -217,14 +230,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(828, 542);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.txtfullname);
             this.Controls.Add(this.chkdate);
             this.Controls.Add(this.chkspc);
             this.Controls.Add(this.chkname);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btnreload);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
@@ -239,7 +250,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,13 +265,16 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnsearch;
-        private System.Windows.Forms.Button btnreload;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.CheckBox chkname;
         private System.Windows.Forms.CheckBox chkspc;
         private System.Windows.Forms.CheckBox chkdate;
         private System.Windows.Forms.TextBox txtfullname;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
