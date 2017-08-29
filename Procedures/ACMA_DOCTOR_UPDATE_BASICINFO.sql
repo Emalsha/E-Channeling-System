@@ -4,19 +4,11 @@ doctor_id_ in number,
 fullname_ in varchar2,
 telephone_ in number,
 address_ in varchar2,
-<<<<<<< HEAD
 nic_no_ in varchar2, 
 room_number_ in number)
 as
 begin
   update acma_doctor set fullname = fullname_, telephone = telephone_, address = address_, nic = nic_no_, room_number = room_number_ where doctor_id = doctor_id_;
-=======
-nic_no in varchar2, 
-room_number_ in number)
-as
-begin
-  update acma_doctor set fullname = fullname_, telephone = telephone_, address = address_, nic = nic_no, room_number = room_number_ where doctor_id = doctor_id_;
->>>>>>> master
   commit;
 end;
   

@@ -93,16 +93,6 @@ namespace DoctorPanel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap doctor_1_ {
-            get {
-                object obj = ResourceManager.GetObject("doctor(1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap loading {
             get {
                 object obj = ResourceManager.GetObject("loading", resourceCulture);
@@ -126,36 +116,6 @@ namespace DoctorPanel.Properties {
         internal static System.Drawing.Bitmap menu_symbol_of_four_lines {
             get {
                 object obj = ResourceManager.GetObject("menu-symbol-of-four-lines", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap refresh_page_option {
-            get {
-                object obj = ResourceManager.GetObject("refresh-page-option", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap settings {
-            get {
-                object obj = ResourceManager.GetObject("settings", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap settings_1_ {
-            get {
-                object obj = ResourceManager.GetObject("settings(1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
