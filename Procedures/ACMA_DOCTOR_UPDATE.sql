@@ -1,14 +1,14 @@
 --procedure starts
 create or replace procedure acma_doctor_update_basicinfo(
-doc_id in number,
-fname in varchar2,
-phone in number,
-addr in varchar2,
-nic_no in varchar2, 
-room in number)
+doctor_id_ in number,
+fullname_ in varchar2,
+telephone_ in number,
+address_ in varchar2,
+nic_ in varchar2, 
+room_ in number)
 as
 begin
-  update acma_doctor set fullname = fname, telephone = phone, address = addr, nic = nic_no, room_number = room where doctor_id = doc_id;
+  update acma_doctor set fullname = fullname_, telephone = telephone_, address = address_, nic = nic_, room_number = room_ where doctor_id = doctor_id_;
   commit;
 end;
   

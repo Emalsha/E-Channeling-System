@@ -1,12 +1,12 @@
 --procedure starts
 create or replace procedure acma_doctor_update_dutyinfo(
-doc_id in number,
-weekend in number,
-patient_no in number,
-patient_time in number)
+doctor_id_ in number,
+available_on_weekend_ in number,
+patient_per_day_ in number,
+time_per_patient_ in number)
 as
 begin
-  update acma_doctor set available_on_weekend = weekend, patient_per_day = patient_no, time_per_patient = patient_time where doctor_id = doc_id;
+  update acma_doctor set available_on_weekend = available_on_weekend_, patient_per_day = patient_per_day_, time_per_patient = time_per_patient_ where doctor_id = doctor_id_;
 end;
   
 --client side check procedure with data  

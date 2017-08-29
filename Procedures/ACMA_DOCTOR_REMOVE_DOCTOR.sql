@@ -1,10 +1,10 @@
 --procedures starts
 create or replace procedure acma_doctor_remove_doctor(
-doc_id in number
+doctor_id in number
 )
 as
 begin
-  delete from acma_doctor where doctor_id = doc_id;
+  delete from acma_doctor where doctor_id = doctor_id;
 end;
 
 --client side check procedure
