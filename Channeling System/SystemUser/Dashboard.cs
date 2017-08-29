@@ -37,5 +37,20 @@ namespace SystemUser
         {
             lbl1.Text = DateTime.Now.ToString("dd-MMM-yyyy  hh:mm:ss tt");
         }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new SearchPatient().Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new AddAppointment().Show();
+        }
     }
 }
