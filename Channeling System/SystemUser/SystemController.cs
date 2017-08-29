@@ -6,6 +6,7 @@ using System.Data;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
 using System.Windows.Forms;
+using SystemUser.SystemModel;
 
 namespace SystemUser
 {
@@ -107,6 +108,74 @@ namespace SystemUser
                 new SearchPatient().Hide();
             }
 
+        }
+
+        public List<SearchDoctorModel> SearchDoctorByName(string doctorName)
+        {
+            string oracleDB = Helper.con_string("acma_db");
+            OracleConnection connect = new OracleConnection(oracleDB);
+            connect.Open();
+
+            string query = "select * from table(ACMA_DOCTOR_SEARCH_BY_NAME(:doctor_name))";
+            OracleCommand cmd = new OracleCommand(query, connect);
+
+            cmd.Parameters.Add(":doctor_name", doctorName);
+
+            OracleDataReader dReader = cmd.ExecuteReader();
+            if (dReader.HasRows)
+            {
+                List<SearchDoctorModel> dataList = new List<SearchDoctorModel>();
+                while (dReader.Read())
+                {
+                    decimal doctor_id = dReader.GetDecimal(0);
+                    string fullname = dReader.GetString(1);
+                    decimal weekend = dReader.GetDecimal(2);
+                    decimal room_number = dReader.GetDecimal(3);
+                    string description = dReader.GetString(4);
+
+                    dataList.Add(new SearchDoctorModel(doctor_id, fullname, weekend, room_number, description));
+                }
+
+                return dataList;
+            }
+            else
+            {
+                return new List<SearchDoctorModel>();
+            }
+        }
+
+        public List<SearchDoctorModel> SearchDoctorBySpecDate(string spec, int day)
+        {
+            string oracleDB = Helper.con_string("acma_db");
+            OracleConnection connect = new OracleConnection(oracleDB);
+            connect.Open();
+
+            string query = "select * from table(ACMA_DOCTOR_SEARCH_BY_SPECDATE(:spec, :day))";
+            OracleCommand cmd = new OracleCommand(query, connect);
+
+            cmd.Parameters.Add(":spec", spec);
+            cmd.Parameters.Add(":day", day);
+
+            OracleDataReader dReader = cmd.ExecuteReader();
+            if (dReader.HasRows)
+            {
+                List<SearchDoctorModel> dataList = new List<SearchDoctorModel>();
+                while (dReader.Read())
+                {
+                    decimal doctor_id = dReader.GetDecimal(0);
+                    string fullname = dReader.GetString(1);
+                    decimal weekend = dReader.GetDecimal(2);
+                    decimal room_number = dReader.GetDecimal(3);
+                    string description = dReader.GetString(4);
+
+                    dataList.Add(new SearchDoctorModel(doctor_id, fullname, weekend, room_number, description));
+                }
+                return dataList;
+            }
+            else 
+            {
+                return new List<SearchDoctorModel>();
+            }
         }
 
     }

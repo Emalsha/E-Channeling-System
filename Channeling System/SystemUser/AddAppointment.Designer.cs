@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbspec = new System.Windows.Forms.ComboBox();
             this.chkname = new System.Windows.Forms.CheckBox();
             this.chkspc = new System.Windows.Forms.CheckBox();
             this.chkdate = new System.Windows.Forms.CheckBox();
@@ -46,7 +47,6 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnsearch = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,16 @@
             this.panel1.Size = new System.Drawing.Size(1079, 46);
             this.panel1.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SystemUser.Properties.Resources.school_calendar;
+            this.pictureBox1.Location = new System.Drawing.Point(763, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -68,9 +78,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(16, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(425, 24);
+            this.label1.Size = new System.Drawing.Size(350, 24);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Add Appoinement - ACMA Medical Center";
+            this.label1.Text = "Add Appointment - Search Doctor";
             // 
             // label2
             // 
@@ -112,14 +122,14 @@
             this.dateTimePicker1.TabIndex = 28;
             this.dateTimePicker1.Value = new System.DateTime(2017, 8, 28, 0, 0, 0, 0);
             // 
-            // comboBox1
+            // cmbspec
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(166, 128);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 26);
-            this.comboBox1.TabIndex = 32;
+            this.cmbspec.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbspec.FormattingEnabled = true;
+            this.cmbspec.Location = new System.Drawing.Point(166, 128);
+            this.cmbspec.Name = "cmbspec";
+            this.cmbspec.Size = new System.Drawing.Size(200, 26);
+            this.cmbspec.TabIndex = 32;
             // 
             // chkname
             // 
@@ -214,28 +224,18 @@
             this.btnsearch.UseVisualStyleBackColor = false;
             this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SystemUser.Properties.Resources.school_calendar;
-            this.pictureBox1.Location = new System.Drawing.Point(763, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
-            // 
             // AddAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(828, 542);
+            this.ClientSize = new System.Drawing.Size(813, 542);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.txtfullname);
             this.Controls.Add(this.chkdate);
             this.Controls.Add(this.chkspc);
             this.Controls.Add(this.chkname);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbspec);
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
@@ -265,7 +265,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnsearch;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbspec;
         private System.Windows.Forms.CheckBox chkname;
         private System.Windows.Forms.CheckBox chkspc;
         private System.Windows.Forms.CheckBox chkdate;
