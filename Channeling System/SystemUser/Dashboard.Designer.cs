@@ -38,7 +38,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,17 +46,24 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +73,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1249, 46);
+            this.panel1.Size = new System.Drawing.Size(1369, 46);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -77,9 +83,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(16, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 24);
+            this.label1.Size = new System.Drawing.Size(355, 24);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Dashboard";
+            this.label1.Text = "Dashboard - ACMA Medical Center";
             // 
             // panel2
             // 
@@ -89,10 +95,9 @@
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Location = new System.Drawing.Point(10, 47);
+            this.panel2.Location = new System.Drawing.Point(10, 204);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(269, 329);
+            this.panel2.Size = new System.Drawing.Size(269, 242);
             this.panel2.TabIndex = 15;
             // 
             // pictureBox2
@@ -122,9 +127,9 @@
             this.button11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button11.Image = global::SystemUser.Properties.Resources.report;
-            this.button11.Location = new System.Drawing.Point(23, 237);
+            this.button11.Location = new System.Drawing.Point(138, 143);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(224, 88);
+            this.button11.Size = new System.Drawing.Size(109, 88);
             this.button11.TabIndex = 21;
             this.button11.Text = "View Patients";
             this.button11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -159,6 +164,7 @@
             this.button2.Text = "Search Patient";
             this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button5
             // 
@@ -175,21 +181,6 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Image = global::SystemUser.Properties.Resources.file__1_;
-            this.button4.Location = new System.Drawing.Point(138, 143);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 88);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Cancel Appoinment";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.pictureBox3);
@@ -199,7 +190,7 @@
             this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.button7);
-            this.panel3.Location = new System.Drawing.Point(10, 377);
+            this.panel3.Location = new System.Drawing.Point(10, 453);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(264, 328);
             this.panel3.TabIndex = 21;
@@ -299,6 +290,96 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button7.UseVisualStyleBackColor = false;
             // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.lbl1.Location = new System.Drawing.Point(1157, 127);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(135, 17);
+            this.lbl1.TabIndex = 23;
+            this.lbl1.Text = "--/----/- ----  --:--:-- --";
+            this.lbl1.Click += new System.EventHandler(this.lbl1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.label4.Location = new System.Drawing.Point(1177, 152);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 13);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Welcome : Delushaan Delu";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pictureBox4);
+            this.panel4.Controls.Add(this.button13);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.button4);
+            this.panel4.Location = new System.Drawing.Point(12, 64);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(264, 147);
+            this.panel4.TabIndex = 24;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::SystemUser.Properties.Resources.agenda__2_;
+            this.pictureBox4.Location = new System.Drawing.Point(23, 10);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox4.TabIndex = 22;
+            this.pictureBox4.TabStop = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button13.Image = global::SystemUser.Properties.Resources.file__1_;
+            this.button13.Location = new System.Drawing.Point(136, 42);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(109, 88);
+            this.button13.TabIndex = 25;
+            this.button13.Text = "Cancel ";
+            this.button13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.label5.Location = new System.Drawing.Point(51, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 18);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Appointment";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Image = global::SystemUser.Properties.Resources.monthly_calendar__2_;
+            this.button4.Location = new System.Drawing.Point(23, 42);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(107, 88);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "New";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // button12
             // 
             this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
@@ -306,7 +387,7 @@
             this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button12.Image = global::SystemUser.Properties.Resources.exit;
             this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button12.Location = new System.Drawing.Point(1122, 683);
+            this.button12.Location = new System.Drawing.Point(1287, 755);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(66, 28);
             this.button12.TabIndex = 22;
@@ -322,7 +403,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = global::SystemUser.Properties.Resources.logout__2_1;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(1050, 683);
+            this.button1.Location = new System.Drawing.Point(1215, 755);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(66, 28);
             this.button1.TabIndex = 5;
@@ -334,46 +415,19 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SystemUser.Properties.Resources.ACMA_logo_1;
-            this.pictureBox1.Location = new System.Drawing.Point(987, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(1142, 51);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(203, 73);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.lbl1.Location = new System.Drawing.Point(1002, 127);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(181, 17);
-            this.lbl1.TabIndex = 23;
-            this.lbl1.Text = "dd-MMM-yyyy  hh:mm:ss tt";
-            this.lbl1.Click += new System.EventHandler(this.lbl1_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.label4.Location = new System.Drawing.Point(1022, 152);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 13);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Welcome : Delushaan Delu";
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1195, 720);
+            this.ClientSize = new System.Drawing.Size(1369, 795);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.button12);
@@ -387,6 +441,7 @@
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard - ACMA Medical Center";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -395,6 +450,9 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -427,5 +485,9 @@
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label5;
     }
 }

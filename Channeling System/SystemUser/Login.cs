@@ -25,7 +25,7 @@ namespace SystemUser
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            ClassLogin login = new ClassLogin();
+            SystemController login = new SystemController();
             string username = txtusername.Text;
             string password = txtpassword.Text;
             login.login_auth(username, password);

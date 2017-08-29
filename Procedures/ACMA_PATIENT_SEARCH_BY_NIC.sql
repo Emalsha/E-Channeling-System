@@ -4,16 +4,17 @@ return varchar2
 is
 temp varchar2(64);
 myexp exception;
+notf varchar2(64) := 'no_user_found';
 begin
   select fullname into temp from acma_patient where nic = nic_no;
   return temp;
      exception when others then 
     if sqlcode = +100 then
-      dbms_output.put_line('No row of data found');
-      return null;
+      --dbms_output.put_line('No row of data found');
+      return notf;
     else
       raise;
-      return null;
+      return notf;
     end if;
 end;
 
@@ -21,7 +22,9 @@ end;
 declare
   nic varchar2(15);
 begin
-  nic := acma_patient_search_by_nic('960290583V');
+  nic := acma_patient_search_by_nic('960290583dV');
   dbms_output.put_line(nic);
 end;
+
+select * from acma_patient
 
