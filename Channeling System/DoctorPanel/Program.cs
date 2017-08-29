@@ -15,7 +15,7 @@ namespace DoctorPanel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DoctorHome());
+            Application.Run(new StartForm( ));
         }
     }
 }
