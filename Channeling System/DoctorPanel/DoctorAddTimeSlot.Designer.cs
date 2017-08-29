@@ -30,34 +30,37 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorAddTimeSlot));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblDashboard = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.timeDoctorEnd = new System.Windows.Forms.DateTimePicker();
             this.lblDayDescription = new System.Windows.Forms.Label();
-            this.txtDoctorTicket = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.timeDoctorBegining = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSunday = new System.Windows.Forms.Button();
+            this.btnMonday = new System.Windows.Forms.Button();
             this.btnSaturday = new System.Windows.Forms.Button();
             this.btnTuesday = new System.Windows.Forms.Button();
             this.btnFriday = new System.Windows.Forms.Button();
             this.btnWendsday = new System.Windows.Forms.Button();
             this.btnThursday = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblDashboard = new System.Windows.Forms.Label();
-            this.btnSunday = new System.Windows.Forms.Button();
-            this.btnMonday = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.timeDoctorBegining = new System.Windows.Forms.DateTimePicker();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.timeDoctorEnd = new System.Windows.Forms.DateTimePicker();
+            this.btnAddDuty = new System.Windows.Forms.Button();
+            this.btnUpdateDuty = new System.Windows.Forms.Button();
+            this.txtDoctorTicket = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorTicket)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,12 +76,34 @@
             this.panel1.Size = new System.Drawing.Size(727, 559);
             this.panel1.TabIndex = 0;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.panel3.Controls.Add(this.lblDashboard);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(742, 40);
+            this.panel3.TabIndex = 24;
+            // 
+            // lblDashboard
+            // 
+            this.lblDashboard.AutoSize = true;
+            this.lblDashboard.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashboard.ForeColor = System.Drawing.Color.White;
+            this.lblDashboard.Location = new System.Drawing.Point(12, 9);
+            this.lblDashboard.Name = "lblDashboard";
+            this.lblDashboard.Size = new System.Drawing.Size(179, 22);
+            this.lblDashboard.TabIndex = 7;
+            this.lblDashboard.Text = "Working Time Slot";
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtDoctorTicket);
+            this.panel2.Controls.Add(this.btnUpdateDuty);
+            this.panel2.Controls.Add(this.btnAddDuty);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.lblDayDescription);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.txtDoctorTicket);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -87,24 +112,60 @@
             this.panel2.Size = new System.Drawing.Size(619, 203);
             this.panel2.TabIndex = 23;
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.timeDoctorEnd);
+            this.panel5.Location = new System.Drawing.Point(328, 89);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(108, 26);
+            this.panel5.TabIndex = 27;
+            // 
+            // timeDoctorEnd
+            // 
+            this.timeDoctorEnd.Cursor = System.Windows.Forms.Cursors.Default;
+            this.timeDoctorEnd.Enabled = false;
+            this.timeDoctorEnd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeDoctorEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.timeDoctorEnd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.timeDoctorEnd.Location = new System.Drawing.Point(-1, -2);
+            this.timeDoctorEnd.Name = "timeDoctorEnd";
+            this.timeDoctorEnd.ShowUpDown = true;
+            this.timeDoctorEnd.Size = new System.Drawing.Size(133, 27);
+            this.timeDoctorEnd.TabIndex = 25;
+            this.timeDoctorEnd.Value = new System.DateTime(2017, 8, 29, 0, 0, 0, 0);
+            // 
             // lblDayDescription
             // 
             this.lblDayDescription.AutoSize = true;
             this.lblDayDescription.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDayDescription.Location = new System.Drawing.Point(171, 13);
             this.lblDayDescription.Name = "lblDayDescription";
-            this.lblDayDescription.Size = new System.Drawing.Size(322, 26);
+            this.lblDayDescription.Size = new System.Drawing.Size(246, 26);
             this.lblDayDescription.TabIndex = 6;
-            this.lblDayDescription.Text = "You Editing Monday Working Times.";
+            this.lblDayDescription.Text = "Select A Day To Edit or Add";
             // 
-            // txtDoctorTicket
+            // panel4
             // 
-            this.txtDoctorTicket.Enabled = false;
-            this.txtDoctorTicket.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoctorTicket.Location = new System.Drawing.Point(328, 121);
-            this.txtDoctorTicket.Name = "txtDoctorTicket";
-            this.txtDoctorTicket.Size = new System.Drawing.Size(42, 27);
-            this.txtDoctorTicket.TabIndex = 27;
+            this.panel4.Controls.Add(this.timeDoctorBegining);
+            this.panel4.Location = new System.Drawing.Point(328, 53);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(108, 30);
+            this.panel4.TabIndex = 26;
+            // 
+            // timeDoctorBegining
+            // 
+            this.timeDoctorBegining.Cursor = System.Windows.Forms.Cursors.Default;
+            this.timeDoctorBegining.Enabled = false;
+            this.timeDoctorBegining.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeDoctorBegining.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.timeDoctorBegining.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.timeDoctorBegining.Location = new System.Drawing.Point(-1, -2);
+            this.timeDoctorBegining.Name = "timeDoctorBegining";
+            this.timeDoctorBegining.ShowUpDown = true;
+            this.timeDoctorBegining.Size = new System.Drawing.Size(133, 27);
+            this.timeDoctorBegining.TabIndex = 24;
+            this.timeDoctorBegining.Value = new System.DateTime(2017, 8, 29, 0, 0, 0, 0);
+            this.timeDoctorBegining.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label3
             // 
@@ -148,6 +209,35 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Days";
+            // 
+            // btnSunday
+            // 
+            this.btnSunday.BackColor = System.Drawing.Color.White;
+            this.btnSunday.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSunday.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSunday.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnSunday.Location = new System.Drawing.Point(547, 38);
+            this.btnSunday.Name = "btnSunday";
+            this.btnSunday.Size = new System.Drawing.Size(60, 60);
+            this.btnSunday.TabIndex = 21;
+            this.btnSunday.Text = "Sun";
+            this.btnSunday.UseVisualStyleBackColor = false;
+            this.btnSunday.Click += new System.EventHandler(this.btnSunday_Click);
+            // 
+            // btnMonday
+            // 
+            this.btnMonday.BackColor = System.Drawing.Color.White;
+            this.btnMonday.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnMonday.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnMonday.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMonday.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMonday.Location = new System.Drawing.Point(14, 38);
+            this.btnMonday.Name = "btnMonday";
+            this.btnMonday.Size = new System.Drawing.Size(60, 60);
+            this.btnMonday.TabIndex = 0;
+            this.btnMonday.Text = "Mon";
+            this.btnMonday.UseVisualStyleBackColor = false;
+            this.btnMonday.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSaturday
             // 
@@ -219,55 +309,6 @@
             this.btnThursday.UseVisualStyleBackColor = false;
             this.btnThursday.Click += new System.EventHandler(this.btnThursday_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
-            this.panel3.Controls.Add(this.lblDashboard);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(742, 40);
-            this.panel3.TabIndex = 24;
-            // 
-            // lblDashboard
-            // 
-            this.lblDashboard.AutoSize = true;
-            this.lblDashboard.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDashboard.ForeColor = System.Drawing.Color.White;
-            this.lblDashboard.Location = new System.Drawing.Point(12, 9);
-            this.lblDashboard.Name = "lblDashboard";
-            this.lblDashboard.Size = new System.Drawing.Size(179, 22);
-            this.lblDashboard.TabIndex = 7;
-            this.lblDashboard.Text = "Working Time Slot";
-            // 
-            // btnSunday
-            // 
-            this.btnSunday.BackColor = System.Drawing.Color.White;
-            this.btnSunday.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSunday.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSunday.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnSunday.Location = new System.Drawing.Point(547, 38);
-            this.btnSunday.Name = "btnSunday";
-            this.btnSunday.Size = new System.Drawing.Size(60, 60);
-            this.btnSunday.TabIndex = 21;
-            this.btnSunday.Text = "Sun";
-            this.btnSunday.UseVisualStyleBackColor = false;
-            this.btnSunday.Click += new System.EventHandler(this.btnSunday_Click);
-            // 
-            // btnMonday
-            // 
-            this.btnMonday.BackColor = System.Drawing.Color.White;
-            this.btnMonday.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnMonday.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnMonday.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonday.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMonday.Location = new System.Drawing.Point(14, 38);
-            this.btnMonday.Name = "btnMonday";
-            this.btnMonday.Size = new System.Drawing.Size(60, 60);
-            this.btnMonday.TabIndex = 0;
-            this.btnMonday.Text = "Mon";
-            this.btnMonday.UseVisualStyleBackColor = false;
-            this.btnMonday.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::DoctorPanel.Properties.Resources.ACMA_logo_1;
@@ -278,50 +319,36 @@
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
             // 
-            // timeDoctorBegining
+            // btnAddDuty
             // 
-            this.timeDoctorBegining.Cursor = System.Windows.Forms.Cursors.Default;
-            this.timeDoctorBegining.Enabled = false;
-            this.timeDoctorBegining.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeDoctorBegining.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.timeDoctorBegining.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.timeDoctorBegining.Location = new System.Drawing.Point(-1, -2);
-            this.timeDoctorBegining.Name = "timeDoctorBegining";
-            this.timeDoctorBegining.ShowUpDown = true;
-            this.timeDoctorBegining.Size = new System.Drawing.Size(133, 27);
-            this.timeDoctorBegining.TabIndex = 25;
-            this.timeDoctorBegining.Value = new System.DateTime(2017, 8, 29, 0, 0, 0, 0);
-            this.timeDoctorBegining.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.btnAddDuty.Location = new System.Drawing.Point(414, 156);
+            this.btnAddDuty.Name = "btnAddDuty";
+            this.btnAddDuty.Size = new System.Drawing.Size(86, 32);
+            this.btnAddDuty.TabIndex = 28;
+            this.btnAddDuty.Text = "Add Time";
+            this.btnAddDuty.UseVisualStyleBackColor = true;
+            this.btnAddDuty.Visible = false;
+            this.btnAddDuty.Click += new System.EventHandler(this.btnAddDuty_Click);
             // 
-            // panel4
+            // btnUpdateDuty
             // 
-            this.panel4.Controls.Add(this.timeDoctorBegining);
-            this.panel4.Location = new System.Drawing.Point(328, 53);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(108, 30);
-            this.panel4.TabIndex = 26;
+            this.btnUpdateDuty.Location = new System.Drawing.Point(414, 156);
+            this.btnUpdateDuty.Name = "btnUpdateDuty";
+            this.btnUpdateDuty.Size = new System.Drawing.Size(86, 32);
+            this.btnUpdateDuty.TabIndex = 29;
+            this.btnUpdateDuty.Text = "Update Time";
+            this.btnUpdateDuty.UseVisualStyleBackColor = true;
+            this.btnUpdateDuty.Visible = false;
+            this.btnUpdateDuty.Click += new System.EventHandler(this.btnUpdateDuty_Click);
             // 
-            // panel5
+            // txtDoctorTicket
             // 
-            this.panel5.Controls.Add(this.timeDoctorEnd);
-            this.panel5.Location = new System.Drawing.Point(328, 89);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(108, 26);
-            this.panel5.TabIndex = 27;
-            // 
-            // timeDoctorEnd
-            // 
-            this.timeDoctorEnd.Cursor = System.Windows.Forms.Cursors.Default;
-            this.timeDoctorEnd.Enabled = false;
-            this.timeDoctorEnd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeDoctorEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.timeDoctorEnd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.timeDoctorEnd.Location = new System.Drawing.Point(-1, -2);
-            this.timeDoctorEnd.Name = "timeDoctorEnd";
-            this.timeDoctorEnd.ShowUpDown = true;
-            this.timeDoctorEnd.Size = new System.Drawing.Size(133, 27);
-            this.timeDoctorEnd.TabIndex = 25;
-            this.timeDoctorEnd.Value = new System.DateTime(2017, 8, 29, 0, 0, 0, 0);
+            this.txtDoctorTicket.Enabled = false;
+            this.txtDoctorTicket.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoctorTicket.Location = new System.Drawing.Point(327, 121);
+            this.txtDoctorTicket.Name = "txtDoctorTicket";
+            this.txtDoctorTicket.Size = new System.Drawing.Size(48, 26);
+            this.txtDoctorTicket.TabIndex = 25;
             // 
             // DoctorAddTimeSlot
             // 
@@ -335,16 +362,16 @@
             this.Name = "DoctorAddTimeSlot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DoctorAddTimeSlot";
-            this.Load += new System.EventHandler(this.DoctorAddTimeSlot_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorTicket)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,7 +389,6 @@
         private System.Windows.Forms.Button btnWendsday;
         private System.Windows.Forms.Button btnThursday;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtDoctorTicket;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -373,5 +399,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DateTimePicker timeDoctorEnd;
+        private System.Windows.Forms.Button btnUpdateDuty;
+        private System.Windows.Forms.Button btnAddDuty;
+        private System.Windows.Forms.NumericUpDown txtDoctorTicket;
     }
 }

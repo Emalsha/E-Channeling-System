@@ -68,6 +68,7 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Doctor.cs" />
+    <Compile Include="Models\DoctorDuty.cs" />
     <Compile Include="Models\DoctorToday.cs" />
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>

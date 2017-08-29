@@ -119,7 +119,44 @@ namespace DoctorPanel
             }
         }
 
-        
+        //Doctor view duties 
+        public List<DoctorDuty> DoctorDutyView(int doctorId)
+        {
+            using (OracleConnection con = new OracleConnection(DBString.GetString()))
+            {
+                con.Open();
+                string sql = "select * from table(ACMA_DUTY_VIEW(:doctor_id))";
+                using (OracleCommand cmd = new OracleCommand(sql, con))
+                {
+                    cmd.Parameters.Add(":doctor_id",6);
+                    OracleDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        List<DoctorDuty> dutyList = new List<DoctorDuty>();
+                        while (reader.Read())
+                        {
+                            decimal dutyId = reader.GetDecimal(0);
+                            int consultingDate = (int)reader.GetDecimal(2);
+                            string timeBegin = reader.GetString(3);
+                            string timeEnd = reader.GetString(4);
+                            int ticketPerDay = (int)reader.GetDecimal(5);
+                            int remainingTicket = (int)reader.GetDecimal(6);
+
+                            DoctorDuty doctorTimesObject = new DoctorDuty(dutyId, consultingDate, timeBegin, timeEnd, ticketPerDay, remainingTicket );
+
+                            dutyList.Add(doctorTimesObject);
+                        }
+                        return dutyList;
+                    }
+                    else
+                    {
+                        return new List<DoctorDuty> { };
+                    }
+
+                }
+            }
+        }
 
     }
 }
