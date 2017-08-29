@@ -188,6 +188,30 @@ namespace SystemUser
                 }
             }
 
+            else if (chkspc.Checked == true)
+            { 
+                string spec = cmbspec.Text;
+
+                SystemController SearchDoctorBySpec = new SystemController();
+
+                List<SearchDoctorModel> ByDoctorSpec = SearchDoctorBySpec.SearchDoctorBySpec(spec);
+                if (ByDoctorSpec.Count() > 0)
+                {
+                    listView1.Items.Clear();
+
+                    foreach (SearchDoctorModel dataRow in ByDoctorSpec)
+                    { 
+                        ListViewItem ListItem = new ListViewItem (dataRow.Doctor_id.ToString());
+                        ListItem.SubItems.Add(dataRow.Fullname);
+                        ListItem.SubItems.Add(dataRow.Weekend.ToString());
+                        ListItem.SubItems.Add(dataRow.Room_number.ToString());
+                        ListItem.SubItems.Add(dataRow.Descriptionl);
+
+                        listView1.Items.Add(ListItem);
+                    }
+                }
+            }
+
             else
             {
                 MessageBox.Show("You can search doctor by NAME or NAME & SPECIALITY or SPECIALITY & DATE, Also make sure that your choice is checked.", "Choice Not Fullfilled to Search", MessageBoxButtons.OK, MessageBoxIcon.Information);

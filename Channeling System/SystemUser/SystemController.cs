@@ -178,5 +178,35 @@ namespace SystemUser
             }
         }
 
+        public List<SearchDoctorModel> SearchDoctorBySpec(string spec)
+        {
+            string oracleDB = Helper.con_string("acma_db");
+            OracleConnection connect = new OracleConnection(oracleDB);
+            connect.Open();
+
+            string query = "select * from table (ACMA_DOCTOR_SEARCH_BY_SPEC(:spec))";
+            OracleCommand cmd = new OracleCommand(query, connect);
+
+            cmd.Parameters.Add(":spec", spec);
+
+            OracleDataReader dReader = cmd.ExecuteReader();
+            if (dReader.HasRows)
+            {
+                List<SearchDoctorModel> dataList = new List<SearchDoctorModel>();
+                while (dReader.Read())
+                {
+                    decimal doctro_id = dReader.GetDecimal(0);
+                    string fullname = dReader.GetString(1);
+                    decimal weekend = dReader.GetDecimal(2);
+                    decimal room_number = dReader.GetDecimal(3);
+                    string description = dReader.GetString(4);
+
+                    dataList.Add(new SearchDoctorModel(doctro_id, fullname, weekend, room_number, description));
+                }
+                return dataList;
+            }
+            return new List<SearchDoctorModel>();
+        }
+
     }
 }
