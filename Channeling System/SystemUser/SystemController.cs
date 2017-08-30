@@ -7,6 +7,7 @@ using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
 using System.Windows.Forms;
 using SystemUser.SystemModel;
+using DoctorPanel.Models;
 
 namespace SystemUser
 {
@@ -206,6 +207,48 @@ namespace SystemUser
                 return dataList;
             }
             return new List<SearchDoctorModel>();
+        }
+
+
+
+        // Add new doctor emalsha...
+        public string AddDoctor(Doctor newDoctor,string username_, string specialty)
+        {
+            using (OracleConnection con = new OracleConnection(Helper.GetString()))
+            {
+                con.Open();
+                string qry = "ACMA_DOCTOR_ADD";
+                using (OracleCommand cmd = new OracleCommand(qry, con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("FULLNAME_", OracleDbType.Varchar2, newDoctor.Fullname, ParameterDirection.Input);
+                    cmd.Parameters.Add("TELEPHONE_", OracleDbType.Decimal, newDoctor.Contact, ParameterDirection.Input);
+                    cmd.Parameters.Add("ADDRESS_", OracleDbType.Varchar2, newDoctor.Address, ParameterDirection.Input);
+                    cmd.Parameters.Add("NIC_", OracleDbType.Varchar2, newDoctor.Nic, ParameterDirection.Input);
+                    cmd.Parameters.Add("AVAILABLE_ON_WEEKEND_", OracleDbType.Decimal, newDoctor.Available_on_weekend, ParameterDirection.Input); // Pass default values
+                    cmd.Parameters.Add("PATIENT_PER_DAY_", OracleDbType.Decimal, newDoctor.Patient_per_day, ParameterDirection.Input);
+                    cmd.Parameters.Add("TIME_PER_PATIENT_", OracleDbType.Decimal,0, ParameterDirection.Input); // Pass default values
+                    cmd.Parameters.Add("ROOM_NUMBER_", OracleDbType.Varchar2, newDoctor.Room_no, ParameterDirection.Input); // Pass default values
+                    cmd.Parameters.Add("USERNAME_", OracleDbType.Varchar2, username_, ParameterDirection.Input); // Pass default values
+                    cmd.Parameters.Add("PASSWORD_", OracleDbType.Varchar2,"123", ParameterDirection.Input); // Pass default values
+                    cmd.Parameters.Add("EMAIL_", OracleDbType.Varchar2, newDoctor.Email, ParameterDirection.Input); // Pass default values
+                    cmd.Parameters.Add("SPECIALTY", OracleDbType.Varchar2, specialty, ParameterDirection.Input);
+                    cmd.Parameters.Add("OUTPUT", OracleDbType.Varchar2, ParameterDirection.Output).Size = 250;
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        return cmd.Parameters["OUTPUT"].Value.ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        return ex.Message;
+                    }
+                }
+            }
+
+
+
         }
 
     }
