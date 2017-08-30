@@ -1,11 +1,12 @@
 create or replace procedure acma_doctor_update_accountinfo(
-doc_id in number,
-usern in varchar2,
-pass in varchar2,
-mail in varchar2)
+doctor_id_ in number,
+username_ in varchar2,
+password_ in varchar2,
+email_ in varchar2)
 as
 begin
-  update acma_doctor set username = usern, password = pass, email = mail where doctor_id = doc_id;
+  update acma_doctor set username = username_, password = password_, email = email_ where doctor_id = doctor_id_;
+  commit;
 end;
   
   

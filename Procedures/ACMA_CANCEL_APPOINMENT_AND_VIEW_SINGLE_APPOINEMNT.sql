@@ -17,6 +17,7 @@ begin
   left join acma_doctor d on ap.doctor_id = d.doctor_id
   where ap. appoinment_id= app_id order by ap.appoinment_id;
   return data_set;
+  
 end;
 
 --client side view and get multiple data
@@ -45,7 +46,7 @@ as
  myexp exception;
 begin
   update acma_appoinment set status = 0 where appoinment_id = app_id;
-
+	commit;
 -- excepetion is not working "I dont know why"
   exception when no_data_found then
       dbms_output.put_line('No Appoinment Found!');

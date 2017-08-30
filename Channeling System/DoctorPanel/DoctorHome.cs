@@ -92,5 +92,10 @@ namespace DoctorPanel
             lblTIme.Text = DateTime.Now.ToLongTimeString();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }

@@ -39,7 +39,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblDoctorEmail = new System.Windows.Forms.Label();
             this.lblDoctorName = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.lstTodayAppoinment = new System.Windows.Forms.ListView();
             this.appoinment_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -84,6 +86,58 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1039, 572);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(153, 256);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 100);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "My Setting";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(46, 256);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 100);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "View History";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // lblTIme
+            // 
+            this.lblTIme.AutoSize = true;
+            this.lblTIme.Location = new System.Drawing.Point(43, 535);
+            this.lblTIme.Name = "lblTIme";
+            this.lblTIme.Size = new System.Drawing.Size(40, 13);
+            this.lblTIme.TabIndex = 11;
+            this.lblTIme.Text = "--:--:-- --";
+            this.lblTIme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(43, 518);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(68, 13);
+            this.lblDate.TabIndex = 10;
+            this.lblDate.Text = "--/--/---- --:--:--";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // imgSetting
+            // 
+            this.imgSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgSetting.Image = global::DoctorPanel.Properties.Resources.settings;
+            this.imgSetting.Location = new System.Drawing.Point(982, 59);
+            this.imgSetting.Name = "imgSetting";
+            this.imgSetting.Size = new System.Drawing.Size(32, 32);
+            this.imgSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgSetting.TabIndex = 9;
+            this.imgSetting.TabStop = false;
+            this.imgSetting.MouseLeave += new System.EventHandler(this.imgSetting_MouseLeave);
+            this.imgSetting.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
             // 
             // button4
             // 
@@ -162,6 +216,16 @@
             this.lblDoctorName.TabIndex = 5;
             this.lblDoctorName.Text = "Dr. Warusa Withana";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DoctorPanel.Properties.Resources.doctor_1_;
+            this.pictureBox2.Location = new System.Drawing.Point(46, 59);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(46, 149);
@@ -170,6 +234,18 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Add Time Slot";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Window;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::DoctorPanel.Properties.Resources.refresh_page_option;
+            this.button1.Location = new System.Drawing.Point(499, 437);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 21);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lstTodayAppoinment
             // 
@@ -236,6 +312,7 @@
             this.panel2.Size = new System.Drawing.Size(1039, 40);
             this.panel2.TabIndex = 0;
             // 
+
             // lblDashboard
             // 
             this.lblDashboard.AutoSize = true;
