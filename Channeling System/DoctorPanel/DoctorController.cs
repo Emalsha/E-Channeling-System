@@ -128,7 +128,7 @@ namespace DoctorPanel
                 string sql = "select * from table(ACMA_DUTY_VIEW(:doctor_id))";
                 using (OracleCommand cmd = new OracleCommand(sql, con))
                 {
-                    cmd.Parameters.Add(":doctor_id",6);
+                    cmd.Parameters.Add(":doctor_id", doctorId);
                     OracleDataReader reader = cmd.ExecuteReader();
 
                     if (reader.HasRows)
