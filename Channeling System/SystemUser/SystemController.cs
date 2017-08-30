@@ -133,7 +133,18 @@ namespace SystemUser
                     decimal room_number = dReader.GetDecimal(3);
                     string description = dReader.GetString(4);
 
-                    dataList.Add(new SearchDoctorModel(doctor_id, fullname, weekend, room_number, description));
+                    string weekend_ = "Available";
+
+                    if (weekend == 0)
+                    {
+                        weekend_ = "Available";
+                    }
+                    else
+                    {
+                        weekend_ = "Not Available";
+                    }
+
+                    dataList.Add(new SearchDoctorModel(doctor_id, fullname, weekend_, room_number, description));
                 }
 
                 return dataList;
@@ -168,7 +179,18 @@ namespace SystemUser
                     decimal room_number = dReader.GetDecimal(3);
                     string description = dReader.GetString(4);
 
-                    dataList.Add(new SearchDoctorModel(doctor_id, fullname, weekend, room_number, description));
+                    string weekend_ = "Available";
+
+                    if (weekend == 0)
+                    {
+                        weekend_ = "Available";
+                    }
+                    else
+                    {
+                        weekend_ = "Not Available";
+                    }
+
+                    dataList.Add(new SearchDoctorModel(doctor_id, fullname, weekend_, room_number, description));
                 }
                 return dataList;
             }
@@ -201,11 +223,88 @@ namespace SystemUser
                     decimal room_number = dReader.GetDecimal(3);
                     string description = dReader.GetString(4);
 
-                    dataList.Add(new SearchDoctorModel(doctro_id, fullname, weekend, room_number, description));
+                    string weekend_ = "Available";
+
+                    if (weekend == 0)
+                    {
+                        weekend_ = "Available";
+                    }
+                    else
+                    {
+                        weekend_ = "Not Available";
+                    }
+
+                    dataList.Add(new SearchDoctorModel(doctro_id, fullname, weekend_, room_number, description));
                 }
                 return dataList;
             }
             return new List<SearchDoctorModel>();
+        }
+
+        public List<SearchDoctorModel> DoctorDutyShedule(int doctor_id)
+        {
+            string oracleDB = Helper.con_string("acma_db");
+            OracleConnection connect = new OracleConnection(oracleDB);
+            connect.Open();
+
+            string query = "select * from table (ACMA_DUTY_VIEW(:doctor_id))";
+            OracleCommand cmd = new OracleCommand(query, connect);
+
+            
+
+            cmd.Parameters.Add(":doctor_id", doctor_id);
+
+            OracleDataReader dReader = cmd.ExecuteReader();
+            if (dReader.HasRows)
+            {
+                List<SearchDoctorModel> dataList = new List<SearchDoctorModel>();
+                
+                while(dReader.Read())
+                    {
+                        decimal doctor_id_ = dReader.GetDecimal(1);
+                        decimal consultind_date = dReader.GetDecimal(2);                       
+                        string consulting_time_start = dReader.GetString(3);
+                        string consulting_time_end = dReader.GetString(4);
+                        decimal ticket = dReader.GetDecimal(5);
+
+                        string day = "Monday";
+
+
+                        if (consultind_date == 1)
+                        {
+                            day = "Sunday";
+                        }
+                        else if (consultind_date == 2)
+                        {
+                            day = "Monday";
+                        }
+                        else if (consultind_date == 3)
+                        {
+                            day = "Tuesday";
+                        }
+                        else if (consultind_date == 4)
+                        {
+                            day = "Wednesday";
+                        }
+                        else if (consultind_date == 5)
+                        {
+                            day = "Thursday";
+                        }
+                        else if (consultind_date == 6)
+                        {
+                            day = "Friday";
+                        }
+                        else if (consultind_date == 7)
+                        {
+                            day = "Saturday";
+                        }
+
+                        dataList.Add(new SearchDoctorModel(doctor_id_, day, consulting_time_start , consulting_time_end, 5));
+                    }
+                return dataList;
+            }
+            return new List<SearchDoctorModel>();
+            
         }
 
     }

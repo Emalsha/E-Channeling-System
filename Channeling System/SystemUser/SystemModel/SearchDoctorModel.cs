@@ -23,9 +23,9 @@ namespace SystemUser.SystemModel
             set { fullname = value; }
         }
 
-        private decimal weekend;
+        private string weekend;
 
-        public decimal Weekend
+        public string Weekend
         {
             get { return weekend; }
             set { weekend = value; }
@@ -47,7 +47,45 @@ namespace SystemUser.SystemModel
             set { descriptionl = value; }
         }
 
-        public SearchDoctorModel(decimal doctor_id_, string fullname_, decimal weekend_, decimal room_number_, string description_)
+        private string consulting_date;
+
+        public string Consulting_date
+        {
+            get { return consulting_date; }
+            set { consulting_date = value; }
+        }
+        private string consulting_time_start;
+
+        public string Consulting_time_start
+        {
+            get { return consulting_time_start; }
+            set { consulting_time_start = value; }
+        }
+        private string consulting_time_end;
+
+        public string Consulting_time_end
+        {
+            get { return consulting_time_end; }
+            set { consulting_time_end = value; }
+        }
+        private decimal tickets;
+
+        public decimal Tickets
+        {
+            get { return tickets; }
+            set { tickets = value; }
+        }
+
+        public SearchDoctorModel(decimal doctor_id_, string consulting_date_, string consulting_time_start_, string consulting_time_end_, decimal tickets_)
+        {
+            this.doctor_id = doctor_id_;
+            this.consulting_date = consulting_date_;
+            this.consulting_time_start = consulting_time_start_;
+            this.consulting_time_end = consulting_time_end_;
+            this.tickets = tickets_;
+        }
+
+        public SearchDoctorModel(decimal doctor_id_, string fullname_, string weekend_, decimal room_number_, string description_)
         {
             this.doctor_id = doctor_id_;
             this.fullname = fullname_;
