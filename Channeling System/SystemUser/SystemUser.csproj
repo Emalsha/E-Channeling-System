@@ -67,6 +67,7 @@
     </Compile>
     <Compile Include="AddAppointmentDoctorInfo.Designer.cs">
       <DependentUpon>AddAppointmentDoctorInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +117,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddAppointmentDoctorInfo.resx">
       <DependentUpon>AddAppointmentDoctorInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddDoctor.resx">
       <DependentUpon>AddDoctor.cs</DependentUpon>
     </EmbeddedResource>

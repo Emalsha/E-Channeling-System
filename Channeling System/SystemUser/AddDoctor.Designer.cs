@@ -28,41 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddDoctor));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddDoctor = new System.Windows.Forms.Button();
+            this.btnAddDoctorCancel = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtDoctorName = new System.Windows.Forms.TextBox();
-            this.txtDoctorContact = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDoctorAddress = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDoctorNic = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.availabilityYes = new System.Windows.Forms.RadioButton();
-            this.availabilityNo = new System.Windows.Forms.RadioButton();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtDoctorPatientPerDay = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtDoctorRoomNumber = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnAddDoctorCancel = new System.Windows.Forms.Button();
-            this.btnAddDoctor = new System.Windows.Forms.Button();
-            this.txtDoctorUsername = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txtDoctorSpeciality = new System.Windows.Forms.ComboBox();
             this.txtDoctorEmail = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtDoctorSpeciality = new System.Windows.Forms.ComboBox();
+            this.txtDoctorUsername = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtDoctorRoomNumber = new System.Windows.Forms.NumericUpDown();
+            this.txtDoctorContact = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDoctorPatientPerDay = new System.Windows.Forms.NumericUpDown();
+            this.txtDoctorName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.availabilityNo = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.availabilityYes = new System.Windows.Forms.RadioButton();
+            this.txtDoctorAddress = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDoctorNic = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderContact = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderAddress = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorPatientPerDay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorRoomNumber)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorRoomNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorPatientPerDay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderContact)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAddress)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,6 +84,40 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(794, 541);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SystemUser.Properties.Resources.ACMA_logo_1;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 473);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(164, 56);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAddDoctor
+            // 
+            this.btnAddDoctor.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAddDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddDoctor.Location = new System.Drawing.Point(501, 479);
+            this.btnAddDoctor.Name = "btnAddDoctor";
+            this.btnAddDoctor.Size = new System.Drawing.Size(96, 35);
+            this.btnAddDoctor.TabIndex = 20;
+            this.btnAddDoctor.Text = "Add Doctor";
+            this.btnAddDoctor.UseVisualStyleBackColor = true;
+            this.btnAddDoctor.Click += new System.EventHandler(this.btnAddDoctor_Click);
+            // 
+            // btnAddDoctorCancel
+            // 
+            this.btnAddDoctorCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAddDoctorCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddDoctorCancel.Location = new System.Drawing.Point(610, 479);
+            this.btnAddDoctorCancel.Name = "btnAddDoctorCancel";
+            this.btnAddDoctorCancel.Size = new System.Drawing.Size(96, 35);
+            this.btnAddDoctorCancel.TabIndex = 19;
+            this.btnAddDoctorCancel.Text = "Cancel";
+            this.btnAddDoctorCancel.UseVisualStyleBackColor = true;
+            this.btnAddDoctorCancel.Click += new System.EventHandler(this.btnAddDoctorCancel_Click);
             // 
             // panel2
             // 
@@ -97,156 +138,6 @@
             this.label1.Size = new System.Drawing.Size(125, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Doctor";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Name : ";
-            // 
-            // txtDoctorName
-            // 
-            this.txtDoctorName.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoctorName.Location = new System.Drawing.Point(117, 8);
-            this.txtDoctorName.Name = "txtDoctorName";
-            this.txtDoctorName.Size = new System.Drawing.Size(248, 25);
-            this.txtDoctorName.TabIndex = 2;
-            // 
-            // txtDoctorContact
-            // 
-            this.txtDoctorContact.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoctorContact.Location = new System.Drawing.Point(117, 45);
-            this.txtDoctorContact.Name = "txtDoctorContact";
-            this.txtDoctorContact.Size = new System.Drawing.Size(248, 25);
-            this.txtDoctorContact.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Contact : ";
-            // 
-            // txtDoctorAddress
-            // 
-            this.txtDoctorAddress.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoctorAddress.Location = new System.Drawing.Point(117, 83);
-            this.txtDoctorAddress.Name = "txtDoctorAddress";
-            this.txtDoctorAddress.Size = new System.Drawing.Size(248, 25);
-            this.txtDoctorAddress.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 16);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Address : ";
-            // 
-            // txtDoctorNic
-            // 
-            this.txtDoctorNic.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoctorNic.Location = new System.Drawing.Point(117, 124);
-            this.txtDoctorNic.Name = "txtDoctorNic";
-            this.txtDoctorNic.Size = new System.Drawing.Size(248, 25);
-            this.txtDoctorNic.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(44, 128);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "NIC :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(44, 168);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 16);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Speciality : ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(44, 284);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(144, 16);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Weekend Availability : ";
-            // 
-            // availabilityYes
-            // 
-            this.availabilityYes.AutoSize = true;
-            this.availabilityYes.Location = new System.Drawing.Point(212, 275);
-            this.availabilityYes.Name = "availabilityYes";
-            this.availabilityYes.Size = new System.Drawing.Size(68, 17);
-            this.availabilityYes.TabIndex = 12;
-            this.availabilityYes.TabStop = true;
-            this.availabilityYes.Text = "Available";
-            this.availabilityYes.UseVisualStyleBackColor = true;
-            // 
-            // availabilityNo
-            // 
-            this.availabilityNo.AutoSize = true;
-            this.availabilityNo.Location = new System.Drawing.Point(212, 298);
-            this.availabilityNo.Name = "availabilityNo";
-            this.availabilityNo.Size = new System.Drawing.Size(88, 17);
-            this.availabilityNo.TabIndex = 13;
-            this.availabilityNo.TabStop = true;
-            this.availabilityNo.Text = "Not Available";
-            this.availabilityNo.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(44, 329);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 16);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Patient Per Day : ";
-            // 
-            // txtDoctorPatientPerDay
-            // 
-            this.txtDoctorPatientPerDay.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoctorPatientPerDay.Location = new System.Drawing.Point(170, 326);
-            this.txtDoctorPatientPerDay.Name = "txtDoctorPatientPerDay";
-            this.txtDoctorPatientPerDay.Size = new System.Drawing.Size(60, 25);
-            this.txtDoctorPatientPerDay.TabIndex = 15;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(44, 370);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 16);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Room Number :";
-            // 
-            // txtDoctorRoomNumber
-            // 
-            this.txtDoctorRoomNumber.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoctorRoomNumber.Location = new System.Drawing.Point(170, 367);
-            this.txtDoctorRoomNumber.Name = "txtDoctorRoomNumber";
-            this.txtDoctorRoomNumber.Size = new System.Drawing.Size(60, 25);
-            this.txtDoctorRoomNumber.TabIndex = 17;
             // 
             // panel3
             // 
@@ -276,47 +167,16 @@
             this.panel3.Size = new System.Drawing.Size(401, 400);
             this.panel3.TabIndex = 18;
             // 
-            // btnAddDoctorCancel
+            // txtDoctorSpeciality
             // 
-            this.btnAddDoctorCancel.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnAddDoctorCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddDoctorCancel.Location = new System.Drawing.Point(610, 479);
-            this.btnAddDoctorCancel.Name = "btnAddDoctorCancel";
-            this.btnAddDoctorCancel.Size = new System.Drawing.Size(96, 35);
-            this.btnAddDoctorCancel.TabIndex = 19;
-            this.btnAddDoctorCancel.Text = "Cancel";
-            this.btnAddDoctorCancel.UseVisualStyleBackColor = true;
-            this.btnAddDoctorCancel.Click += new System.EventHandler(this.btnAddDoctorCancel_Click);
-            // 
-            // btnAddDoctor
-            // 
-            this.btnAddDoctor.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnAddDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddDoctor.Location = new System.Drawing.Point(501, 479);
-            this.btnAddDoctor.Name = "btnAddDoctor";
-            this.btnAddDoctor.Size = new System.Drawing.Size(96, 35);
-            this.btnAddDoctor.TabIndex = 20;
-            this.btnAddDoctor.Text = "Add Doctor";
-            this.btnAddDoctor.UseVisualStyleBackColor = true;
-            this.btnAddDoctor.Click += new System.EventHandler(this.btnAddDoctor_Click);
-            // 
-            // txtDoctorUsername
-            // 
-            this.txtDoctorUsername.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoctorUsername.Location = new System.Drawing.Point(117, 202);
-            this.txtDoctorUsername.Name = "txtDoctorUsername";
-            this.txtDoctorUsername.Size = new System.Drawing.Size(248, 25);
-            this.txtDoctorUsername.TabIndex = 18;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(44, 206);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 16);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Username : ";
+            this.txtDoctorSpeciality.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtDoctorSpeciality.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.txtDoctorSpeciality.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoctorSpeciality.FormattingEnabled = true;
+            this.txtDoctorSpeciality.Location = new System.Drawing.Point(117, 164);
+            this.txtDoctorSpeciality.Name = "txtDoctorSpeciality";
+            this.txtDoctorSpeciality.Size = new System.Drawing.Size(248, 24);
+            this.txtDoctorSpeciality.TabIndex = 22;
             // 
             // txtDoctorEmail
             // 
@@ -336,24 +196,193 @@
             this.label11.TabIndex = 21;
             this.label11.Text = "E-mail : ";
             // 
-            // pictureBox1
+            // txtDoctorUsername
             // 
-            this.pictureBox1.Image = global::SystemUser.Properties.Resources.ACMA_logo_1;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 473);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(164, 56);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
+            this.txtDoctorUsername.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoctorUsername.Location = new System.Drawing.Point(117, 202);
+            this.txtDoctorUsername.Name = "txtDoctorUsername";
+            this.txtDoctorUsername.Size = new System.Drawing.Size(248, 25);
+            this.txtDoctorUsername.TabIndex = 18;
             // 
-            // txtDoctorSpeciality
+            // label10
             // 
-            this.txtDoctorSpeciality.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoctorSpeciality.FormattingEnabled = true;
-            this.txtDoctorSpeciality.Location = new System.Drawing.Point(117, 164);
-            this.txtDoctorSpeciality.Name = "txtDoctorSpeciality";
-            this.txtDoctorSpeciality.Size = new System.Drawing.Size(248, 24);
-            this.txtDoctorSpeciality.TabIndex = 22;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(44, 206);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 16);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Username : ";
+            // 
+            // txtDoctorRoomNumber
+            // 
+            this.txtDoctorRoomNumber.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoctorRoomNumber.Location = new System.Drawing.Point(170, 367);
+            this.txtDoctorRoomNumber.Name = "txtDoctorRoomNumber";
+            this.txtDoctorRoomNumber.Size = new System.Drawing.Size(60, 25);
+            this.txtDoctorRoomNumber.TabIndex = 17;
+            // 
+            // txtDoctorContact
+            // 
+            this.txtDoctorContact.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoctorContact.Location = new System.Drawing.Point(117, 45);
+            this.txtDoctorContact.Name = "txtDoctorContact";
+            this.txtDoctorContact.Size = new System.Drawing.Size(248, 25);
+            this.txtDoctorContact.TabIndex = 4;
+            this.txtDoctorContact.CausesValidationChanged += new System.EventHandler(this.btnAddDoctor_Click);
+            this.txtDoctorContact.Validating += new System.ComponentModel.CancelEventHandler(this.txtDoctorContact_Validating);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(44, 370);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(102, 16);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Room Number :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(44, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Name : ";
+            // 
+            // txtDoctorPatientPerDay
+            // 
+            this.txtDoctorPatientPerDay.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoctorPatientPerDay.Location = new System.Drawing.Point(170, 326);
+            this.txtDoctorPatientPerDay.Name = "txtDoctorPatientPerDay";
+            this.txtDoctorPatientPerDay.Size = new System.Drawing.Size(60, 25);
+            this.txtDoctorPatientPerDay.TabIndex = 15;
+            // 
+            // txtDoctorName
+            // 
+            this.txtDoctorName.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoctorName.Location = new System.Drawing.Point(117, 8);
+            this.txtDoctorName.Name = "txtDoctorName";
+            this.txtDoctorName.Size = new System.Drawing.Size(248, 25);
+            this.txtDoctorName.TabIndex = 2;
+            this.txtDoctorName.CausesValidationChanged += new System.EventHandler(this.btnAddDoctor_Click);
+            this.txtDoctorName.Validating += new System.ComponentModel.CancelEventHandler(this.txtDoctorName_Validating);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(44, 329);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(110, 16);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Patient Per Day : ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(44, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Contact : ";
+            // 
+            // availabilityNo
+            // 
+            this.availabilityNo.AutoSize = true;
+            this.availabilityNo.Location = new System.Drawing.Point(212, 298);
+            this.availabilityNo.Name = "availabilityNo";
+            this.availabilityNo.Size = new System.Drawing.Size(88, 17);
+            this.availabilityNo.TabIndex = 13;
+            this.availabilityNo.TabStop = true;
+            this.availabilityNo.Text = "Not Available";
+            this.availabilityNo.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(44, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 16);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Address : ";
+            // 
+            // availabilityYes
+            // 
+            this.availabilityYes.AutoSize = true;
+            this.availabilityYes.Location = new System.Drawing.Point(212, 275);
+            this.availabilityYes.Name = "availabilityYes";
+            this.availabilityYes.Size = new System.Drawing.Size(68, 17);
+            this.availabilityYes.TabIndex = 12;
+            this.availabilityYes.TabStop = true;
+            this.availabilityYes.Text = "Available";
+            this.availabilityYes.UseVisualStyleBackColor = true;
+            // 
+            // txtDoctorAddress
+            // 
+            this.txtDoctorAddress.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoctorAddress.Location = new System.Drawing.Point(117, 83);
+            this.txtDoctorAddress.Name = "txtDoctorAddress";
+            this.txtDoctorAddress.Size = new System.Drawing.Size(248, 25);
+            this.txtDoctorAddress.TabIndex = 6;
+            this.txtDoctorAddress.CausesValidationChanged += new System.EventHandler(this.btnAddDoctor_Click);
+            this.txtDoctorAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txtDoctorAddress_Validating);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(44, 284);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(144, 16);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Weekend Availability : ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(44, 128);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "NIC :";
+            // 
+            // txtDoctorNic
+            // 
+            this.txtDoctorNic.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoctorNic.Location = new System.Drawing.Point(117, 124);
+            this.txtDoctorNic.Name = "txtDoctorNic";
+            this.txtDoctorNic.Size = new System.Drawing.Size(248, 25);
+            this.txtDoctorNic.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(44, 168);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 16);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Speciality : ";
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
+            // 
+            // errorProviderContact
+            // 
+            this.errorProviderContact.ContainerControl = this;
+            this.errorProviderContact.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderContact.Icon")));
+            // 
+            // errorProviderAddress
+            // 
+            this.errorProviderAddress.ContainerControl = this;
             // 
             // AddDoctor
             // 
@@ -368,13 +397,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddDoctor";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorPatientPerDay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorRoomNumber)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorRoomNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorPatientPerDay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderContact)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAddress)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -409,5 +441,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox txtDoctorSpeciality;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.ErrorProvider errorProviderContact;
+        private System.Windows.Forms.ErrorProvider errorProviderAddress;
     }
 }

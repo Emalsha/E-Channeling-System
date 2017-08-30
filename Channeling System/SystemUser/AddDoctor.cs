@@ -80,5 +80,39 @@ namespace SystemUser
  
         }
 
+        private void txtDoctorName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtDoctorName.Text))
+            {
+                txtDoctorName.Focus();
+                errorProvider.SetError(txtDoctorName, "Name should not be empty!");
+            }
+        }
+
+        private void txtDoctorContact_Validating(object sender, CancelEventArgs e)
+        {
+            decimal res;
+            if (string.IsNullOrEmpty(txtDoctorContact.Text) || !decimal.TryParse(txtDoctorContact.Text,out res))
+            {
+                txtDoctorContact.Focus();
+                errorProviderContact.SetError(txtDoctorContact, "Contact number should provide and only numbers accept!");
+            }
+
+            if (txtDoctorContact.Text.Length != 10)
+            {
+                txtDoctorContact.Focus();
+                errorProviderContact.SetError(txtDoctorContact,"Need 10 numbers.");
+            }
+        }
+
+        private void txtDoctorAddress_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtDoctorAddress.Text))
+            {
+                txtDoctorAddress.Focus();
+                errorProviderAddress.SetError(txtDoctorAddress, "Address should provide!");
+            }
+        }
+
     }
 }
