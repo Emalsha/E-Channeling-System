@@ -7,13 +7,7 @@ namespace DoctorPanel.Models
 {
     public class DoctorDuty
     {
-        decimal dutyId;
-
-        public decimal DutyId
-        {
-            get { return dutyId; }
-            set { dutyId = value; }
-        }
+        
         int consultingDate;
 
         public int ConsultingDate
@@ -62,16 +56,6 @@ namespace DoctorPanel.Models
         public DoctorDuty()
         {
 
-        }
-
-        public DoctorDuty(decimal dutyId,int consultingDate,string timeBegin,string timeEnd,int ticketPerDay,int remainingTicket)
-        {
-            this.dutyId = dutyId;
-            this.consultingDate = consultingDate;
-            this.timeBegin = timeBegin;
-            this.timeEnd = timeEnd;
-            this.ticketPerDay = ticketPerDay;
-            this.remainingTicket = remainingTicket;
         }
 
         public DoctorDuty(int doctorId, int consultingDate, string timeBegin, string timeEnd, int ticketPerDay, int remainingTicket)

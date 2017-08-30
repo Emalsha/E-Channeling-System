@@ -136,14 +136,14 @@ namespace DoctorPanel
                         List<DoctorDuty> dutyList = new List<DoctorDuty>();
                         while (reader.Read())
                         {
-                            decimal dutyId = reader.GetDecimal(0);
+                            int doctorId_ = (int)reader.GetDecimal(1);
                             int consultingDate = (int)reader.GetDecimal(2);
                             string timeBegin = reader.GetString(3);
                             string timeEnd = reader.GetString(4);
                             int ticketPerDay = (int)reader.GetDecimal(5);
                             int remainingTicket = (int)reader.GetDecimal(6);
 
-                            DoctorDuty doctorTimesObject = new DoctorDuty(dutyId, consultingDate, timeBegin, timeEnd, ticketPerDay, remainingTicket );
+                            DoctorDuty doctorTimesObject = new DoctorDuty(doctorId_, consultingDate, timeBegin, timeEnd, ticketPerDay, remainingTicket);
 
                             dutyList.Add(doctorTimesObject);
                         }
@@ -154,6 +154,68 @@ namespace DoctorPanel
                         return new List<DoctorDuty> { };
                     }
 
+                }
+            }
+        }
+
+        //Doctor duty update 
+        public string DoctorDutyUpdate(DoctorDuty doctorDuty)
+        {
+            using (OracleConnection con = new OracleConnection(DBString.GetString()))
+            {
+                con.Open();
+                string qry = "ACMA_DUTY_UPDATE";
+                using (OracleCommand cmd = new OracleCommand(qry,con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("DOCTOR_ID_", OracleDbType.Decimal, doctorDuty.DoctorId, ParameterDirection.Input);
+                    cmd.Parameters.Add("CONSULTING_DATE_", OracleDbType.Decimal, doctorDuty.ConsultingDate, ParameterDirection.Input);
+                    cmd.Parameters.Add("CONSULTING_TIME_BEGIN_", OracleDbType.Varchar2, doctorDuty.TimeBegin, ParameterDirection.Input);
+                    cmd.Parameters.Add("CONSULTING_TIME_END_", OracleDbType.Varchar2, doctorDuty.TimeEnd, ParameterDirection.Input);
+                    cmd.Parameters.Add("TICKETS_PER_DAY_", OracleDbType.Decimal, doctorDuty.TicketPerDay, ParameterDirection.Input);
+                    cmd.Parameters.Add("OUTPUT",OracleDbType.Varchar2,ParameterDirection.Output).Size = 250;
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        return cmd.Parameters["OUTPUT"].Value.ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        return ex.Message;
+                    }
+                }
+            }
+        }
+
+        //Doctor duty add 
+        public string DoctorDutyAdd(DoctorDuty doctorDuty)
+        {
+            using (OracleConnection con = new OracleConnection(DBString.GetString()))
+            {
+                con.Open();
+                string qry = "ACMA_DUTY_ADD";
+                using (OracleCommand cmd = new OracleCommand(qry, con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("DOCTOR_ID_", OracleDbType.Decimal, doctorDuty.DoctorId, ParameterDirection.Input);
+                    cmd.Parameters.Add("CONSULTING_DATE_", OracleDbType.Decimal, doctorDuty.ConsultingDate, ParameterDirection.Input);
+                    cmd.Parameters.Add("CONSULTING_TIME_BEGIN_", OracleDbType.Varchar2, doctorDuty.TimeBegin, ParameterDirection.Input);
+                    cmd.Parameters.Add("CONSULTING_TIME_END_", OracleDbType.Varchar2, doctorDuty.TimeEnd, ParameterDirection.Input);
+                    cmd.Parameters.Add("LOCK_STATUS_", OracleDbType.Decimal, 0, ParameterDirection.Input); // Pass default values
+                    cmd.Parameters.Add("TICKETS_PER_DAY_", OracleDbType.Decimal, doctorDuty.TicketPerDay, ParameterDirection.Input);
+                    cmd.Parameters.Add("REMAINING_TICKET_", OracleDbType.Decimal, doctorDuty.TicketPerDay, ParameterDirection.Input); // Pass default values
+                    cmd.Parameters.Add("OUTPUT", OracleDbType.Varchar2, ParameterDirection.Output).Size = 250;
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        return cmd.Parameters["OUTPUT"].Value.ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        return ex.Message;
+                    }
                 }
             }
         }

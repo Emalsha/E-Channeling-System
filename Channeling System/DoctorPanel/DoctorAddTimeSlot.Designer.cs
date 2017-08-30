@@ -33,6 +33,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtDoctorTicket = new System.Windows.Forms.NumericUpDown();
+            this.btnUpdateDuty = new System.Windows.Forms.Button();
+            this.btnAddDuty = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.timeDoctorEnd = new System.Windows.Forms.DateTimePicker();
             this.lblDayDescription = new System.Windows.Forms.Label();
@@ -50,17 +53,15 @@
             this.btnWendsday = new System.Windows.Forms.Button();
             this.btnThursday = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnAddDuty = new System.Windows.Forms.Button();
-            this.btnUpdateDuty = new System.Windows.Forms.Button();
-            this.txtDoctorTicket = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorTicket)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorTicket)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,6 +99,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.txtDoctorTicket);
             this.panel2.Controls.Add(this.btnUpdateDuty);
             this.panel2.Controls.Add(this.btnAddDuty);
@@ -111,6 +113,37 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(619, 203);
             this.panel2.TabIndex = 23;
+            // 
+            // txtDoctorTicket
+            // 
+            this.txtDoctorTicket.Enabled = false;
+            this.txtDoctorTicket.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDoctorTicket.Location = new System.Drawing.Point(327, 121);
+            this.txtDoctorTicket.Name = "txtDoctorTicket";
+            this.txtDoctorTicket.Size = new System.Drawing.Size(48, 26);
+            this.txtDoctorTicket.TabIndex = 25;
+            // 
+            // btnUpdateDuty
+            // 
+            this.btnUpdateDuty.Location = new System.Drawing.Point(414, 156);
+            this.btnUpdateDuty.Name = "btnUpdateDuty";
+            this.btnUpdateDuty.Size = new System.Drawing.Size(86, 32);
+            this.btnUpdateDuty.TabIndex = 29;
+            this.btnUpdateDuty.Text = "Update Time";
+            this.btnUpdateDuty.UseVisualStyleBackColor = true;
+            this.btnUpdateDuty.Visible = false;
+            this.btnUpdateDuty.Click += new System.EventHandler(this.btnUpdateDuty_Click);
+            // 
+            // btnAddDuty
+            // 
+            this.btnAddDuty.Location = new System.Drawing.Point(414, 156);
+            this.btnAddDuty.Name = "btnAddDuty";
+            this.btnAddDuty.Size = new System.Drawing.Size(86, 32);
+            this.btnAddDuty.TabIndex = 28;
+            this.btnAddDuty.Text = "Add Time";
+            this.btnAddDuty.UseVisualStyleBackColor = true;
+            this.btnAddDuty.Visible = false;
+            this.btnAddDuty.Click += new System.EventHandler(this.btnAddDuty_Click);
             // 
             // panel5
             // 
@@ -234,7 +267,7 @@
             this.btnMonday.Location = new System.Drawing.Point(14, 38);
             this.btnMonday.Name = "btnMonday";
             this.btnMonday.Size = new System.Drawing.Size(60, 60);
-            this.btnMonday.TabIndex = 0;
+            this.btnMonday.TabIndex = 15;
             this.btnMonday.Text = "Mon";
             this.btnMonday.UseVisualStyleBackColor = false;
             this.btnMonday.Click += new System.EventHandler(this.button1_Click);
@@ -319,36 +352,15 @@
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
             // 
-            // btnAddDuty
+            // button1
             // 
-            this.btnAddDuty.Location = new System.Drawing.Point(414, 156);
-            this.btnAddDuty.Name = "btnAddDuty";
-            this.btnAddDuty.Size = new System.Drawing.Size(86, 32);
-            this.btnAddDuty.TabIndex = 28;
-            this.btnAddDuty.Text = "Add Time";
-            this.btnAddDuty.UseVisualStyleBackColor = true;
-            this.btnAddDuty.Visible = false;
-            this.btnAddDuty.Click += new System.EventHandler(this.btnAddDuty_Click);
-            // 
-            // btnUpdateDuty
-            // 
-            this.btnUpdateDuty.Location = new System.Drawing.Point(414, 156);
-            this.btnUpdateDuty.Name = "btnUpdateDuty";
-            this.btnUpdateDuty.Size = new System.Drawing.Size(86, 32);
-            this.btnUpdateDuty.TabIndex = 29;
-            this.btnUpdateDuty.Text = "Update Time";
-            this.btnUpdateDuty.UseVisualStyleBackColor = true;
-            this.btnUpdateDuty.Visible = false;
-            this.btnUpdateDuty.Click += new System.EventHandler(this.btnUpdateDuty_Click);
-            // 
-            // txtDoctorTicket
-            // 
-            this.txtDoctorTicket.Enabled = false;
-            this.txtDoctorTicket.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDoctorTicket.Location = new System.Drawing.Point(327, 121);
-            this.txtDoctorTicket.Name = "txtDoctorTicket";
-            this.txtDoctorTicket.Size = new System.Drawing.Size(48, 26);
-            this.txtDoctorTicket.TabIndex = 25;
+            this.button1.Location = new System.Drawing.Point(516, 156);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 32);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // DoctorAddTimeSlot
             // 
@@ -367,11 +379,11 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorTicket)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDoctorTicket)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,5 +414,6 @@
         private System.Windows.Forms.Button btnUpdateDuty;
         private System.Windows.Forms.Button btnAddDuty;
         private System.Windows.Forms.NumericUpDown txtDoctorTicket;
+        private System.Windows.Forms.Button button1;
     }
 }

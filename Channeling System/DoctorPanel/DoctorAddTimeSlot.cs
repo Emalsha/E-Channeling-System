@@ -218,7 +218,13 @@ namespace DoctorPanel
         // Add and update btn click event
         private void btnAddDuty_Click(object sender, EventArgs e)
         {
+            var confirmation = MessageBox.Show("You are tring to add new working time to the system.", "Confirm !", MessageBoxButtons.YesNo);
+            if (confirmation == DialogResult.Yes)
+            {
+                AddDuty(6);
+            }
 
+            
         }
 
         private void btnUpdateDuty_Click(object sender, EventArgs e)
@@ -297,21 +303,31 @@ namespace DoctorPanel
             newObj.TimeBegin = timeDoctorBegining.Value.ToString("HH:mm") + ":00";
             newObj.TimeEnd = timeDoctorEnd.Value.ToString("HH:mm")+":00";
 
-            //TODO : in doctor contorller add function
+            DoctorController dc = new DoctorController();
+            string res = dc.DoctorDutyAdd(newObj);
+            MessageBox.Show(res);
+            GetDoctorDuty();
 
         }
 
         private void UpdateDuty(DoctorDuty doctorDuty)
         {
             doctorDuty.TicketPerDay = (int)txtDoctorTicket.Value;
-            doctorDuty.TimeBegin = timeDoctorBegining.Text;
-            doctorDuty.TimeEnd = timeDoctorEnd.Text;
+            doctorDuty.TimeBegin = timeDoctorBegining.Value.ToString("HH:mm") + ":00";
+            doctorDuty.TimeEnd = timeDoctorEnd.Value.ToString("HH:mm") + ":00";
             Console.WriteLine(timeDoctorBegining.Value.ToString("HH:mm") + ":00");
 
-            //TODO : in doctor controller update function
+            DoctorController dc = new DoctorController();
+            string res = dc.DoctorDutyUpdate(doctorDuty);
+            MessageBox.Show(res);
+            GetDoctorDuty();
         }
 
-        // TODO : remove auto focus to button
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
 
         // Sunday -> 1 , Monday -> 2 ...
         
