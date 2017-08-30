@@ -51,8 +51,22 @@ namespace SystemUser
                     listView1.Items.Add(ListItem);
                 }
             }
+
+            //double click recode seletion function
+            listView1.MouseDoubleClick += new MouseEventHandler(listView1_doubleclick);
             
         }
+
+        private void listView1_doubleclick(object sender, MouseEventArgs e)
+        {
+            string doctor_id = listView1.SelectedItems[0].SubItems[0].Text.ToString();
+            string consulting_day = listView1.SelectedItems[0].SubItems[1].Text.ToString();
+            string appoinment_time = listView1.SelectedItems[0].SubItems[2].Text.ToString();
+            string description = lbl_doctor_description.Text;
+            AddAppoinmentSearchPatient SearchPatient_ = new AddAppoinmentSearchPatient(doctor_id, consulting_day, appoinment_time, description);
+            SearchPatient_.Show();
+        }
+        
 
         private void AddAppointmentDoctorInfo_Load(object sender, EventArgs e)
         {

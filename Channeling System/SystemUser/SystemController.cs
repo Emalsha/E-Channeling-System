@@ -110,6 +110,8 @@ namespace SystemUser
 
         }
 
+        //public void addAppoinment(int patient_id, int doctor_id, string sysdate, )
+
         public List<SearchDoctorModel> SearchDoctorByName(string doctorName)
         {
             string oracleDB = Helper.con_string("acma_db");
