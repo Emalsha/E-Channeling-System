@@ -15,7 +15,7 @@ namespace DoctorPanel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DoctorAddTimeSlot( ));
+            Application.Run(new DoctorHome(4)); // This doctor id should come from login
         }
     }
 }

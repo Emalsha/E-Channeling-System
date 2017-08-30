@@ -18,13 +18,16 @@ CREATE OR REPLACE PROCEDURE ACMA_DOCTOR_ADD(
        ROOM_NUMBER_ IN VARCHAR2,
        USERNAME_ IN VARCHAR,
        PASSWORD_ IN VARCHAR,
-       EMAIL_ IN VARCHAR2
+       EMAIL_ IN VARCHAR2,
+       DOCTOR_SPECILATY IN VARCHAR2,
+       OUTPUT OUT VARCHAR2
 )
 IS
+  DOCTOR_ID NUMBER := ACMA_DOCTOR_ID.NEXTVAL;
 BEGIN
   INSERT INTO ACMA_DOCTOR
   VALUES(
-       ACMA_DOCTOR_ID.NEXTVAL,
+       DOCTOR_ID,
        FULLNAME_,
        TELEPHONE_,
        ADDRESS_,
@@ -37,11 +40,44 @@ BEGIN
        PASSWORD_,
        EMAIL_
   );
+  IF(SQL%ROWCOUNT > 0)
+  THEN 
+    OUTPUT := 'New Doctor details added.';
+    ACMA_SPECIALTY_ADD(DOCTOR_ID,DOCTOR_SPECILATY);
+  ELSE OUTPUT := 'Failed.';
+  END IF;
+  COMMIT;
   COMMIT;
 END;
 
 DECLARE
+ output varchar2(100);
 BEGIN
-  ACMA_DOCTOR_ADD('Dr.Prasanna Serasinghe',0710868178,'AB923,Haputhale Road,Bandarawela','89055145v',0,10,10,6,'prasanna','123','prasanna@gmail.com');
+  ACMA_DOCTOR_ADD('Dr.Prasanna Serasinghe',0710868178,'AB923,Haputhale Road,Bandarawela','89055145v',0,10,10,8,'prasanna','123','prasanna@gmail.com','Plastic surgeon',OUTPUT);
 END;
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

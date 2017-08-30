@@ -10,15 +10,17 @@ using DoctorPanel.Models;
 
 namespace DoctorPanel
 {
+    
+
     public partial class DoctorHome : Form
     {
-        private int doctorId = 0;
+        static private int doctorId = 0;
 
-        public DoctorHome(int doctorId)
+        public DoctorHome(int doctorId_)
         {
             InitializeComponent();
-            this.doctorId = doctorId;
-            GetDoctorDetail();
+            doctorId = doctorId_;
+            GetDoctorDetail(doctorId);
             GetTodayList();
 
             lblDate.Text = DateTime.Now.ToLongDateString();
@@ -68,10 +70,10 @@ namespace DoctorPanel
         }
 
         //Method to get doctor details after login
-        private void GetDoctorDetail()
+        private void GetDoctorDetail(int doctorId_)
         {
             DoctorController dc = new DoctorController();
-            Doctor logedInDoctor = dc.GetDoctorDetail(doctorId);
+            Doctor logedInDoctor = dc.GetDoctorDetail(doctorId_);
             lblDoctorName.Text = logedInDoctor.Fullname;
             lblDoctorEmail.Text = logedInDoctor.Email;
             lblRoomNumber.Text = logedInDoctor.Room_no.ToString();
@@ -95,6 +97,12 @@ namespace DoctorPanel
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            DoctorAddTimeSlot doctorAddTimeSlot = new DoctorAddTimeSlot(doctorId);
+            doctorAddTimeSlot.Show();
         }
 
     }
