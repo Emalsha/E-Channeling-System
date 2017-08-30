@@ -20,10 +20,12 @@ namespace DoctorPanel
         static DoctorDuty SaturdayObject = null;
         static DoctorDuty SundayObject = null;
         static int changingDate = 0;
+        static int doctorId = 0;
 
-        public DoctorAddTimeSlot()
+        public DoctorAddTimeSlot(int doctorId_)
         {
             InitializeComponent();
+            doctorId = doctorId_;
             GetDoctorDuty();
         }
 
@@ -170,7 +172,7 @@ namespace DoctorPanel
         private void GetDoctorDuty()
         {
             DoctorController dc = new DoctorController();
-            List<DoctorDuty> dutyList = dc.DoctorDutyView(6);
+            List<DoctorDuty> dutyList = dc.DoctorDutyView(doctorId);
             foreach (DoctorDuty item in dutyList)
             {
                 int day = item.ConsultingDate;
@@ -218,10 +220,10 @@ namespace DoctorPanel
         // Add and update btn click event
         private void btnAddDuty_Click(object sender, EventArgs e)
         {
-            var confirmation = MessageBox.Show("You are tring to add new working time to the system.", "Confirm !", MessageBoxButtons.YesNo);
+            var confirmation = MessageBox.Show("You are tring to add new working time to the system.", "Confirm !", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if (confirmation == DialogResult.Yes)
             {
-                AddDuty(6);
+                AddDuty(doctorId);
             }
 
             
@@ -305,7 +307,7 @@ namespace DoctorPanel
 
             DoctorController dc = new DoctorController();
             string res = dc.DoctorDutyAdd(newObj);
-            MessageBox.Show(res);
+            MessageBox.Show(res,"Doctor Duty Add.",MessageBoxButtons.OK,MessageBoxIcon.Information);
             GetDoctorDuty();
 
         }
