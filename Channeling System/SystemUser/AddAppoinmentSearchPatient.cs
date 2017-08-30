@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types;
 
 namespace SystemUser
 {
@@ -19,6 +21,11 @@ namespace SystemUser
             string day_ = day;
             string time_ = time;
             string description_ = description;
+
+            lbl_doctoruid.Text = doctor_id_;
+            lblday.Text = day_;
+            lbltime.Text = time_;
+            lbldesc.Text = description_;
 
         }
 
@@ -38,6 +45,62 @@ namespace SystemUser
                 this.Height = 495;
                 txtnic.Enabled = false;
                 btnsearch.Enabled = false;
+            }
+            else 
+            {
+                var dResult = MessageBox.Show("Do you want to add new Appoinment? ", "Add Appoinment", MessageBoxButtons.YesNo);
+                if (dResult == DialogResult.Yes)
+                {
+
+                    SystemController Searchpatient = new SystemController();
+                    string nic_ni = txtnic.Text;
+
+                    string patient_id = Searchpatient.SearchPatient_idByNIC(nic_ni);
+
+                    int patient_id_ = Convert.ToInt32(patient_id);
+                    int doctor_id = Convert.ToInt32(lbl_doctoruid.Text);
+                    string day = lblday.Text;
+                    int day_ = 1;
+
+                    if (day == "Sunday")
+                    {
+                        day_ = 1;
+                    }
+                    else if (day == "Monday")
+                    {
+                        day_ = 2;
+                    }
+                    else if (day == "Tuesday")
+                    { 
+                        day_ = 3;
+                    }
+                    else if (day == "Wednesday")
+                    { 
+                        day_ = 4;
+                    }
+                    else if (day == "Thursday")
+                    { 
+                        day_ = 5;
+                    }
+                    else if (day == "Friday")
+                    { 
+                        day_ = 6;
+                    }
+                    else if (day == "Saturday")
+                    { 
+                        day_ = 7;
+                    }
+
+                    string time = lbltime.Text;
+                    string description = lbldesc.Text;
+
+                    SystemController addAppoinement = new SystemController();
+                    addAppoinement.addAppoinment(patient_id_, doctor_id, day_, time, description);
+                }
+                else
+                {
+                    this.Close(); 
+                }
             }
         }
 
@@ -60,15 +123,7 @@ namespace SystemUser
 
         public void add_appointment() 
         {
-            var dResult= MessageBox.Show("Do you want tot add new ","Add Appoinment to New User", MessageBoxButtons.YesNo);
-            if (dResult == DialogResult.Yes)
-            {
-                
-            }
-            else 
-            {
-                MessageBox.Show("not donje");
-            }
+            
         }
 
         
