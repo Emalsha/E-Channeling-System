@@ -12,5 +12,12 @@ namespace SystemUser
         {
             return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
+
+
+        //Emalsha
+        public static string GetString()
+        {
+            return "Data Source=CMBTRNDB02/APP8SP2;Persist Security Info=True;User ID=ifsapp;Password=ifsapp;";
+        }
     }
 }
