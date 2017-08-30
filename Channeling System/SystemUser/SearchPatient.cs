@@ -59,5 +59,10 @@ namespace SystemUser
             SystemController addPatient = new SystemController();
             addPatient.addNewPatient(txtname.Text, txtnicnumber.Text, txttelephone.Text, txtaddress.Text);
         }
+
+        private void SearchPatient_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

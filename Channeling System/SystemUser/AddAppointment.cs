@@ -16,7 +16,8 @@ namespace SystemUser
     {
         public AddAppointment()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            listView1.MouseDoubleClick += new MouseEventHandler(listView1_doubleclick);
         }
 
         private void btnclose_Click(object sender, EventArgs e)
@@ -49,81 +50,22 @@ namespace SystemUser
         }
 
         private void btnsearch_Click(object sender, EventArgs e)
-        {
-            /*
-            string fullname = txtfullname.Text;
-            string oracleDB = Helper.con_string("acma_db");
-            OracleConnection connect = new OracleConnection(oracleDB);
-            connect.Open();
-                        
+        { 
+            // checking name and doctor speciality 
             if ((chkname.Checked == true) && (chkspc.Checked == true))
             {
                 MessageBox.Show("You can search doctor by NAME or NAME & SPECIALITY or SPECIALITY & DATE, Also make sure that your choice is checked.", "Choice Not Fullfilled to Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 listView1.Items.Clear();
             }
-
-            else if ((chkname.Checked == true) && (chkdate.Checked == true))
-            {
-                MessageBox.Show("name date");
-            }
-
-            else if ((chkdate.Checked == true) && (chkspc.Checked == true))
-            {
-                MessageBox.Show("Spec date");
-            }
-
-            else if (chkname.Checked == true)
-            {                
-                string query = "SELECT D.DOCTOR_ID,D.FULLNAME,D.AVAILABLE_ON_WEEKEND,D.ROOM_NUMBER,S.DESCRIPTION FROM ACMA_DOCTOR D LEFT JOIN ACMA_DOCTOR_SPECIALTY DS ON D.DOCTOR_ID = DS.DOCTOR_ID LEFT JOIN ACMA_SPECIALTY S ON DS.SPECIALTY_ID = S.SPECIALTY_ID WHERE lower(FULLNAME) LIKE lower('%" + fullname + "%') ORDER BY D.FULLNAME ";              
-                OracleCommand cmd = new OracleCommand(query, connect);
-
-                try
-                {
-                    listView1.Items.Clear();
-                    OracleDataReader dReader = cmd.ExecuteReader();
-                    while (dReader.Read())
-                    {
-                        ListViewItem ListItem = new ListViewItem(dReader["DOCTOR_ID"].ToString());
-                        ListItem.SubItems.Add(dReader["FULLNAME"].ToString());
-                        ListItem.SubItems.Add(dReader["AVAILABLE_ON_WEEKEND"].ToString());
-                        ListItem.SubItems.Add(dReader["ROOM_NUMBER"].ToString());
-                        ListItem.SubItems.Add(dReader["DESCRIPTION"].ToString());
-                        listView1.Items.Add(ListItem);
-                    }
-
-                    dReader.Close();
-                    connect.Close();
-                }
-
-                catch (Exception exp)
-                {
-                    MessageBox.Show(exp.Message);
-                }
-            }
-
-            else
-            {
-                MessageBox.Show("You can search doctor by NAME or NAME & SPECIALITY or SPECIALITY & DATE, Also make sure that your choice is checked.", "Choice Not Fullfilled to Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                listView1.Items.Clear();
-            }
-            */
-
-            //connect.Close();
-
             
-
-            if ((chkname.Checked == true) && (chkspc.Checked == true))
-            {
-                MessageBox.Show("You can search doctor by NAME or NAME & SPECIALITY or SPECIALITY & DATE, Also make sure that your choice is checked.", "Choice Not Fullfilled to Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                listView1.Items.Clear();
-            }
-
+            // checking name and doctor available date
             else if ((chkname.Checked == true) && (chkdate.Checked == true))
             {
                 MessageBox.Show("You can search doctor by NAME or NAME & SPECIALITY or SPECIALITY & DATE, Also make sure that your choice is checked.", "Choice Not Fullfilled to Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 listView1.Items.Clear();
             }
 
+            // checking doctor available date and doctor specility 
             else if ((chkdate.Checked == true) && (chkspc.Checked == true))
             {
                 string spec = cmbspec.Text;
@@ -164,6 +106,8 @@ namespace SystemUser
                 }
             }
 
+
+            // search doctor by doctor name
             else if (chkname.Checked == true)
             {
                 string doctorname = txtfullname.Text;
@@ -188,6 +132,7 @@ namespace SystemUser
                 }
             }
 
+            // search doctor by his specility
             else if (chkspc.Checked == true)
             { 
                 string spec = cmbspec.Text;
@@ -198,7 +143,7 @@ namespace SystemUser
                 if (ByDoctorSpec.Count() > 0)
                 {
                     listView1.Items.Clear();
-
+                    
                     foreach (SearchDoctorModel dataRow in ByDoctorSpec)
                     { 
                         ListViewItem ListItem = new ListViewItem (dataRow.Doctor_id.ToString());
@@ -212,12 +157,35 @@ namespace SystemUser
                 }
             }
 
+            //warning for all other searching opetion selections
             else
             {
                 MessageBox.Show("You can search doctor by NAME or NAME & SPECIALITY or SPECIALITY & DATE, Also make sure that your choice is checked.", "Choice Not Fullfilled to Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 listView1.Items.Clear();
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void listView1_doubleclick(object sender, MouseEventArgs e)
+        {
+            string doctor_id = listView1.SelectedItems[0].SubItems[0].Text.ToString();
+            string doctor_name = listView1.SelectedItems[0].SubItems[1].Text.ToString();
+            string weekend_status = listView1.SelectedItems[0].SubItems[2].Text.ToString();
+            string room_number = listView1.SelectedItems[0].SubItems[3].Text.ToString();
+            string description = listView1.SelectedItems[0].SubItems[4].Text.ToString();
+
+            AddAppointmentDoctorInfo doctorInfo = new AddAppointmentDoctorInfo(doctor_id, doctor_name, weekend_status, room_number, description);
+            doctorInfo.Show();
         }
     }
 }
