@@ -35,7 +35,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.lblTIme = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.imgSetting = new System.Windows.Forms.PictureBox();
             this.lblRoomNumber = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblDoctorEmail = new System.Windows.Forms.Label();
@@ -51,19 +50,23 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.imgSetting = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.lblTIme);
@@ -135,6 +138,44 @@
             this.imgSetting.TabStop = false;
             this.imgSetting.MouseLeave += new System.EventHandler(this.imgSetting_MouseLeave);
             this.imgSetting.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(153, 256);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 100);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "My Setting";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(46, 256);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 100);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "View History";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // lblTIme
+            // 
+            this.lblTIme.AutoSize = true;
+            this.lblTIme.Location = new System.Drawing.Point(43, 535);
+            this.lblTIme.Name = "lblTIme";
+            this.lblTIme.Size = new System.Drawing.Size(40, 13);
+            this.lblTIme.TabIndex = 11;
+            this.lblTIme.Text = "--:--:-- --";
+            this.lblTIme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(43, 518);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(68, 13);
+            this.lblDate.TabIndex = 10;
+            this.lblDate.Text = "--/--/---- --:--:--";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblRoomNumber
             // 
@@ -265,23 +306,13 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.lblDashboard);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1039, 40);
             this.panel2.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DoctorPanel.Properties.Resources.doctor;
-            this.pictureBox1.Location = new System.Drawing.Point(992, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(22, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
+
             // lblDashboard
             // 
             this.lblDashboard.AutoSize = true;
@@ -298,6 +329,51 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DoctorPanel.Properties.Resources.ACMA_logo_1;
+            this.pictureBox3.Location = new System.Drawing.Point(832, 488);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(164, 60);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            // 
+            // imgSetting
+            // 
+            this.imgSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgSetting.Image = global::DoctorPanel.Properties.Resources.settings;
+            this.imgSetting.Location = new System.Drawing.Point(982, 59);
+            this.imgSetting.Name = "imgSetting";
+            this.imgSetting.Size = new System.Drawing.Size(32, 32);
+            this.imgSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgSetting.TabIndex = 9;
+            this.imgSetting.TabStop = false;
+            this.imgSetting.MouseLeave += new System.EventHandler(this.imgSetting_MouseLeave);
+            this.imgSetting.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DoctorPanel.Properties.Resources.doctor_1_;
+            this.pictureBox2.Location = new System.Drawing.Point(46, 59);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Window;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::DoctorPanel.Properties.Resources.refresh_page_option;
+            this.button1.Location = new System.Drawing.Point(499, 437);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 21);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // DoctorHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,16 +382,17 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "DoctorHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard - ACME Medical Center";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgSetting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSetting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,7 +401,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblDashboard;
         private System.Windows.Forms.ListView lstTodayAppoinment;
         private System.Windows.Forms.ColumnHeader columnHeader1;
@@ -346,5 +422,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
