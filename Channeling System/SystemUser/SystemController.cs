@@ -403,5 +403,33 @@ namespace SystemUser
 
         }
 
+        // Remove doctor
+        public string RemoveDoctor(int doctorId_)
+        {
+            using (OracleConnection con = new OracleConnection(Helper.GetString()))
+            {
+                con.Open();
+                string qry = "acma_doctor_remove_doctor";
+                using (OracleCommand cmd = new OracleCommand(qry, con))
+                {
+                    
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("doctor_id", OracleDbType.Decimal, doctorId_, ParameterDirection.Input);
+                        cmd.Parameters.Add("OUTPUT", OracleDbType.Varchar2, ParameterDirection.Output).Size = 250;
+                        cmd.ExecuteNonQuery();
+                        return cmd.Parameters["OUTPUT"].Value.ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        return ex.Message;
+                    }
+                }
+            }
+
+        }
+
+
     }
 }

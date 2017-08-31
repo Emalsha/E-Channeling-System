@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAppointment));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -90,9 +91,9 @@
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(66, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 16);
+            this.label2.Size = new System.Drawing.Size(96, 16);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Doctor Name";
+            this.label2.Text = "Doctor Name : ";
             // 
             // label3
             // 
@@ -100,9 +101,9 @@
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(66, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 16);
+            this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 24;
-            this.label3.Text = "Speciality";
+            this.label3.Text = "Speciality : ";
             // 
             // label4
             // 
@@ -110,27 +111,27 @@
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(446, 85);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 16);
+            this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 25;
-            this.label4.Text = "Date";
+            this.label4.Text = "Date : ";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(501, 82);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
             this.dateTimePicker1.TabIndex = 28;
             this.dateTimePicker1.Value = new System.DateTime(2017, 8, 28, 0, 0, 0, 0);
             // 
             // cmbspec
             // 
-            this.cmbspec.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbspec.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbspec.FormattingEnabled = true;
-            this.cmbspec.Location = new System.Drawing.Point(166, 128);
+            this.cmbspec.Location = new System.Drawing.Point(164, 128);
             this.cmbspec.Name = "cmbspec";
-            this.cmbspec.Size = new System.Drawing.Size(200, 26);
+            this.cmbspec.Size = new System.Drawing.Size(200, 25);
             this.cmbspec.TabIndex = 32;
             // 
             // chkname
@@ -163,7 +164,7 @@
             // txtfullname
             // 
             this.txtfullname.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfullname.Location = new System.Drawing.Point(166, 81);
+            this.txtfullname.Location = new System.Drawing.Point(164, 83);
             this.txtfullname.Name = "txtfullname";
             this.txtfullname.Size = new System.Drawing.Size(200, 25);
             this.txtfullname.TabIndex = 37;
@@ -189,51 +190,49 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "DOCTOR_ID";
-            this.columnHeader1.Width = 80;
+            this.columnHeader1.Text = "ID";
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "FULLNAME";
-            this.columnHeader2.Width = 110;
+            this.columnHeader2.Text = "FULL NAME";
+            this.columnHeader2.Width = 204;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "AVAILABLE_ON_WEEKEND";
-            this.columnHeader3.Width = 160;
+            this.columnHeader3.Text = "WEEKEND";
+            this.columnHeader3.Width = 76;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "ROOM_NUMBER";
-            this.columnHeader4.Width = 105;
+            this.columnHeader4.Text = "ROOM";
+            this.columnHeader4.Width = 57;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "DESCRIPTION";
-            this.columnHeader5.Width = 210;
+            this.columnHeader5.Width = 253;
             // 
             // btnsearch
             // 
             this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsearch.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnsearch.Image = global::SystemUser.Properties.Resources.search;
             this.btnsearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnsearch.Location = new System.Drawing.Point(561, 123);
+            this.btnsearch.Location = new System.Drawing.Point(613, 128);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(88, 36);
             this.btnsearch.TabIndex = 29;
             this.btnsearch.Text = "Search";
-            this.btnsearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnsearch.UseVisualStyleBackColor = false;
             this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SystemUser.Properties.Resources.ACMA_logo_1;
-            this.pictureBox2.Location = new System.Drawing.Point(678, 503);
+            this.pictureBox2.Location = new System.Drawing.Point(643, 491);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(101, 43);
+            this.pictureBox2.Size = new System.Drawing.Size(150, 55);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 40;
             this.pictureBox2.TabStop = false;
@@ -258,6 +257,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddAppointment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddAppointment - Seach Doctor";

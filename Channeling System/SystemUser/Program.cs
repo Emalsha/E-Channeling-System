@@ -15,7 +15,7 @@ namespace SystemUser
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddDoctor());
+            Application.Run(new RemoveDoctor());
         }
     }
 }
