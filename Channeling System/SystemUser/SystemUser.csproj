@@ -74,6 +74,18 @@
     <Compile Include="AddDoctor.Designer.cs">
       <DependentUpon>AddDoctor.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="CancelAppoinment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CancelAppoinment.Designer.cs">
+      <DependentUpon>CancelAppoinment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintReceipt.Designer.cs">
+      <DependentUpon>PrintReceipt.cs</DependentUpon>
     <Compile Include="RegexMatchTimeoutException.cs" />
     <Compile Include="RemoveDoctor.cs">
       <SubType>Form</SubType>
@@ -128,12 +140,18 @@
     <EmbeddedResource Include="AddDoctor.resx">
       <DependentUpon>AddDoctor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CancelAppoinment.resx">
+      <DependentUpon>CancelAppoinment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+
+    <EmbeddedResource Include="PrintReceipt.resx">
+      <DependentUpon>PrintReceipt.cs</DependentUpon>
     <EmbeddedResource Include="RemoveDoctor.resx">
       <DependentUpon>RemoveDoctor.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +308,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -96,6 +96,11 @@ namespace SystemUser
 
                     SystemController addAppoinement = new SystemController();
                     addAppoinement.addAppoinment(patient_id_, doctor_id, day_, time, description);
+
+                    PrintReceipt print = new PrintReceipt(patient_id_, doctor_id, day, time, description);
+                    print.Show();
+                    this.Hide();
+
                 }
                 else
                 {

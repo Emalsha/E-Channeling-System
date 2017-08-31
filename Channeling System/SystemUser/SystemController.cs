@@ -13,6 +13,7 @@ namespace SystemUser
 {
     public class SystemController
     {
+        //login auth function
         public void login_auth(string username, string password)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -51,6 +52,7 @@ namespace SystemUser
 
         }
 
+        //search patient
         public string SearchPatientByNIC(string nic)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -80,6 +82,7 @@ namespace SystemUser
             
         }
 
+        //search patitent process in add appoinment section
         public string SearchPatient_idByNIC(string nic)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -109,6 +112,7 @@ namespace SystemUser
 
         }
 
+        //add new patient pricess
         public void addNewPatient(string fullname, string nic, string telephone, string address)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -140,6 +144,7 @@ namespace SystemUser
 
         }
 
+        //add appoinment 
         public void addAppoinment(int patient_id, int doctor_id, int appoinmentDate, string appoinmentTime, string catogery)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -169,6 +174,7 @@ namespace SystemUser
             }
         }
 
+        //seach doctor information by doctor name
         public List<SearchDoctorModel> SearchDoctorByName(string doctorName)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -214,6 +220,7 @@ namespace SystemUser
             }
         }
 
+        //search doctor information by doctor speciality and doctor available day
         public List<SearchDoctorModel> SearchDoctorBySpecDate(string spec, int day)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -259,6 +266,7 @@ namespace SystemUser
             }
         }
 
+        //search  doctor by doctor speciality
         public List<SearchDoctorModel> SearchDoctorBySpec(string spec)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -300,6 +308,7 @@ namespace SystemUser
             return new List<SearchDoctorModel>();
         }
       
+        //search doctor by doctor duty shedule informations
         public List<SearchDoctorModel> DoctorDutyShedule(int doctor_id)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -308,8 +317,6 @@ namespace SystemUser
 
             string query = "select * from table (ACMA_DUTY_VIEW(:doctor_id))";
             OracleCommand cmd = new OracleCommand(query, connect);
-
-            
 
             cmd.Parameters.Add(":doctor_id", doctor_id);
 
@@ -403,6 +410,80 @@ namespace SystemUser
 
         }
 
+        //cancel appoinment 
+        public void UpdateAppoinmentStatus(int appoinment_id)
+        {
+
+            string oracleDB = Helper.con_string("acma_db");
+            OracleCommand cmd = new OracleCommand();
+            OracleConnection connect = new OracleConnection(oracleDB);
+            cmd.Connection = connect;
+            connect.Open();
+
+            cmd.CommandText = "acma_cancel_appoinment";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("app_id", OracleDbType.Decimal, appoinment_id, ParameterDirection.Input);
+
+            int status = cmd.ExecuteNonQuery();
+
+            if (status == 0)
+            {
+                MessageBox.Show("Can not cancel this appoinment, Please try again!", "Error in Appoinment Cancel", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Successfully canceled the appoinemnt!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        //search and get single appoinemtn information to clancel the appoinment
+        public List<SearchDoctorModel> SearchAppoinmentToCanel(int appoinment_id)
+        {
+            string oracleDB = Helper.con_string("acma_db");
+            OracleConnection connect = new OracleConnection(oracleDB);
+            connect.Open();
+
+            string query = "select * from table (acma_cancel_appoinment_view(:appoinment_id))";
+            OracleCommand cmd = new OracleCommand(query, connect);
+
+            cmd.Parameters.Add(":appoinment_id",appoinment_id);
+
+            OracleDataReader dReader = cmd.ExecuteReader();
+
+            if (dReader.HasRows)
+            {
+                List<SearchDoctorModel> dataList = new List<SearchDoctorModel>();
+
+                while (dReader.Read())
+                {
+                    decimal appoinment_id_ = dReader.GetDecimal(0);
+                    string patient_name_ = dReader.GetString(1);
+                    string doctor_name_ = dReader.GetString(2);
+                    //string created_ = dReader.GetString(3);
+                    //string appoinment_date_ = dReader.GetString(4);
+                    //string appoinment_time_ = dReader.GetString(5);
+                    string catogery_ = dReader.GetString(6);
+                    decimal status_ = dReader.GetDecimal(7);
+
+                    string status_s = "Active";
+                    if (status_ == 0)
+                    {
+                        status_s = "Canceled";
+                    }
+                    else
+                    {
+                        status_s = "Active";
+                    }
+
+
+                    dataList.Add(new SearchDoctorModel(appoinment_id_,patient_name_,doctor_name_,catogery_,status_s));
+                }
+                return dataList;
+            }
+            return new List<SearchDoctorModel>();
+        }
+      
         // Remove doctor
         public string RemoveDoctor(int doctorId_)
         {
@@ -429,7 +510,5 @@ namespace SystemUser
             }
 
         }
-
-
     }
 }

@@ -57,5 +57,17 @@ namespace SystemUser
         {
             new AddDoctor().Show();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            new CancelAppoinment().Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SearchPatient Search = new SearchPatient();
+            Search.Show();
+            Search.Height = 460;
+        }
     }
 }

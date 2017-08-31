@@ -15,7 +15,7 @@ begin
   from acma_appoinment ap
   left join acma_patient p on ap.patient_id = p.patient_id
   left join acma_doctor d on ap.doctor_id = d.doctor_id
-  where ap. appoinment_id= app_id order by ap.appoinment_id;
+  where ap. appoinment_id= app_id and ap.status = 1 order by ap.appoinment_id;
   return data_set;
   
 end;
