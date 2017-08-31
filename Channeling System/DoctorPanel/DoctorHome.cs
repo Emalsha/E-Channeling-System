@@ -32,7 +32,8 @@ namespace DoctorPanel
         private void button1_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Sorry, No appoinments to view.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            listDate.SelectedItem = "Today";
+            GetDoctorDates(doctorId);
+            //listDate.SelectedItem = "Today";
             
         }
 
@@ -171,6 +172,9 @@ namespace DoctorPanel
         //Get dates
         private void GetDoctorDates(int doctorId_)
         {
+            listDate.Items.Clear();
+            listDate.Items.Add("Today");
+            listDate.SelectedItem = "Today";
             DoctorController dc = new DoctorController();
             List<int> dates = dc.GetDoctorDates(doctorId_);
             if (dates.Count() > 0)
@@ -211,6 +215,12 @@ namespace DoctorPanel
         private void listDate_SelectedIndexChanged(object sender, EventArgs e)
         {
             ViewAppoinment(listDate.SelectedItem.ToString());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            History history = new History(doctorId);
+            history.Show();
         }
 
 

@@ -7,6 +7,7 @@ namespace DoctorPanel.Models
 {
     class DoctorToday
     {
+        
         private decimal appinment_id;
         private decimal patient_id;
         private string patient_name;
