@@ -80,6 +80,35 @@ namespace SystemUser
             
         }
 
+        public string SearchPatient_idByNIC(string nic)
+        {
+            string oracleDB = Helper.con_string("acma_db");
+            OracleConnection connect = new OracleConnection(oracleDB);
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = connect;
+            connect.Open();
+
+            cmd.CommandText = "acma_patient_id_search_by_nic";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            //cmd.Parameters.Add("patientname", OracleDbType.Varchar2, ParameterDirection.ReturnValue);
+
+            OracleParameter p_name = new OracleParameter();
+            p_name.Size = 64;
+            p_name.ParameterName = "patientname";
+            p_name.Direction = ParameterDirection.ReturnValue;
+            cmd.Parameters.Add(p_name);
+
+            cmd.Parameters.Add("user_no", OracleDbType.Varchar2, nic, ParameterDirection.Input);
+
+            cmd.ExecuteNonQuery();
+
+            string text = cmd.Parameters["patientname"].Value.ToString();
+
+            return text;
+
+        }
+
         public void addNewPatient(string fullname, string nic, string telephone, string address)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -111,7 +140,34 @@ namespace SystemUser
 
         }
 
-        //public void addAppoinment(int patient_id, int doctor_id, string sysdate, )
+        public void addAppoinment(int patient_id, int doctor_id, int appoinmentDate, string appoinmentTime, string catogery)
+        {
+            string oracleDB = Helper.con_string("acma_db");
+            OracleCommand cmd = new OracleCommand();
+            OracleConnection connect = new OracleConnection(oracleDB);
+            cmd.Connection = connect;
+            connect.Open();
+
+            cmd.CommandText = "acma_appoinment_add";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("patient_id", OracleDbType.Decimal, patient_id, ParameterDirection.Input);
+            cmd.Parameters.Add("doctor_id", OracleDbType.Decimal, doctor_id, ParameterDirection.Input);
+            cmd.Parameters.Add("appoinment_date", OracleDbType.Decimal, appoinmentDate, ParameterDirection.Input);
+            cmd.Parameters.Add("appoinment_time", OracleDbType.Varchar2, appoinmentTime, ParameterDirection.Input);
+            cmd.Parameters.Add("category_", OracleDbType.Varchar2, catogery, ParameterDirection.Input);
+
+            int status = cmd.ExecuteNonQuery();
+
+            if (status == 1)
+            {
+                MessageBox.Show("Error Occurs in Makind an Appoinment! Try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else 
+            {
+                MessageBox.Show("Succassfully Appoinment Addred to the System.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
 
         public List<SearchDoctorModel> SearchDoctorByName(string doctorName)
         {
