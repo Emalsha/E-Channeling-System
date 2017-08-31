@@ -39,10 +39,14 @@ namespace SystemUser
                     ListItem.SubItems.Add(dataRow.Fullname);
                     ListItem.SubItems.Add(dataRow.Descriptionl);
                     ListItem.SubItems.Add(dataRow.Room_number.ToString());
-                    
+
 
                     listViewDoctor.Items.Add(ListItem);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Sorry, No search results.","Result",MessageBoxButtons.OK,MessageBoxIcon.None);
             }
         }
 

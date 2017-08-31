@@ -28,7 +28,20 @@ namespace SystemUser
             SystemController login = new SystemController();
             string username = txtusername.Text;
             string password = txtpassword.Text;
-            login.login_auth(username, password);
+            bool auth = login.login_auth(username, password);
+
+            if (auth)
+            {
+                Dashboard dboard = new Dashboard();
+                dboard.Closed += (s, arg) => this.Close();
+                dboard.Show();
+                this.Hide();
+                
+            }
+            else
+            {
+                MessageBox.Show("Wrong Username or Password! Make sure your authentication values correct.", "Error in login!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -153,6 +153,7 @@ namespace SystemUser
             }
         }
 
+        //Email validation
         public bool isEmail(string strIn)
         {
             // Return true if strIn is in valid e-mail format.
@@ -180,6 +181,7 @@ namespace SystemUser
             }
         }
 
+        //NIC validation
         public bool isNIC(string strIn)
         {
             // Return true if strIn is in valid NIC format.
