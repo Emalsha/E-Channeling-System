@@ -57,5 +57,10 @@ namespace SystemUser
         {
             new AddDoctor().Show();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            new CancelAppoinment().Show();
+        }
     }
 }
