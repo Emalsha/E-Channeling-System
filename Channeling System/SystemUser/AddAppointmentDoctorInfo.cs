@@ -14,14 +14,15 @@ namespace SystemUser
 {
     public partial class AddAppointmentDoctorInfo : Form
     {
-        public AddAppointmentDoctorInfo(string doctor_id, string doctor_name, string weekend, string room, string desc)
+        private AddAppointment parent; 
+        public AddAppointmentDoctorInfo(string doctor_id, string doctor_name, string weekend, string room, string desc,AddAppointment parentForm)
         {
             //receving data from search doctor form
             InitializeComponent();
             lbl_doctorname.Text = doctor_name;
             lbl_doctor_description.Text = desc;
             lbl_room_number.Text = room;
-
+            parent = parentForm;
             if (weekend == "0")
             {
                 lbl_week.Text = "Not Available on WeekEnds!";
@@ -87,7 +88,7 @@ namespace SystemUser
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
-            new AddAppointment().Show();
+            parent.Show();
         }
     }
 }

@@ -38,10 +38,10 @@ namespace SystemUser
         {
             SystemController SearchByNic = new SystemController();
             string nic = txtnic.Text;
-            lblname.Text = SearchByNic.SearchPatientByNIC(nic);
-
-            if (lblname.Text == "no_user_found")
+            
+            if (SearchByNic.SearchPatientByNIC(nic) == "no_user_found")
             {
+                lblname.Text = " Sorry, Not a registered user.";
                 this.Height = 495;
                 txtnic.Enabled = false;
                 btnsearch.Enabled = false;
@@ -102,10 +102,10 @@ namespace SystemUser
                     this.Hide();
 
                 }
-                else
-                {
-                    this.Close(); 
-                }
+                //else
+                //{
+                //    this.Close(); 
+                //}
             }
         }
 

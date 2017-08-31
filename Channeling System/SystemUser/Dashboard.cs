@@ -69,5 +69,11 @@ namespace SystemUser
             Search.Show();
             Search.Height = 460;
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            RemoveDoctor rdoc = new RemoveDoctor();
+            rdoc.Show();
+        }
     }
 }

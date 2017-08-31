@@ -49,6 +49,7 @@ namespace SystemUser
             connect.Close();           
         }
 
+        //Search button options
         private void btnsearch_Click(object sender, EventArgs e)
         { 
             // checking name and doctor speciality 
@@ -166,6 +167,7 @@ namespace SystemUser
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -176,6 +178,7 @@ namespace SystemUser
             
         }
 
+        //List view item select event
         private void listView1_doubleclick(object sender, MouseEventArgs e)
         {
             string doctor_id = listView1.SelectedItems[0].SubItems[0].Text.ToString();
@@ -186,7 +189,7 @@ namespace SystemUser
 
             this.Hide();
 
-            AddAppointmentDoctorInfo doctorInfo = new AddAppointmentDoctorInfo(doctor_id, doctor_name, weekend_status, room_number, description);
+            AddAppointmentDoctorInfo doctorInfo = new AddAppointmentDoctorInfo(doctor_id, doctor_name, weekend_status, room_number, description,this);
             doctorInfo.Show();
         }
     }
