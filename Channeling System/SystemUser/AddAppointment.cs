@@ -187,5 +187,10 @@ namespace SystemUser
             AddAppointmentDoctorInfo doctorInfo = new AddAppointmentDoctorInfo(doctor_id, doctor_name, weekend_status, room_number, description);
             doctorInfo.Show();
         }
+
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            
+        }
     }
 }

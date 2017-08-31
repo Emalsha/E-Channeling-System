@@ -65,5 +65,7 @@ CREATE SEQUENCE appoinment_id_seq
 
 select * from acma_appoinment
 
+
+
 select * from acma_patient
 select patient_id from acma_patient where nic = 'as'
