@@ -308,6 +308,7 @@ namespace SystemUser
             return new List<SearchDoctorModel>();
         }
 
+        //search all the patient
         public List<SearchDoctorModel> SearchAllPatient(string nic)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -337,6 +338,36 @@ namespace SystemUser
             return new List<SearchDoctorModel>();
         }
       
+        //search single patient
+        public List<SearchDoctorModel> SearchSinglePatient(string nic)
+        {
+            string oracleDB = Helper.con_string("acma_db");
+            OracleConnection connect = new OracleConnection(oracleDB);
+            connect.Open();
+
+            string query = "select * from table (ACMA_SINGLE_PATIENT(:nic))";
+            OracleCommand cmd = new OracleCommand(query, connect);
+
+            cmd.Parameters.Add(":nic", nic);
+
+            OracleDataReader dReadr = cmd.ExecuteReader();
+            if (dReadr.HasRows)
+            {
+                List<SearchDoctorModel> dataList = new List<SearchDoctorModel>();
+                while (dReadr.Read())
+                {
+                    string fullname = dReadr.GetString(1);
+                    string nic_no = dReadr.GetString(2);
+                    decimal telephone = dReadr.GetDecimal(3);
+                    string address = dReadr.GetString(4);
+
+                    dataList.Add(new SearchDoctorModel(fullname, nic_no, telephone, address));
+                }
+                return dataList;
+            }
+            return new List<SearchDoctorModel>();
+        }
+
         //search doctor by doctor duty shedule informations
         public List<SearchDoctorModel> DoctorDutyShedule(int doctor_id)
         {

@@ -67,7 +67,7 @@ namespace SystemUser
         {
             SearchPatient Search = new SearchPatient();
             Search.Show();
-            Search.Height = 460;
+            Search.Height = 475;
         }
 
         private void button8_Click(object sender, EventArgs e)
