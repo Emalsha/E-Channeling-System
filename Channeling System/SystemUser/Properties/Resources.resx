@@ -127,17 +127,20 @@
   <data name="doctor1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doctor1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="patient" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\patient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ACMA-logo-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ACMA-logo-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logout (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loupe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loupe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,9 +157,6 @@
   <data name="loupe (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loupe (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loaderLogin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loaderLogin.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="file (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\file (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,17 +166,14 @@
   <data name="agenda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agenda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cross (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="group" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="monthly-calendar (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\monthly-calendar (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="doctor (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\doctor (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hospital" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hospital.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +199,11 @@
   <data name="remove-user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove-user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cross (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cross (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="patient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\patient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logout (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cross1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cross1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,17 +214,23 @@
   <data name="calendar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logout (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logout (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logout (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loaderLogin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loaderLogin.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ACMA-logo-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ACMA-logo-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="doctor (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doctor (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="file (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\file (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,14 +238,17 @@
   <data name="remove-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hospital" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hospital.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ACMA-logo-21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ACMA-logo-21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="monthly-calendar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\monthly-calendar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ACMA-logo-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ACMA-logo-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,7 +259,7 @@
   <data name="agenda (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agenda (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="door" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="printer (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

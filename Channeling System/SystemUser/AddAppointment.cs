@@ -184,6 +184,8 @@ namespace SystemUser
             string room_number = listView1.SelectedItems[0].SubItems[3].Text.ToString();
             string description = listView1.SelectedItems[0].SubItems[4].Text.ToString();
 
+            this.Hide();
+
             AddAppointmentDoctorInfo doctorInfo = new AddAppointmentDoctorInfo(doctor_id, doctor_name, weekend_status, room_number, description);
             doctorInfo.Show();
         }

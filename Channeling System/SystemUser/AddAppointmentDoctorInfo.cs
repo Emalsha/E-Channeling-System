@@ -65,12 +65,29 @@ namespace SystemUser
             string description = lbl_doctor_description.Text;
             AddAppoinmentSearchPatient SearchPatient_ = new AddAppoinmentSearchPatient(doctor_id, consulting_day, appoinment_time, description);
             SearchPatient_.Show();
+            this.Close();
         }
         
 
         private void AddAppointmentDoctorInfo_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            lblBack.Visible = true;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            lblBack.Visible = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new AddAppointment().Show();
         }
     }
 }

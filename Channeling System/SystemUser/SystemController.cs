@@ -13,6 +13,7 @@ namespace SystemUser
 {
     public class SystemController
     {
+        //login auth function
         public void login_auth(string username, string password)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -51,6 +52,7 @@ namespace SystemUser
 
         }
 
+        //search patient
         public string SearchPatientByNIC(string nic)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -80,6 +82,7 @@ namespace SystemUser
             
         }
 
+        //search patitent process in add appoinment section
         public string SearchPatient_idByNIC(string nic)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -109,6 +112,7 @@ namespace SystemUser
 
         }
 
+        //add new patient pricess
         public void addNewPatient(string fullname, string nic, string telephone, string address)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -140,6 +144,7 @@ namespace SystemUser
 
         }
 
+        //add appoinment 
         public void addAppoinment(int patient_id, int doctor_id, int appoinmentDate, string appoinmentTime, string catogery)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -169,6 +174,7 @@ namespace SystemUser
             }
         }
 
+        //seach doctor information by doctor name
         public List<SearchDoctorModel> SearchDoctorByName(string doctorName)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -214,6 +220,7 @@ namespace SystemUser
             }
         }
 
+        //search doctor information by doctor speciality and doctor available day
         public List<SearchDoctorModel> SearchDoctorBySpecDate(string spec, int day)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -259,6 +266,7 @@ namespace SystemUser
             }
         }
 
+        //search  doctor by doctor speciality
         public List<SearchDoctorModel> SearchDoctorBySpec(string spec)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -300,6 +308,7 @@ namespace SystemUser
             return new List<SearchDoctorModel>();
         }
       
+        //search doctor by doctor duty shedule informations
         public List<SearchDoctorModel> DoctorDutyShedule(int doctor_id)
         {
             string oracleDB = Helper.con_string("acma_db");
@@ -401,6 +410,7 @@ namespace SystemUser
 
         }
 
+        //cancel appoinment 
         public void UpdateAppoinmentStatus(int appoinment_id)
         {
 
@@ -427,6 +437,7 @@ namespace SystemUser
             }
         }
 
+        //search and get single appoinemtn information to clancel the appoinment
         public List<SearchDoctorModel> SearchAppoinmentToCanel(int appoinment_id)
         {
             string oracleDB = Helper.con_string("acma_db");
