@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAppoinmentSearchPatient));
-            this.btnreload = new System.Windows.Forms.Button();
             this.txtnicnumber = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.txttelephone = new System.Windows.Forms.TextBox();
@@ -53,25 +52,10 @@
             this.lbltime = new System.Windows.Forms.Label();
             this.lbldesc = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnmakeapp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnreload
-            // 
-            this.btnreload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
-            this.btnreload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnreload.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnreload.Image = global::SystemUser.Properties.Resources.refresh;
-            this.btnreload.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnreload.Location = new System.Drawing.Point(316, 409);
-            this.btnreload.Name = "btnreload";
-            this.btnreload.Size = new System.Drawing.Size(103, 28);
-            this.btnreload.TabIndex = 33;
-            this.btnreload.Text = "Reload Search";
-            this.btnreload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnreload.UseVisualStyleBackColor = false;
-            this.btnreload.Click += new System.EventHandler(this.btnreload_Click);
             // 
             // txtnicnumber
             // 
@@ -107,7 +91,7 @@
             this.btnaddpatient.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnaddpatient.Image = global::SystemUser.Properties.Resources.new_user;
             this.btnaddpatient.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnaddpatient.Location = new System.Drawing.Point(203, 409);
+            this.btnaddpatient.Location = new System.Drawing.Point(266, 398);
             this.btnaddpatient.Name = "btnaddpatient";
             this.btnaddpatient.Size = new System.Drawing.Size(95, 28);
             this.btnaddpatient.TabIndex = 32;
@@ -283,18 +267,32 @@
             this.label6.TabIndex = 38;
             this.label6.Text = "Search by NIC ";
             // 
+            // btnmakeapp
+            // 
+            this.btnmakeapp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnmakeapp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmakeapp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnmakeapp.Location = new System.Drawing.Point(247, 398);
+            this.btnmakeapp.Name = "btnmakeapp";
+            this.btnmakeapp.Size = new System.Drawing.Size(128, 28);
+            this.btnmakeapp.TabIndex = 39;
+            this.btnmakeapp.Text = "Make Appoinment";
+            this.btnmakeapp.UseVisualStyleBackColor = false;
+            this.btnmakeapp.Visible = false;
+            this.btnmakeapp.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AddAppoinmentSearchPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(464, 200);
+            this.ClientSize = new System.Drawing.Size(464, 216);
+            this.Controls.Add(this.btnmakeapp);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lbldesc);
             this.Controls.Add(this.lbltime);
             this.Controls.Add(this.lblday);
             this.Controls.Add(this.lbl_doctoruid);
-            this.Controls.Add(this.btnreload);
             this.Controls.Add(this.txtnicnumber);
             this.Controls.Add(this.txtname);
             this.Controls.Add(this.txttelephone);
@@ -324,7 +322,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnreload;
         private System.Windows.Forms.TextBox txtnicnumber;
         private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.TextBox txttelephone;
@@ -347,6 +344,7 @@
         private System.Windows.Forms.Label lbltime;
         private System.Windows.Forms.Label lbldesc;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnmakeapp;
 
     }
 }
