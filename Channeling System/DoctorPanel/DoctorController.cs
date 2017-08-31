@@ -300,5 +300,47 @@ namespace DoctorPanel
                 return new List<DoctorToday>();
             }
         }
+
+        //Get appoinment history
+        public List<DoctorToday> DoctorHistory(int doctorId)
+        {
+
+            using (OracleConnection con = new OracleConnection(DBString.GetString()))
+            {
+                con.Open();
+                string qry = "select * from table( ACMA_DOCTOR_APPOINMENT_HISTORY(:doctor_id_))";
+                using (OracleCommand cmd = new OracleCommand(qry, con))
+                {
+                    cmd.Parameters.Add(":doctor_id_", doctorId);
+
+                    OracleDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        List<DoctorToday> newList = new List<DoctorToday>();
+                        while (reader.Read())
+                        {
+                            decimal appinment_id = reader.GetDecimal(0);
+                            decimal patient_id = reader.GetDecimal(1);
+                            string patient_name = reader.GetString(2);
+                            DateTime appoinment_created_date = reader.GetDateTime(3);
+                            string appoinment_time = reader.GetString(4);
+                            string catogery = reader.GetString(5);
+                            decimal state = reader.GetDecimal(6);
+
+
+                            newList.Add(new DoctorToday(appinment_id, patient_id, patient_name, appoinment_created_date, appoinment_time, catogery, state));
+
+                        }
+                        return newList;
+                    }
+                    else
+                    {
+                        return new List<DoctorToday>();
+                    }
+
+                }
+            }
+        }
+        
     }
 }

@@ -31,19 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorHome));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lblTIme = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.imgSetting = new System.Windows.Forms.PictureBox();
             this.lblRoomNumber = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblDoctorEmail = new System.Windows.Forms.Label();
             this.lblDoctorName = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -56,12 +52,16 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.imgSetting = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,16 +89,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::DoctorPanel.Properties.Resources.ACMA_logo_1;
-            this.pictureBox3.Location = new System.Drawing.Point(832, 488);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(164, 60);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -118,6 +108,7 @@
             this.button3.TabIndex = 12;
             this.button3.Text = "History";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lblTIme
             // 
@@ -138,19 +129,6 @@
             this.lblDate.TabIndex = 10;
             this.lblDate.Text = "--/--/---- --:--:--";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // imgSetting
-            // 
-            this.imgSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgSetting.Image = global::DoctorPanel.Properties.Resources.settings;
-            this.imgSetting.Location = new System.Drawing.Point(982, 59);
-            this.imgSetting.Name = "imgSetting";
-            this.imgSetting.Size = new System.Drawing.Size(32, 32);
-            this.imgSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgSetting.TabIndex = 9;
-            this.imgSetting.TabStop = false;
-            this.imgSetting.MouseLeave += new System.EventHandler(this.imgSetting_MouseLeave);
-            this.imgSetting.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
             // 
             // lblRoomNumber
             // 
@@ -191,16 +169,6 @@
             this.lblDoctorName.TabIndex = 5;
             this.lblDoctorName.Text = "Dr. Warusa Withana";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DoctorPanel.Properties.Resources.doctor_1_;
-            this.pictureBox2.Location = new System.Drawing.Point(46, 59);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -211,18 +179,6 @@
             this.button2.Text = "Add Time Slot";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Window;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::DoctorPanel.Properties.Resources.refresh_page_option;
-            this.button1.Location = new System.Drawing.Point(467, 437);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 21);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -330,6 +286,51 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DoctorPanel.Properties.Resources.ACMA_logo_1;
+            this.pictureBox3.Location = new System.Drawing.Point(832, 488);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(164, 60);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            // 
+            // imgSetting
+            // 
+            this.imgSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgSetting.Image = global::DoctorPanel.Properties.Resources.settings;
+            this.imgSetting.Location = new System.Drawing.Point(982, 59);
+            this.imgSetting.Name = "imgSetting";
+            this.imgSetting.Size = new System.Drawing.Size(32, 32);
+            this.imgSetting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgSetting.TabIndex = 9;
+            this.imgSetting.TabStop = false;
+            this.imgSetting.MouseLeave += new System.EventHandler(this.imgSetting_MouseLeave);
+            this.imgSetting.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DoctorPanel.Properties.Resources.doctor_1_;
+            this.pictureBox2.Location = new System.Drawing.Point(46, 59);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Window;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::DoctorPanel.Properties.Resources.refresh_page_option;
+            this.button1.Location = new System.Drawing.Point(467, 437);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 21);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // DoctorHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,12 +345,12 @@
             this.Text = "Dashboard - ACME Medical Center";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgSetting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSetting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

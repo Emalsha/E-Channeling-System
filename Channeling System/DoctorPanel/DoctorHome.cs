@@ -213,6 +213,12 @@ namespace DoctorPanel
             ViewAppoinment(listDate.SelectedItem.ToString());
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            History history = new History(doctorId);
+            history.Show();
+        }
+
 
     }
 }
