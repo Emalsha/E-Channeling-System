@@ -44,6 +44,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblDashboard = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listDate = new System.Windows.Forms.ComboBox();
             this.lstTodayAppoinment = new System.Windows.Forms.ListView();
             this.appoinment_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -51,11 +55,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblDashboard = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSetting)).BeginInit();
@@ -224,6 +224,51 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.panel2.Controls.Add(this.lblDashboard);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1039, 40);
+            this.panel2.TabIndex = 0;
+            // 
+            // lblDashboard
+            // 
+            this.lblDashboard.AutoSize = true;
+            this.lblDashboard.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashboard.ForeColor = System.Drawing.Color.White;
+            this.lblDashboard.Location = new System.Drawing.Point(12, 9);
+            this.lblDashboard.Name = "lblDashboard";
+            this.lblDashboard.Size = new System.Drawing.Size(113, 22);
+            this.lblDashboard.TabIndex = 0;
+            this.lblDashboard.Text = "Dashboard";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.listDate);
+            this.groupBox1.Controls.Add(this.lstTodayAppoinment);
+            this.groupBox1.Location = new System.Drawing.Point(305, 131);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(691, 351);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "View Appoinment";
+            // 
+            // listDate
+            // 
+            this.listDate.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.listDate.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.listDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listDate.FormattingEnabled = true;
+            this.listDate.Items.AddRange(new object[] {
+            "Today"});
+            this.listDate.Location = new System.Drawing.Point(15, 19);
+            this.listDate.Name = "listDate";
+            this.listDate.Size = new System.Drawing.Size(141, 24);
+            this.listDate.TabIndex = 15;
+            this.listDate.SelectedIndexChanged += new System.EventHandler(this.listDate_SelectedIndexChanged);
+            // 
             // lstTodayAppoinment
             // 
             this.lstTodayAppoinment.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -280,61 +325,10 @@
             this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader5.Width = 52;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
-            this.panel2.Controls.Add(this.lblDashboard);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1039, 40);
-            this.panel2.TabIndex = 0;
-            // 
-            // lblDashboard
-            // 
-            this.lblDashboard.AutoSize = true;
-            this.lblDashboard.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDashboard.ForeColor = System.Drawing.Color.White;
-            this.lblDashboard.Location = new System.Drawing.Point(12, 9);
-            this.lblDashboard.Name = "lblDashboard";
-            this.lblDashboard.Size = new System.Drawing.Size(113, 22);
-            this.lblDashboard.TabIndex = 0;
-            this.lblDashboard.Text = "Dashboard";
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Friday",
-            "Monday",
-            "Saturday",
-            "Sunday",
-            "Thursday",
-            "Today",
-            "Tuesday",
-            "Wednesday"});
-            this.comboBox1.Location = new System.Drawing.Point(15, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(141, 24);
-            this.comboBox1.TabIndex = 15;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.lstTodayAppoinment);
-            this.groupBox1.Location = new System.Drawing.Point(305, 131);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(691, 351);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "View Appoinment";
             // 
             // DoctorHome
             // 
@@ -387,6 +381,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox listDate;
     }
 }

@@ -27,24 +27,23 @@ namespace SystemUser
 
         private void btnAddDoctor_Click(object sender, EventArgs e)
         {
-
-            string fullname = txtDoctorName.Text;
-            decimal telephone = decimal.Parse(txtDoctorContact.Text);
-            string address = txtDoctorAddress.Text;
-            string nic = txtDoctorNic.Text;
-            bool availability = availabilityYes.Checked == true ? true : false;
-            decimal patientPerDay = txtDoctorPatientPerDay.Value;
-            string roomNum = txtDoctorRoomNumber.Value.ToString();
-            string username = txtDoctorUsername.Text;
-            string email = txtDoctorEmail.Text;
-            string specialty = txtDoctorSpeciality.Text;
-
-            if (string.IsNullOrEmpty(fullname) || telephone < 10000000 || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(nic) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email))
+            if (string.IsNullOrEmpty(txtDoctorName.Text) || string.IsNullOrEmpty(txtDoctorContact.Text) || string.IsNullOrEmpty(txtDoctorAddress.Text) || string.IsNullOrEmpty(txtDoctorNic.Text) || string.IsNullOrEmpty(txtDoctorUsername.Text) || string.IsNullOrEmpty(txtDoctorEmail.Text))
             {
                 MessageBox.Show("Please fill all the details to add new doctor.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                string fullname = txtDoctorName.Text;
+                decimal telephone = decimal.Parse(txtDoctorContact.Text);
+                string address = txtDoctorAddress.Text;
+                string nic = txtDoctorNic.Text;
+                bool availability = availabilityYes.Checked == true ? true : false;
+                decimal patientPerDay = txtDoctorPatientPerDay.Value;
+                string roomNum = txtDoctorRoomNumber.Value.ToString();
+                string username = txtDoctorUsername.Text;
+                string email = txtDoctorEmail.Text;
+                string specialty = txtDoctorSpeciality.Text;
+
                 SystemController sc = new SystemController();
                 Doctor doctor = new Doctor(fullname, telephone, address, nic, availability, patientPerDay, roomNum, email);
                 string res = sc.AddDoctor(doctor, username, specialty);
