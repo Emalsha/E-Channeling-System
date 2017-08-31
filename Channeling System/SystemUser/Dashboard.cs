@@ -50,7 +50,7 @@ namespace SystemUser
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new AddAppointment().Show();
+            new AddAppointment(3).Show();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -74,6 +74,26 @@ namespace SystemUser
         {
             RemoveDoctor rdoc = new RemoveDoctor();
             rdoc.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new RemovePatient().Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            new RemovePatient().Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            new AddAppointment(1).Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            new AddAppointment(2).Show();
         }
     }
 }

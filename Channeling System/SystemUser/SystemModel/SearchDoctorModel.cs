@@ -139,7 +139,47 @@ namespace SystemUser.SystemModel
           get { return catogery; }
           set { catogery = value; }
         }
-        
+
+        private string p_fullname;
+
+        public string P_fullname
+        {
+            get { return p_fullname; }
+            set { p_fullname = value; }
+        }
+
+        private string p_nic;
+
+        public string P_nic
+        {
+            get { return p_nic; }
+            set { p_nic = value; }
+        }
+
+        private decimal p_telephone;
+
+        public decimal P_telephone
+        {
+            get { return p_telephone; }
+            set { p_telephone = value; }
+        }
+
+        private string p_address;
+
+        public string P_address
+        {
+            get { return p_address; }
+            set { p_address = value; }
+        }
+
+        public SearchDoctorModel(string fullname_, string nic_, decimal telephone_, string address_)
+        {
+            this.p_fullname = fullname_;
+            this.p_nic = nic_;
+            this.p_telephone = telephone_;
+            this.p_address = address_;
+        }
+
         public SearchDoctorModel(decimal doctor_id_, string consulting_date_, string consulting_time_start_, string consulting_time_end_, decimal tickets_)
         {
             this.doctor_id = doctor_id_;

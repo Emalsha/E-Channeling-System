@@ -135,6 +135,7 @@
             this.button11.Text = "View Patients";
             this.button11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button3
             // 
@@ -182,6 +183,7 @@
             this.button5.Text = "Remove Patient";
             this.button5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel3
             // 
@@ -231,6 +233,7 @@
             this.button6.Text = "Search By Date and Speciality";
             this.button6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button10
             // 
@@ -293,6 +296,7 @@
             this.button7.Text = "Search By Name";
             this.button7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // lbl1
             // 
