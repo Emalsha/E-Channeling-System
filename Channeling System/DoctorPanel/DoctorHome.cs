@@ -21,18 +21,19 @@ namespace DoctorPanel
             InitializeComponent();
             doctorId = doctorId_;
             GetDoctorDetail(doctorId);
-            GetTodayList();
+            //GetTodayList();
 
             lblDate.Text = DateTime.Now.ToLongDateString();
             lblTIme.Text = DateTime.Now.ToLongTimeString();
+            GetDoctorDates(doctorId);
+            listDate.SelectedItem = "Today";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!GetTodayList())
-            {
-                MessageBox.Show("No data found.");
-            }
+            //MessageBox.Show("Sorry, No appoinments to view.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            listDate.SelectedItem = "Today";
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -106,6 +107,112 @@ namespace DoctorPanel
             DoctorAddTimeSlot doctorAddTimeSlot = new DoctorAddTimeSlot(doctorId);
             doctorAddTimeSlot.Show();
         }
+
+        //Method to view appoinment
+        private void ViewAppoinment(string date)
+        {
+            int dateNum = 0;
+            switch (date)
+            {
+                case "Sunday":
+                    dateNum = 1;
+                    break;
+                case "Monday":
+                    dateNum = 2;
+                    break;
+                case "Tuesday":
+                    dateNum = 3;
+                    break;
+                case "Wednesday":
+                    dateNum = 4;
+                    break;
+                case "Thursday":
+                    dateNum = 5;
+                    break;
+                case "Friday":
+                    dateNum = 6;
+                    break;
+                case "Saturday":
+                    dateNum = 7;
+                    break;
+                case "Today":
+                    GetTodayList();
+                    break;
+            }
+
+            DoctorController dc = new DoctorController();
+            List<DoctorToday> docList = dc.DoctorAppoinmentView(doctorId, dateNum); // Use login doctor id...
+            if (docList.Count() > 0)
+            {
+                lstTodayAppoinment.Items.Clear();
+                int i = 1;
+                foreach (DoctorToday dataItem in docList)
+                {
+                    ListViewItem item = new ListViewItem(dataItem.Appinment_id.ToString());
+                    item.SubItems.Add(i.ToString());
+                    item.SubItems.Add(dataItem.Patient_name);
+                    item.SubItems.Add(dataItem.Appoinment_time);
+                    item.SubItems.Add(dataItem.Catogery);
+                    item.SubItems.Add(dataItem.State == 1 ? "Active" : "Canceled");
+
+                    lstTodayAppoinment.Items.Add(item);
+                    i++;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sorry, No appoinments to view.","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                lstTodayAppoinment.Items.Clear();
+            }
+
+        }
+
+
+        //Get dates
+        private void GetDoctorDates(int doctorId_)
+        {
+            DoctorController dc = new DoctorController();
+            List<int> dates = dc.GetDoctorDates(doctorId_);
+            if (dates.Count() > 0)
+            {
+                foreach (int dateVal in dates)
+                {
+                    switch (dateVal)
+                    {
+                        case 1:
+                            listDate.Items.Add("Sunday");
+                            break;
+                        case 2:
+                            listDate.Items.Add("Monday");
+                            break;
+                        case 3:
+                            listDate.Items.Add("Tuesday");
+                            break;
+                        case 4:
+                            listDate.Items.Add("Wednesday");
+                            break;
+                        case 5:
+                            listDate.Items.Add("Thursday");
+                            break;
+                        case 6:
+                            listDate.Items.Add("Friday");
+                            break;
+                        case 7:
+                            listDate.Items.Add("Saturday");
+                            break;
+                    }
+
+                }
+                
+            }
+
+        }
+
+        private void listDate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ViewAppoinment(listDate.SelectedItem.ToString());
+        }
+
 
     }
 }

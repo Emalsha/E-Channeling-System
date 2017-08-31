@@ -220,5 +220,85 @@ namespace DoctorPanel
             }
         }
 
+
+        // Get doctor availble date list
+        public List<int> GetDoctorDates(int doctorId)
+        {
+            using (OracleConnection con = new OracleConnection(DBString.GetString()))
+            {
+                con.Open();
+                string qry = "SELECT consulting_date FROM acma_duty WHERE doctor_id = :DOCTOR_ID";
+                using (OracleCommand cmd = new OracleCommand(qry, con))
+                {
+                    cmd.Parameters.Add(":DOCTOR_ID", doctorId);
+
+                    OracleDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        List<int> newList = new List<int>();
+                        while (reader.Read())
+                        {
+                            int dates = (int)reader.GetDecimal(0);
+                            newList.Add(dates);
+
+                        }
+                        return newList;
+                    }
+                    else
+                    {
+                        return new List<int>();
+                    }
+
+                }
+            }
+        }
+
+        //Get doctor appinment according to date
+        public List<DoctorToday> DoctorAppoinmentView(int doctorId,int dateNum)
+        {
+            if (dateNum > 0)
+            {
+                using (OracleConnection con = new OracleConnection(DBString.GetString()))
+                {
+                    con.Open();
+                    string qry = "select * from table( ACMA_DOCTOR_DAY_APPOINMENT(:day,:doctor_id_))";
+                    using (OracleCommand cmd = new OracleCommand(qry, con))
+                    {
+                        cmd.Parameters.Add(":day", dateNum);
+                        cmd.Parameters.Add(":doctor_id_", doctorId);
+
+                        OracleDataReader reader = cmd.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            List<DoctorToday> newList = new List<DoctorToday>();
+                            while (reader.Read())
+                            {
+                                decimal appinment_id = reader.GetDecimal(0);
+                                decimal patient_id = reader.GetDecimal(1);
+                                string patient_name = reader.GetString(2);
+                                DateTime appoinment_created_date = reader.GetDateTime(3);
+                                string appoinment_time = reader.GetString(4);
+                                string catogery = reader.GetString(5);
+                                decimal state = reader.GetDecimal(6);
+
+
+                                newList.Add(new DoctorToday(appinment_id, patient_id, patient_name, appoinment_created_date, appoinment_time, catogery, state));
+
+                            }
+                            return newList;
+                        }
+                        else
+                        {
+                            return new List<DoctorToday>();
+                        }
+
+                    }
+                }
+            }
+            else
+            {
+                return new List<DoctorToday>();
+            }
+        }
     }
 }
