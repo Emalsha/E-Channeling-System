@@ -47,7 +47,6 @@ BEGIN
   ELSE OUTPUT := 'Failed.';
   END IF;
   COMMIT;
-  COMMIT;
 END;
 
 DECLARE

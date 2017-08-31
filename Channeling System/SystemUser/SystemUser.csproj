@@ -68,13 +68,18 @@
     <Compile Include="AddAppointmentDoctorInfo.Designer.cs">
       <DependentUpon>AddAppointmentDoctorInfo.cs</DependentUpon>
     </Compile>
-
     <Compile Include="AddDoctor.cs">
-
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddDoctor.Designer.cs">
       <DependentUpon>AddDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegexMatchTimeoutException.cs" />
+    <Compile Include="RemoveDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveDoctor.Designer.cs">
+      <DependentUpon>RemoveDoctor.cs</DependentUpon>
     </Compile>
     <Compile Include="SystemController.cs" />
     <Compile Include="Dashboard.cs">
@@ -120,9 +125,7 @@
     <EmbeddedResource Include="AddAppointmentDoctorInfo.resx">
       <DependentUpon>AddAppointmentDoctorInfo.cs</DependentUpon>
     </EmbeddedResource>
-
-      <EmbeddedResource Include="AddDoctor.resx">
-
+    <EmbeddedResource Include="AddDoctor.resx">
       <DependentUpon>AddDoctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
@@ -130,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveDoctor.resx">
+      <DependentUpon>RemoveDoctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchPatient.resx">
       <DependentUpon>SearchPatient.cs</DependentUpon>
