@@ -307,6 +307,35 @@ namespace SystemUser
             }
             return new List<SearchDoctorModel>();
         }
+
+        public List<SearchDoctorModel> SearchAllPatient(string nic)
+        {
+            string oracleDB = Helper.con_string("acma_db");
+            OracleConnection connect = new OracleConnection(oracleDB);
+            connect.Open();
+
+            string query = "select * from table (ACMA_ALL_PATIENT(:nic))";
+            OracleCommand cmd = new OracleCommand(query, connect);
+
+            cmd.Parameters.Add(":nic", nic);
+
+            OracleDataReader dReadr = cmd.ExecuteReader();
+            if (dReadr.HasRows)
+            {
+                List<SearchDoctorModel> dataList = new List<SearchDoctorModel>();
+                while (dReadr.Read())
+                {
+                    string fullname = dReadr.GetString(1);
+                    string nic_no = dReadr.GetString(2);
+                    decimal telephone = dReadr.GetDecimal(3);
+                    string address = dReadr.GetString(4);
+
+                    dataList.Add(new SearchDoctorModel(fullname, nic_no, telephone, address));
+                }
+                return dataList;
+            }
+            return new List<SearchDoctorModel>();
+        }
       
         //search doctor by doctor duty shedule informations
         public List<SearchDoctorModel> DoctorDutyShedule(int doctor_id)
@@ -509,6 +538,33 @@ namespace SystemUser
                 }
             }
 
+        }
+
+        //Remove patient
+        public void RemovePatient(string nic)
+        {
+            string oracleDB = Helper.con_string("acma_db");
+            OracleCommand cmd = new OracleCommand();
+            OracleConnection connect = new OracleConnection(oracleDB);
+            cmd.Connection = connect;
+            connect.Open();
+
+            cmd.CommandText = "acma_patient_delete_by_nic";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("logid", OracleDbType.Decimal, ParameterDirection.ReturnValue);
+            cmd.Parameters.Add("nic_no", OracleDbType.Varchar2, nic, ParameterDirection.Input);
+
+            int status = cmd.ExecuteNonQuery();
+
+            if (status == 0)
+            {
+                MessageBox.Show("Can not delete this user, please try again later", "Error in Delete the User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Successfully deleted the user!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

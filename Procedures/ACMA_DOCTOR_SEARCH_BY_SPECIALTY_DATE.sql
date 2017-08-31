@@ -60,3 +60,4 @@ SELECT D.DOCTOR_ID,D.FULLNAME,D.AVAILABLE_ON_WEEKEND,D.ROOM_NUMBER,S.DESCRIPTION
   ORDER BY D.FULLNAME 
 
 -------------------------------
+select * from acma_patient

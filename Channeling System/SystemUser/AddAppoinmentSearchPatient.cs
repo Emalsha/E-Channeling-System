@@ -43,8 +43,6 @@ namespace SystemUser
             {
                 lblname.Text = " Sorry, Not a registered user.";
                 this.Height = 495;
-                txtnic.Enabled = false;
-                btnsearch.Enabled = false;
             }
             else 
             {
@@ -102,10 +100,6 @@ namespace SystemUser
                     this.Hide();
 
                 }
-                //else
-                //{
-                //    this.Close(); 
-                //}
             }
         }
 

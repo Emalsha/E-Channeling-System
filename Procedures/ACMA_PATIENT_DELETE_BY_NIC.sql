@@ -26,3 +26,5 @@ begin
 end;
 
 select * from acma_patient
+
+select * from acma_doctor

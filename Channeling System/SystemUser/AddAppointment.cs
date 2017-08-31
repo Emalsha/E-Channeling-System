@@ -14,17 +14,38 @@ namespace SystemUser
 {
     public partial class AddAppointment : Form
     {
-        public AddAppointment()
+        //constructer
+        public AddAppointment(int control)
         {
             InitializeComponent();
             listView1.MouseDoubleClick += new MouseEventHandler(listView1_doubleclick);
+
+            if (control == 1)
+            {
+                dateTimePicker1.Enabled = false;
+                cmbspec.Enabled = false;
+                chkspc.Enabled = false;
+                chkdate.Enabled = false;
+            }
+            else if (control == 2)
+            {
+                txtfullname.Enabled = false;
+                chkname.Enabled = false;
+            }
+            else if (control == 3)
+            { 
+                
+            }
+
         }
 
+        //close button 
         private void btnclose_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
 
+        // get all appoinment information from database
         private void AddAppointment_Load(object sender, EventArgs e)
         {
 
@@ -167,12 +188,13 @@ namespace SystemUser
 
         }
 
-
+        //worng added button
         private void button1_Click(object sender, EventArgs e)
         {
             
         }
 
+        //wrong added list view
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             

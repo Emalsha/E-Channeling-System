@@ -175,11 +175,10 @@
             this.lblname.BackColor = System.Drawing.SystemColors.Window;
             this.lblname.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblname.Location = new System.Drawing.Point(154, 57);
+            this.lblname.Location = new System.Drawing.Point(104, 57);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(162, 22);
+            this.lblname.Size = new System.Drawing.Size(0, 22);
             this.lblname.TabIndex = 23;
-            this.lblname.Text = "Delushan Jayaw";
             this.lblname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
@@ -289,7 +288,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(464, 472);
+            this.ClientSize = new System.Drawing.Size(464, 200);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lbldesc);
             this.Controls.Add(this.lbltime);
