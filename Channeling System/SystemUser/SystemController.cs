@@ -14,7 +14,7 @@ namespace SystemUser
     public class SystemController
     {
         //login auth function
-        public void login_auth(string username, string password)
+        public bool login_auth(string username, string password)
         {
             string oracleDB = Helper.con_string("acma_db");
             OracleCommand cmd = new OracleCommand();
@@ -35,19 +35,17 @@ namespace SystemUser
                 int response = int.Parse(cmd.Parameters["logid"].Value.ToString());
                 if (response == 0 )
                 {
-                 MessageBox.Show("Wrong Username or Password! Make sure your authentication values correct.","Error in login!",MessageBoxButtons.OK,MessageBoxIcon.Error);       
+                    return false;
                 }
                 else
                 {
-                    new Dashboard().Show();
+                    return true;
+                    
                 }
             }
-           
             finally
             {
                 connect.Dispose();
-                Login log_o = new Login();
-                log_o.Hide();
             }
 
         }
