@@ -68,11 +68,9 @@
     <Compile Include="AddAppointmentDoctorInfo.Designer.cs">
       <DependentUpon>AddAppointmentDoctorInfo.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
+
     <Compile Include="AddDoctor.cs">
-=======
-      <Compile Include="AddDoctor.cs">
->>>>>>> parent of f5b2a3c... Revert "add appoinment process completed"
+
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddDoctor.Designer.cs">
@@ -122,11 +120,9 @@
     <EmbeddedResource Include="AddAppointmentDoctorInfo.resx">
       <DependentUpon>AddAppointmentDoctorInfo.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
+
       <EmbeddedResource Include="AddDoctor.resx">
-=======
-    <EmbeddedResource Include="AddDoctor.resx">
->>>>>>> parent of f5b2a3c... Revert "add appoinment process completed"
+
       <DependentUpon>AddDoctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
