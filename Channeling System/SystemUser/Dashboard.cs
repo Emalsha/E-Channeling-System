@@ -52,10 +52,5 @@ namespace SystemUser
         {
             new AddAppointment().Show();
         }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            new AddDoctor().Show();
-        }
     }
 }

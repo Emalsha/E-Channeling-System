@@ -47,10 +47,6 @@
             this.txtnic = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.lbl_doctoruid = new System.Windows.Forms.Label();
-            this.lblday = new System.Windows.Forms.Label();
-            this.lbltime = new System.Windows.Forms.Label();
-            this.lbldesc = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -235,51 +231,11 @@
             this.panel1.Size = new System.Drawing.Size(464, 46);
             this.panel1.TabIndex = 19;
             // 
-            // lbl_doctoruid
-            // 
-            this.lbl_doctoruid.AutoSize = true;
-            this.lbl_doctoruid.Location = new System.Drawing.Point(600, 46);
-            this.lbl_doctoruid.Name = "lbl_doctoruid";
-            this.lbl_doctoruid.Size = new System.Drawing.Size(35, 13);
-            this.lbl_doctoruid.TabIndex = 34;
-            this.lbl_doctoruid.Text = "label6";
-            // 
-            // lblday
-            // 
-            this.lblday.AutoSize = true;
-            this.lblday.Location = new System.Drawing.Point(600, 82);
-            this.lblday.Name = "lblday";
-            this.lblday.Size = new System.Drawing.Size(35, 13);
-            this.lblday.TabIndex = 35;
-            this.lblday.Text = "label6";
-            // 
-            // lbltime
-            // 
-            this.lbltime.AutoSize = true;
-            this.lbltime.Location = new System.Drawing.Point(600, 111);
-            this.lbltime.Name = "lbltime";
-            this.lbltime.Size = new System.Drawing.Size(35, 13);
-            this.lbltime.TabIndex = 36;
-            this.lbltime.Text = "label6";
-            // 
-            // lbldesc
-            // 
-            this.lbldesc.AutoSize = true;
-            this.lbldesc.Location = new System.Drawing.Point(610, 142);
-            this.lbldesc.Name = "lbldesc";
-            this.lbldesc.Size = new System.Drawing.Size(35, 13);
-            this.lbldesc.TabIndex = 37;
-            this.lbldesc.Text = "label6";
-            // 
             // AddAppoinmentSearchPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 207);
-            this.Controls.Add(this.lbldesc);
-            this.Controls.Add(this.lbltime);
-            this.Controls.Add(this.lblday);
-            this.Controls.Add(this.lbl_doctoruid);
             this.Controls.Add(this.btnreload);
             this.Controls.Add(this.txtnicnumber);
             this.Controls.Add(this.txtname);
@@ -327,10 +283,6 @@
         private System.Windows.Forms.TextBox txtnic;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Label lbl_doctoruid;
-        private System.Windows.Forms.Label lblday;
-        private System.Windows.Forms.Label lbltime;
-        private System.Windows.Forms.Label lbldesc;
 
     }
 }
