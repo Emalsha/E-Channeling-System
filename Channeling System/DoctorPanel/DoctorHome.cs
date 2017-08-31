@@ -47,19 +47,21 @@ namespace DoctorPanel
             List<DoctorToday> docList = dc.DoctorTodayView(doctorId); // Use login doctor id...
             if (docList.Count() > 0)
             {
+                lstTodayAppoinment.Items.Clear();
                 int i = 1;
                 foreach (DoctorToday dataItem in docList)
                 {
-                    lstTodayAppoinment.Items.Clear();
+                    
 
                     ListViewItem item = new ListViewItem(dataItem.Appinment_id.ToString());
                     item.SubItems.Add(i.ToString());
                     item.SubItems.Add(dataItem.Patient_name);
                     item.SubItems.Add(dataItem.Appoinment_time);
                     item.SubItems.Add(dataItem.Catogery);
-                    item.SubItems.Add(dataItem.State.ToString());
+                    item.SubItems.Add(dataItem.State == 1 ? "Active" : "Canceled");
 
                     lstTodayAppoinment.Items.Add(item);
+                    i++;
                 }
                 return true;
             }

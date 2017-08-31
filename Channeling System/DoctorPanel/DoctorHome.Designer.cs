@@ -54,11 +54,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,8 +80,8 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.lstTodayAppoinment);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -98,6 +101,7 @@
             // 
             // button4
             // 
+            this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(153, 256);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 100);
@@ -107,11 +111,12 @@
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(46, 256);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 100);
             this.button3.TabIndex = 12;
-            this.button3.Text = "View History";
+            this.button3.Text = "History";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // lblTIme
@@ -198,6 +203,7 @@
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(46, 149);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(207, 100);
@@ -211,7 +217,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.Window;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::DoctorPanel.Properties.Resources.refresh_page_option;
-            this.button1.Location = new System.Drawing.Point(499, 437);
+            this.button1.Location = new System.Drawing.Point(467, 437);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(23, 21);
             this.button1.TabIndex = 2;
@@ -230,9 +236,9 @@
             this.lstTodayAppoinment.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstTodayAppoinment.FullRowSelect = true;
             this.lstTodayAppoinment.GridLines = true;
-            this.lstTodayAppoinment.Location = new System.Drawing.Point(499, 149);
+            this.lstTodayAppoinment.Location = new System.Drawing.Point(162, 18);
             this.lstTodayAppoinment.Name = "lstTodayAppoinment";
-            this.lstTodayAppoinment.Size = new System.Drawing.Size(497, 309);
+            this.lstTodayAppoinment.Size = new System.Drawing.Size(523, 309);
             this.lstTodayAppoinment.TabIndex = 1;
             this.lstTodayAppoinment.UseCompatibleStateImageBehavior = false;
             this.lstTodayAppoinment.View = System.Windows.Forms.View.Details;
@@ -253,19 +259,19 @@
             // 
             this.columnHeader2.DisplayIndex = 1;
             this.columnHeader2.Text = "Patient";
-            this.columnHeader2.Width = 167;
+            this.columnHeader2.Width = 174;
             // 
             // columnHeader3
             // 
             this.columnHeader3.DisplayIndex = 2;
             this.columnHeader3.Text = "Time";
-            this.columnHeader3.Width = 92;
+            this.columnHeader3.Width = 103;
             // 
             // columnHeader4
             // 
             this.columnHeader4.DisplayIndex = 3;
             this.columnHeader4.Text = "Speciality";
-            this.columnHeader4.Width = 148;
+            this.columnHeader4.Width = 150;
             // 
             // columnHeader5
             // 
@@ -299,6 +305,37 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Friday",
+            "Monday",
+            "Saturday",
+            "Sunday",
+            "Thursday",
+            "Today",
+            "Tuesday",
+            "Wednesday"});
+            this.comboBox1.Location = new System.Drawing.Point(15, 19);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(141, 24);
+            this.comboBox1.TabIndex = 15;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.lstTodayAppoinment);
+            this.groupBox1.Location = new System.Drawing.Point(305, 131);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(691, 351);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "View Appoinment";
+            // 
             // DoctorHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,6 +355,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -348,5 +386,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

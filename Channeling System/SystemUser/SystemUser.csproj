@@ -74,6 +74,7 @@
     <Compile Include="AddDoctor.Designer.cs">
       <DependentUpon>AddDoctor.cs</DependentUpon>
     </Compile>
+
     <Compile Include="CancelAppoinment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +86,12 @@
     </Compile>
     <Compile Include="PrintReceipt.Designer.cs">
       <DependentUpon>PrintReceipt.cs</DependentUpon>
+    <Compile Include="RegexMatchTimeoutException.cs" />
+    <Compile Include="RemoveDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveDoctor.Designer.cs">
+      <DependentUpon>RemoveDoctor.cs</DependentUpon>
     </Compile>
     <Compile Include="SystemController.cs" />
     <Compile Include="Dashboard.cs">
@@ -142,8 +149,11 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="PrintReceipt.resx">
       <DependentUpon>PrintReceipt.cs</DependentUpon>
+    <EmbeddedResource Include="RemoveDoctor.resx">
+      <DependentUpon>RemoveDoctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchPatient.resx">
       <DependentUpon>SearchPatient.cs</DependentUpon>
