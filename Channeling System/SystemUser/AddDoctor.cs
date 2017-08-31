@@ -61,6 +61,7 @@ namespace SystemUser
             txtDoctorEmail.Text = "";
         }
 
+        //Load speciality
         public void LoadSpeciality()
         {
             using (OracleConnection con = new OracleConnection(Helper.GetString()))
