@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using DoctorPanel.Models;
 using Oracle.DataAccess.Client;
+using System.Text.RegularExpressions;
 
 namespace SystemUser
 {
@@ -138,6 +139,59 @@ namespace SystemUser
                 errorProviderAddress.SetError(txtDoctorAddress, "");
             }
 
+        }
+
+        private void txtDoctorEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (!isEmail(txtDoctorEmail.Text))
+            {
+                txtDoctorEmail.Focus();
+                errorProvider.SetError(txtDoctorEmail, "Please add valid email address!");
+            }
+            else
+            {
+                errorProvider.SetError(txtDoctorEmail, "");
+            }
+        }
+
+        public bool isEmail(string strIn)
+        {
+            // Return true if strIn is in valid e-mail format.
+            try
+            {
+                return Regex.IsMatch(strIn,@"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" + @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$",
+                      RegexOptions.IgnoreCase);
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                return false;
+            }
+        }
+
+        private void txtDoctorNic_Validating(object sender, CancelEventArgs e)
+        {
+            if (!isNIC(txtDoctorNic.Text))
+            {
+                txtDoctorNic.Focus();
+                errorProvider.SetError(txtDoctorNic, "Please add valid NIC number!");
+            }
+            else
+            {
+                errorProvider.SetError(txtDoctorNic, "");
+            }
+        }
+
+        public bool isNIC(string strIn)
+        {
+            // Return true if strIn is in valid NIC format.
+            try
+            {
+                return Regex.IsMatch(strIn, "[0-9]{9}v",RegexOptions.IgnoreCase);
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                return false;
+            }
         }
 
     }

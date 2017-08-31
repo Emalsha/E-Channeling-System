@@ -176,7 +176,7 @@
             this.txtDoctorSpeciality.Location = new System.Drawing.Point(117, 164);
             this.txtDoctorSpeciality.Name = "txtDoctorSpeciality";
             this.txtDoctorSpeciality.Size = new System.Drawing.Size(248, 24);
-            this.txtDoctorSpeciality.TabIndex = 22;
+            this.txtDoctorSpeciality.TabIndex = 6;
             // 
             // txtDoctorEmail
             // 
@@ -184,7 +184,8 @@
             this.txtDoctorEmail.Location = new System.Drawing.Point(117, 239);
             this.txtDoctorEmail.Name = "txtDoctorEmail";
             this.txtDoctorEmail.Size = new System.Drawing.Size(248, 25);
-            this.txtDoctorEmail.TabIndex = 20;
+            this.txtDoctorEmail.TabIndex = 8;
+            this.txtDoctorEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtDoctorEmail_Validating);
             // 
             // label11
             // 
@@ -202,7 +203,7 @@
             this.txtDoctorUsername.Location = new System.Drawing.Point(117, 202);
             this.txtDoctorUsername.Name = "txtDoctorUsername";
             this.txtDoctorUsername.Size = new System.Drawing.Size(248, 25);
-            this.txtDoctorUsername.TabIndex = 18;
+            this.txtDoctorUsername.TabIndex = 7;
             // 
             // label10
             // 
@@ -220,7 +221,7 @@
             this.txtDoctorRoomNumber.Location = new System.Drawing.Point(170, 367);
             this.txtDoctorRoomNumber.Name = "txtDoctorRoomNumber";
             this.txtDoctorRoomNumber.Size = new System.Drawing.Size(60, 25);
-            this.txtDoctorRoomNumber.TabIndex = 17;
+            this.txtDoctorRoomNumber.TabIndex = 11;
             // 
             // txtDoctorContact
             // 
@@ -228,7 +229,7 @@
             this.txtDoctorContact.Location = new System.Drawing.Point(117, 45);
             this.txtDoctorContact.Name = "txtDoctorContact";
             this.txtDoctorContact.Size = new System.Drawing.Size(248, 25);
-            this.txtDoctorContact.TabIndex = 4;
+            this.txtDoctorContact.TabIndex = 3;
             this.txtDoctorContact.CausesValidationChanged += new System.EventHandler(this.btnAddDoctor_Click);
             this.txtDoctorContact.Validating += new System.ComponentModel.CancelEventHandler(this.txtDoctorContact_Validating);
             // 
@@ -258,7 +259,7 @@
             this.txtDoctorPatientPerDay.Location = new System.Drawing.Point(170, 326);
             this.txtDoctorPatientPerDay.Name = "txtDoctorPatientPerDay";
             this.txtDoctorPatientPerDay.Size = new System.Drawing.Size(60, 25);
-            this.txtDoctorPatientPerDay.TabIndex = 15;
+            this.txtDoctorPatientPerDay.TabIndex = 10;
             // 
             // txtDoctorName
             // 
@@ -296,7 +297,7 @@
             this.availabilityNo.Location = new System.Drawing.Point(212, 298);
             this.availabilityNo.Name = "availabilityNo";
             this.availabilityNo.Size = new System.Drawing.Size(88, 17);
-            this.availabilityNo.TabIndex = 13;
+            this.availabilityNo.TabIndex = 9;
             this.availabilityNo.TabStop = true;
             this.availabilityNo.Text = "Not Available";
             this.availabilityNo.UseVisualStyleBackColor = true;
@@ -317,7 +318,7 @@
             this.availabilityYes.Location = new System.Drawing.Point(212, 275);
             this.availabilityYes.Name = "availabilityYes";
             this.availabilityYes.Size = new System.Drawing.Size(68, 17);
-            this.availabilityYes.TabIndex = 12;
+            this.availabilityYes.TabIndex = 9;
             this.availabilityYes.TabStop = true;
             this.availabilityYes.Text = "Available";
             this.availabilityYes.UseVisualStyleBackColor = true;
@@ -328,7 +329,7 @@
             this.txtDoctorAddress.Location = new System.Drawing.Point(117, 83);
             this.txtDoctorAddress.Name = "txtDoctorAddress";
             this.txtDoctorAddress.Size = new System.Drawing.Size(248, 25);
-            this.txtDoctorAddress.TabIndex = 6;
+            this.txtDoctorAddress.TabIndex = 4;
             this.txtDoctorAddress.CausesValidationChanged += new System.EventHandler(this.btnAddDoctor_Click);
             this.txtDoctorAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txtDoctorAddress_Validating);
             // 
@@ -358,7 +359,8 @@
             this.txtDoctorNic.Location = new System.Drawing.Point(117, 124);
             this.txtDoctorNic.Name = "txtDoctorNic";
             this.txtDoctorNic.Size = new System.Drawing.Size(248, 25);
-            this.txtDoctorNic.TabIndex = 8;
+            this.txtDoctorNic.TabIndex = 5;
+            this.txtDoctorNic.Validating += new System.ComponentModel.CancelEventHandler(this.txtDoctorNic_Validating);
             // 
             // label6
             // 
@@ -383,6 +385,7 @@
             // errorProviderAddress
             // 
             this.errorProviderAddress.ContainerControl = this;
+            this.errorProviderAddress.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderAddress.Icon")));
             // 
             // AddDoctor
             // 

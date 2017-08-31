@@ -74,6 +74,7 @@
     <Compile Include="AddDoctor.Designer.cs">
       <DependentUpon>AddDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegexMatchTimeoutException.cs" />
     <Compile Include="SystemController.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
