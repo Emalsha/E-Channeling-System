@@ -55,9 +55,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SystemUser.Properties.Resources.login__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(360, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(373, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox1.Size = new System.Drawing.Size(28, 29);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
@@ -84,9 +84,9 @@
             this.btnlogin.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnlogin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnlogin.Location = new System.Drawing.Point(227, 262);
+            this.btnlogin.Location = new System.Drawing.Point(158, 258);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(85, 29);
+            this.btnlogin.Size = new System.Drawing.Size(92, 34);
             this.btnlogin.TabIndex = 20;
             this.btnlogin.Text = "Login";
             this.btnlogin.UseVisualStyleBackColor = false;
@@ -116,29 +116,29 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.label5.Location = new System.Drawing.Point(95, 182);
+            this.label5.Location = new System.Drawing.Point(95, 191);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 20);
+            this.label5.Size = new System.Drawing.Size(65, 16);
             this.label5.TabIndex = 17;
             this.label5.Text = "Password";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.label4.Location = new System.Drawing.Point(95, 110);
+            this.label4.Location = new System.Drawing.Point(95, 119);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 20);
+            this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 16;
             this.label4.Text = "Usename ";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SystemUser.Properties.Resources.ACMA_logo_1;
-            this.pictureBox2.Location = new System.Drawing.Point(19, 340);
+            this.pictureBox2.Location = new System.Drawing.Point(132, 309);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(151, 55);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

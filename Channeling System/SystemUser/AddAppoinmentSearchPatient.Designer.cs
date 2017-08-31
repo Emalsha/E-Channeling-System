@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAppoinmentSearchPatient));
             this.btnreload = new System.Windows.Forms.Button();
             this.txtnicnumber = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
@@ -51,6 +52,7 @@
             this.lblday = new System.Windows.Forms.Label();
             this.lbltime = new System.Windows.Forms.Label();
             this.lbldesc = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -170,20 +172,22 @@
             // lblname
             // 
             this.lblname.AutoSize = true;
-            this.lblname.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblname.BackColor = System.Drawing.SystemColors.Window;
             this.lblname.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblname.Location = new System.Drawing.Point(159, 59);
+            this.lblname.Location = new System.Drawing.Point(154, 57);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(0, 22);
+            this.lblname.Size = new System.Drawing.Size(162, 22);
             this.lblname.TabIndex = 23;
+            this.lblname.Text = "Delushan Jayaw";
+            this.lblname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SystemUser.Properties.Resources.user_search;
-            this.pictureBox1.Location = new System.Drawing.Point(405, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(414, 10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox1.Size = new System.Drawing.Size(29, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -192,15 +196,14 @@
             // 
             this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsearch.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnsearch.Image = global::SystemUser.Properties.Resources.search;
             this.btnsearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnsearch.Location = new System.Drawing.Point(163, 142);
+            this.btnsearch.Location = new System.Drawing.Point(163, 150);
             this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(147, 28);
+            this.btnsearch.Size = new System.Drawing.Size(147, 36);
             this.btnsearch.TabIndex = 21;
-            this.btnsearch.Text = "Search Patient by NIC";
-            this.btnsearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsearch.Text = "Search";
             this.btnsearch.UseVisualStyleBackColor = false;
             this.btnsearch.Click += new System.EventHandler(this.btnsearch_Click);
             // 
@@ -219,7 +222,7 @@
             // 
             this.txtnic.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.txtnic.Location = new System.Drawing.Point(130, 95);
+            this.txtnic.Location = new System.Drawing.Point(130, 103);
             this.txtnic.Name = "txtnic";
             this.txtnic.Size = new System.Drawing.Size(215, 29);
             this.txtnic.TabIndex = 20;
@@ -271,12 +274,23 @@
             this.lbldesc.TabIndex = 37;
             this.lbldesc.Text = "label6";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(127, 87);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 13);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Search by NIC ";
+            // 
             // AddAppoinmentSearchPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(464, 207);
+            this.ClientSize = new System.Drawing.Size(464, 472);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.lbldesc);
             this.Controls.Add(this.lbltime);
             this.Controls.Add(this.lblday);
@@ -295,7 +309,8 @@
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.txtnic);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddAppoinmentSearchPatient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddAppoinmentSearchPatient";
@@ -332,6 +347,7 @@
         private System.Windows.Forms.Label lblday;
         private System.Windows.Forms.Label lbltime;
         private System.Windows.Forms.Label lbldesc;
+        private System.Windows.Forms.Label label6;
 
     }
 }

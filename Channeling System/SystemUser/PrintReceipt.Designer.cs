@@ -74,15 +74,14 @@
             // 
             this.btnsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsearch.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnsearch.Image = global::SystemUser.Properties.Resources.printer__1_;
             this.btnsearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnsearch.Location = new System.Drawing.Point(359, 499);
+            this.btnsearch.Location = new System.Drawing.Point(337, 492);
             this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(68, 28);
+            this.btnsearch.Size = new System.Drawing.Size(90, 35);
             this.btnsearch.TabIndex = 8;
             this.btnsearch.Text = "Print";
-            this.btnsearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnsearch.UseVisualStyleBackColor = false;
             // 
             // label2
@@ -171,8 +170,8 @@
             this.lineShape1.Name = "lineShape1";
             this.lineShape1.X1 = 0;
             this.lineShape1.X2 = 438;
-            this.lineShape1.Y1 = 488;
-            this.lineShape1.Y2 = 488;
+            this.lineShape1.Y1 = 481;
+            this.lineShape1.Y2 = 481;
             // 
             // label8
             // 
